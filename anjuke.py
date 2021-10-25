@@ -34,8 +34,7 @@ def crawler(soup):
 
     for r in rooms:
         # 爬取房屋名称
-        print(r.find("b", class_="strongbox").string)
-        # name_list.append(r.find("b", class_="strongbox").text)
+        name_list.append(r.find("b", class_="strongbox").string)
 
 
         room_details = r.find("p", class_="details-item tag").text.split('|')
