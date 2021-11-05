@@ -1,0 +1,95 @@
+未指明数据类型均为varchar(255)
+表名：baseInformation
+MySQL字段 
+name：名称 如中国工商银行离行式自助服务区(北京分行珠市口支行前门西大街)
+rentalPrice 租价 元--》float
+roomType:房型
+locationLat:经度--》float
+locationLng:纬度--》float
+address:：位置 如北京市西城区前门西大街41号
+"uid":"08f1f1f5a23b39ca88db73e6"   主键
+
+表名：locationReminder 地点提示功能
+第二个表--》优化部分暂时不使用
+uid
+children--》json-->偷懒
+
+第三个表route-->先不使用，目前想法是每次搜索首先查询此表，然后调用api，添加数据
+id 主键无意义--》int
+路线功能
+起点终点的uid
+originUid--》外键
+endUid--》外键
+
+distance--》float
+duration--》float
+交通工具 transportation 
+step-->json格式存储
+
+
+下面的不重要
+
+
+
+
+
+
+
+
+
+
+数据库设计
+名称,面积,租价,房型,位置
+剩下的属性属于api调用有关
+status :判断是否请求成功 0为成功，其他均为失败
+result_type:{//备用
+当返回结果为城市列表时，result_type=city_type
+
+当返回结果为普通poi时，result_type=poi_type
+
+当返回结果为行政区划数据时，result_type=region_type
+
+当返回结果为门址数据时，result_type=address_type}
+
+
+
+name=名称
+location:此处位置为经纬度  lat lng 
+address=位置
+province":"北京市",
+city:"北京市",
+"area":"西城区",
+"street_id":"08f1f1f5a23b39ca88db73e6",
+"uid":"08f1f1f5a23b39ca88db73e6"   主键
+
+
+
+地点输入提示功能
+children：指地点-->uid
+
+
+
+
+
+交通工具
+driving
+riding
+walking
+transit公交
+origin destination，起点终点
+routes方案集--》
+distance：距离（m）
+duration：用时(s)
+traffic_condition：路况
+0： 无路况
+1： 畅通
+2： 缓行
+3： 拥堵
+4： 严重拥堵 
+
+toll：路费（元）
+
+step：路线分段--》一堆字段打算直接使用json
+
+批量算路
+
