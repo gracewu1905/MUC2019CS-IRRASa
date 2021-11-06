@@ -13,7 +13,8 @@ import java.nio.charset.StandardCharsets;
 
 
 /**
- * 只调用getJson方法,具体参考getJson函数
+ * 只调用getJson方法,具体参考getJson函数</br>
+ * 除了GetRoutePlanning对象和GetJsonObject对象为JSONObject之外getJson()均为JSONArray对象
  */
 public class GetJsonObject {
 
