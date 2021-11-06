@@ -51,14 +51,19 @@ public class GetJsonObject {
             return json;
         }
     }
-    public JSONArray getJson(String serverUrl){
+    public Object getJson(String serverUrl){
         JSONObject json=this.getResponse(serverUrl);
-        System.out.println(serverUrl);
-        JSONArray results=null;
+        Object results=null;
         if(json==null){
             return results;
         }
-        results=json.getJSONArray("result");
+        try {
+            results=json.getJSONArray("result");
+        }
+        catch (Exception e){
+            results=json.getJSONObject("result");
+        }
+//        results=json.getJSONObject("result");
         return results;
     }
 

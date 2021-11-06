@@ -86,7 +86,7 @@ public class GetLocationSearch extends GetJsonObject{
      *
      *           //test类只能有一个构造器
      *           GetLocationSearch locationSearch = new GetLocationSearch(2, "435d7aea036e54355abbbcc8");
-     *           JSONArray jsonArray = locationSearch.getJson(locationSearch.serverUrl);
+     *           JSONArray jsonArray =(JSONArray) locationSearch.getJson(locationSearch.serverUrl);
      *           Object o = jsonArray.get(0);
      *           o=(JSONObject)o;
      *           System.out.println(o);
@@ -94,5 +94,6 @@ public class GetLocationSearch extends GetJsonObject{
      *
      *   }
      */
+
     //https://api.map.baidu.com/place/v2/detail?uid=435d7aea036e54355abbbcc8&output=json&scope=2&ak=
 }
