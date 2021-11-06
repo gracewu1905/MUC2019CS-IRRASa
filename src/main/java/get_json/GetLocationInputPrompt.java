@@ -9,9 +9,13 @@ import com.alibaba.fastjson.JSONObject;
  */
 public class GetLocationInputPrompt extends GetJsonObject{
     String q;
-
+    String serverUrl;
     public GetLocationInputPrompt(String q) {
         this.q = q;
+        this.serverUrl = "https://api.map.baidu.com/place/v2/suggestion?" +
+                "query=" +q+
+                "&region=北京&city_limit=true&output=json&ak="
+                +super.AK;
     }
 
     public String getQ() {
@@ -84,33 +88,12 @@ public class GetLocationInputPrompt extends GetJsonObject{
      *         }
      *     ]
      * examples:
-     * LocationInputPrompt locationSearch = new LocationInputPrompt("天安");
-     * JSONArray jsonArray = locationSearch.getLocationInputPromptJson();
-     * Object o = jsonArray.get(0);
-     * o=(JSONObject)o;
-     * System.out.println(o);
-     * System.out.println(jsonArray);
+     *
      *然后json处理各种数据
      * */
-    public JSONArray getLocationInputPromptJson(){
-
-        String serverUrl = "https://api.map.baidu.com/place/v2/suggestion?" +
-                "query=" +q+
-                "&region=北京&city_limit=true&output=json&ak="
-                +super.AK;
-        JSONObject json=super.getResponse(serverUrl);
-        System.out.println(serverUrl);
-//        System.out.println(json);
-        JSONArray results=null;
-        if(json==null){
-            return results;
-        }
-        results=json.getJSONArray("result");
-        return results;
-    }
-    /**public static void main(String[] args) {
-        LocationInputPrompt locationSearch = new LocationInputPrompt("天安");
-        JSONArray jsonArray = locationSearch.getLocationInputPromptJson();
+   /** public static void main(String[] args) {
+        GetLocationInputPrompt locationSearch = new GetLocationInputPrompt("天安");
+        JSONArray jsonArray = locationSearch.getJson(locationSearch.serverUrl);
         Object o = jsonArray.get(0);
         o=(JSONObject)o;
         System.out.println(o);

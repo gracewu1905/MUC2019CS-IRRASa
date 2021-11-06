@@ -17,12 +17,14 @@ public class GetLocationSearch extends GetJsonObject{
 
     private String[] uids;
     private int scope;
-
+    String serverUrl ;
 
 
     public GetLocationSearch(int scope, String...uids) {
         this.uids = uids;
         this.scope = scope;
+        this.serverUrl = "https://api.map.baidu.com/place/v2/detail?uids=" +
+                StringUtils.join(uids,",")+"&output=json&scope="+ scope+"&ak="+super.AK;
     }
 
 
@@ -78,37 +80,19 @@ public class GetLocationSearch extends GetJsonObject{
      *             "detail":1
      *         }
      *     ]
-     * examples:
-     *LocationSearch locationSearch = new LocationSearch(2, "435d7aea036e54355abbbcc8");
-     * JSONArray jsonArray = locationSearch.getLocationSearchJson();
-     * System.out.println(jsonArray);
-     * //LocationSearch(int scope,String...uids)
      *然后json处理各种数据
-     * */
-    public JSONArray getLocationSearchJson(){
-
-         String serverUrl = "https://api.map.baidu.com/place/v2/detail?uids=" +
-                 StringUtils.join(uids,",")+"&output=json&scope="+ scope+"&ak="+super.AK;
-        JSONObject json=super.getResponse(serverUrl);
-        System.out.println(serverUrl);
-        JSONArray results=null;
-        if(json==null){
-            return results;
-        }
-        results=json.getJSONArray("result");
-        return results;
-     }
-
-    /**public static void main(String[] args) {
-
-            //test类只能有一个构造器
-            LocationSearch locationSearch = new LocationSearch(2, "435d7aea036e54355abbbcc8");
-            JSONArray jsonArray = locationSearch.getLocationSearchJson();
-            Object o = jsonArray.get(0);
-            o=(JSONObject)o;
-            System.out.println(o);
-            System.out.println(jsonArray);
-
-    }*/
+     *
+     *public static void main(String[] args) {
+     *
+     *           //test类只能有一个构造器
+     *           GetLocationSearch locationSearch = new GetLocationSearch(2, "435d7aea036e54355abbbcc8");
+     *           JSONArray jsonArray = locationSearch.getJson(locationSearch.serverUrl);
+     *           Object o = jsonArray.get(0);
+     *           o=(JSONObject)o;
+     *           System.out.println(o);
+     *           System.out.println(jsonArray);
+     *
+     *   }
+     */
     //https://api.map.baidu.com/place/v2/detail?uid=435d7aea036e54355abbbcc8&output=json&scope=2&ak=
 }

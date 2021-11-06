@@ -1,5 +1,6 @@
 package get_json;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 
 import java.io.BufferedReader;
@@ -50,4 +51,15 @@ public class GetJsonObject {
             return json;
         }
     }
+    public JSONArray getJson(String serverUrl){
+        JSONObject json=this.getResponse(serverUrl);
+        System.out.println(serverUrl);
+        JSONArray results=null;
+        if(json==null){
+            return results;
+        }
+        results=json.getJSONArray("result");
+        return results;
+    }
+
 }
