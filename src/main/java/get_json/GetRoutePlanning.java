@@ -6,29 +6,31 @@ import com.alibaba.fastjson.JSONObject;
 /**路线规划
  * @author ASUS 注意该对象返回jsonobject对象
  * 定义了一个TravelMode的枚举类，参数使用travelMode.DRIVING出行方式driving，riding，walking，transit（公交）
- *  String origin;起始点坐标,输入格式为经度,纬度
+ *  String origin;起始点坐标,
+ *  输入格式为经度,纬度
  * String destination;终点坐标
+ *  输入格式为：经度,纬度
  *
  */
 public class GetRoutePlanning extends GetJsonObject{
     TravelMode travelMode;
-    enum TravelMode{
-        driving("驾车"),
-        riding("骑行"),
-        walking("步行"),
-        transit("公交");
-        private TravelMode( String display) {
-        }
-    }
+
     String origin;
     String destination;
     String servelUrl;
+//    public GetRoutePlanning(TravelMode travelMode, String...s) {
+//        this.travelMode = travelMode;
+//        this.origin = s[0]+","+s[1];
+//        this.destination = s[1]+","+s[2];
+//        this.servelUrl="https://api.map.baidu.com/directionlite/v1/"+travelMode+"?origin="+this.origin+"&destination="+this.destination+"&ak="+super.AK;
+//    }
     public GetRoutePlanning(TravelMode travelMode, String origin, String destination) {
         this.travelMode = travelMode;
         this.origin = origin;
         this.destination = destination;
         this.servelUrl="https://api.map.baidu.com/directionlite/v1/"+travelMode+"?origin="+this.origin+"&destination="+this.destination+"&ak="+super.AK;
     }
+
     /**
      *
      * examples:

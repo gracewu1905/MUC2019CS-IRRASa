@@ -15,11 +15,15 @@ public class GetJsonObject {
     /**
      * 我的密钥
      */
+    enum TravelMode{
+        driving("驾车"),
+        riding("骑行"),
+        walking("步行"),
+        transit("公交");
+        private TravelMode( String display) {
+        }
+    }
     public final String AK ="bxG3716uVo8E4g2lzTjYGVtSIsQWWzAS";
-//    @Test
-//    public void test(){
-//        System.out.println(getResponse("https://api.map.baidu.com/directionlite/v1/driving?origin=40.01116,116.339303&destination=39.936404,116.452562&ak="+AK+"d&callback=showLocation"));
-//    }
     /**
      * 根据传入的url，获取相关的json文件对象,并判断是否合法,如果不合法为null
      * @param serverUrl 传入的URL
