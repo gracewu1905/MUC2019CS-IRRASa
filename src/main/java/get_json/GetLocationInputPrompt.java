@@ -91,9 +91,9 @@ public class GetLocationInputPrompt extends GetJsonObject{
      *
      *然后json处理各种数据
      * */
-   /** public static void main(String[] args) {
+   /**public static void main(String[] args) {
         GetLocationInputPrompt locationSearch = new GetLocationInputPrompt("天安");
-        JSONArray jsonArray = locationSearch.getJson(locationSearch.serverUrl);
+        JSONArray jsonArray = (JSONArray) locationSearch.getJson(locationSearch.serverUrl);
         Object o = jsonArray.get(0);
         o=(JSONObject)o;
         System.out.println(o);
