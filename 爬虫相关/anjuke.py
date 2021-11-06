@@ -66,5 +66,5 @@ if __name__ == '__main__':
         data_list[i].append(rt_list[i])
         data_list[i].append(rl_list[i])
 
-    test = pd.DataFrame(columns=col_name, data=data_list)
-    test.to_csv('house.csv',encoding="utf_8_sig")
+    get_json.GetJsonObject = pd.DataFrame(columns=col_name, data=data_list)
+    get_json.GetJsonObject.to_csv('house.csv',encoding="utf_8_sig")
