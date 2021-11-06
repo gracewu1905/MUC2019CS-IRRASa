@@ -9,5 +9,6 @@
         <module name="MUC2019CS-IRRASa" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="15" />
   </component>
 </project>

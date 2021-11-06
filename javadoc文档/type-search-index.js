@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"get_json","l":"GetJsonObject"},{"p":"get_json","l":"GetLocationInputPrompt"},{"p":"get_json","l":"GetLocationSearch"},{"p":"get_json","l":"GetRoadCalculation"},{"p":"get_json","l":"GetRoutePlanning"},{"l":"所有类","u":"allclasses-index.html"}];updateSearchResults();

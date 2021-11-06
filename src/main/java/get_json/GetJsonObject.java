@@ -11,10 +11,16 @@ import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
 
 
+
+/**
+ * 只调用getJson方法,具体参考getJson函数
+ */
 public class GetJsonObject {
+
     /**
-     * 我的密钥
-     */
+     * 定义了一个TravelMode的枚举类，参数使用travelMode.DRIVING出行方式driving，riding，walking，transit（公交）</br>
+     * 其中GetRoadCaculation无transit
+     * */
     enum TravelMode{
         driving("驾车"),
         riding("骑行"),
@@ -23,6 +29,14 @@ public class GetJsonObject {
         private TravelMode( String display) {
         }
     }
+
+    /**
+     * url
+     */
+    String serverUrl;
+    /**
+     * 我的密钥
+     */
     public final String AK ="bxG3716uVo8E4g2lzTjYGVtSIsQWWzAS";
     /**
      * 根据传入的url，获取相关的json文件对象,并判断是否合法,如果不合法为null
@@ -55,7 +69,21 @@ public class GetJsonObject {
             return json;
         }
     }
-    public Object getJson(String serverUrl){
+
+    /**
+     *examples:</br>
+     *public static void main(String[] args) {</br>
+     *       GetJsonObject getJsonObject=(GetJsonObject) new 具体实现类(参数列表);</br>
+     *       //除了GetRoutePlanning对象为JSONObject之外getJson()均为JSONArray对象</br>
+     *       JSONArray jsonArray =(JSONArray) getJsonObject.getJson();</br>
+     *       Object o = jsonArray.get(0);</br>
+     *       o=(JSONObject)o;</br>
+     *       System.out.println(o);</br>
+     *       System.out.println(jsonArray);</br>
+     *   }</br>
+     *@return 返回object对象，根据情况生成jsonobject对象或jsonarray对象
+     */
+    public Object getJson(){
         JSONObject json=this.getResponse(serverUrl);
         Object results=null;
         if(json==null){
@@ -70,5 +98,6 @@ public class GetJsonObject {
 //        results=json.getJSONObject("result");
         return results;
     }
+
 
 }
