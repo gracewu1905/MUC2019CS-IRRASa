@@ -1,0 +1,1304 @@
+
+    <script src="https://cdn.dingxiang-inc.com/ctu-group/constid-js/index.js"></script>
+    <script>
+        var options = {
+            appId: '0f8591823804c7b5db7e85d05a348ef5',
+        };
+        _dx.ConstID(options, function (e, id) {
+            if (!e) {
+                $('#dx_id').val(id);
+            }
+        });
+    </script>
+    <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>北京地图找房网_北京地图找房_北京地图租房_北京我爱我家官网</title>
+	<meta name="Keywords" content="北京地图找房网,北京地图找房,北京地图租房">
+	<meta name="Description" content="北京地图找房网提供北京地图找房,北京地图找二手房,北京地图租房有关信息.按北京地图找房子、北京地图找二手房、北京地图租房就上我爱我家北京地图找房网.">
+    <meta name="applicable-device" content="pc">
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-103163281-2', 'auto');
+		ga('create', 'UA-103163281-15', 'auto','clientTracker');
+		ga('send', 'pageview');
+		var baseUrl = "https://res.5i5j.com";//显示404图片是需要资源域名
+        var cityName = 'bj';
+	</script>
+	<link href="https://res.5i5j.com/pc/common/basic.css?202005121342c3861d27b5287ac28d098c21a4db8774" rel="stylesheet">	<link href="https://res.5i5j.com/pc/map/map.css?202001220902c3861d27b5287ac28d098c21a4db8774" rel="stylesheet"></head>
+<script>
+    var _trackData = _trackData || [];	//全局变量，一定不要放到一个function里面
+    var _trackDataType = 'web';
+    var _commonData = '[]';
+    var priceStyleConf = JSON.parse(_commonData);
+    console.log(priceStyleConf)
+    
+</script>
+<style>
+
+</style>
+<body>
+<!--Created by JiangXiaolong-->
+<!-- 顶部 start -->
+<div class="top-box">
+	<div class="top-logo fl"><a href="/"></a></div>
+	<div class="top-menu-box fl">
+		<div class="top-menu fl">
+			<h2 name="价格">
+				<span>价格</span>
+				<i class="iconNew icon-arrow"></i>
+			</h2>
+
+			<div class="top-menu-con searchCondition t-prices" id="salePrices" style="display: none">
+				<!--<a value="0">不限</a>-->
+				<a class="buxian cur" value=0>价格不限</a><a value=1>200万以下</a><a value=2>200-250万</a><a value=3>250-300万</a><a value=4>300-400万</a><a value=5>400-500万</a><a value=6>500-700万</a><a value=7>700-1000万</a><a value=8>1000万以上</a>				<div class="clear"></div>
+				<div class="zdy-box">
+					<div class="zdy-tit">自定义</div>
+					<div class="zdy-price clear">
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-xian">—</span>
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-danwei">（万）</span>
+					</div>
+					<div class="zdy-btn">
+						<button class="quxiao">取消</button>
+						<button class="queding">确定</button>
+					</div>
+				</div>
+			</div>
+			<div class="top-menu-con searchCondition" id="rentPrices" >
+				<!--<a value="0">不限</a>-->
+				<a class="buxian cur" value=0>租金不限</a><a value=1>1500元以下</a><a value=2>1500-2500元</a><a value=3>2500-3500元</a><a value=4>3500-5000元</a><a value=5>5000-8000元</a><a value=6>8000-10000元</a><a value=7>10000元以上</a>				<div class="clear"></div>
+				<div class="zdy-box">
+					<div class="zdy-tit">自定义</div>
+					<div class="zdy-price clear">
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-xian">—</span>
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-danwei">（元）</span>
+          </div>
+          
+            <div class="zdy-btn">
+              <button class="quxiao">取消</button>
+              <button class="queding">确定</button>
+            </div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu fl">
+			<h2 name="房型">
+				<span>房型</span>
+				<i class="iconNew icon-arrow"></i>
+			</h2>
+
+			<div class="top-menu-con searchCondition" id="room">
+				<!--<a value="0" class="cur">不限</a>-->
+				<a class="buxian cur" value=0>居室不限</a><a value=1>一室</a><a value=2>二室</a><a value=3>三室</a><a value=4>四室</a><a value=10>四室及以上</a>        <div class="clear"></div>
+        <div>
+        <div class="zdy-btn">
+					<button class="quxiao">取消</button>
+					<button class="queding">确定</button>
+				</div>
+        </div>
+				
+			</div>
+		</div>
+		<div class="top-menu fl">
+			<h2 name="面积">
+				<span>面积</span>
+				<i class="iconNew icon-arrow"></i>
+			</h2>
+
+			<div class="top-menu-con searchCondition" id="buildArea">
+				<!--<a value="0">不限</a>-->
+				<a class="buxian cur" value=0>面积不限</a><a value=1>50㎡以下</a><a value=2>50-70㎡</a><a value=3>70-90㎡</a><a value=4>90-110㎡</a><a value=5>110-130㎡</a><a value=6>130-150㎡</a><a value=7>150-200㎡</a><a value=8>200㎡以上</a>				<div class="clear"></div>
+				<div class="zdy-box">
+					<div class="zdy-tit">自定义</div>
+					<div class="zdy-price clear">
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-xian">—</span>
+						<input type="text" class="zdy-inp"/>
+						<span class="zdy-danwei">（平）</span>
+					</div>
+					<div class="zdy-btn">
+						<button class="quxiao">取消</button>
+						<button class="queding">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="top-menu fl">
+			<h2 name="更多">
+				<span>更多</span>
+				<i class="iconNew icon-arrow"></i>
+			</h2>
+
+			<div class="top-menu-con top-menu-more" id='moreMenu'>
+				<dl>
+					<dt>朝向：</dt>
+					<dd class="searchCondition" id="heading">
+						<a class="buxian cur" value="0">不限</a>
+						<a value=5>南北</a><a value=3>南</a><a value=1>东</a><a value=2>西</a><a value=4>北</a>					</dd>
+				</dl>
+				<dl>
+					<dt>楼层：</dt>
+					<dd class="searchCondition" id="floor">
+						<a class="buxian cur" value="0">不限</a>
+						<a value=998>底层</a><a value=1>低楼层</a><a value=2>中楼层</a><a value=3>高楼层</a><a value=999>顶层</a>					</dd>
+				</dl>
+				<dl>
+					<dt>楼龄：</dt>
+					<dd class="searchCondition" id="buildAges">
+						<a class="buxian cur" value="0">不限</a>
+						<a value=1>5年以内</a><a value=2>10年以内</a><a value=3>15年以内</a><a value=4>20年以内</a><a value=5>20年以上</a>					</dd>
+				</dl>
+				<dl>
+					<dt>装修：</dt>
+					<dd class="searchCondition" id="decoration">
+						<a class="buxian cur" value="0">不限</a>
+						<a value=3>精装修</a><a value=2>普通装修</a><a value=1>毛坯房</a>					</dd>
+				</dl>
+									<dl>
+						<dt>标签：</dt>
+													<dd class="searchCondition" id="saleTags" style="display: none">
+								<a class="buxian cur" value="0">不限</a>
+								<a value=1>近地铁</a><a value=4>随时看</a><a value=8>满二年</a><a value=16>满五年</a><a value=32>近公园</a><a value=4095>业主自荐</a><a value=4097>VR房源</a><a value=4098>甄选</a><a value=4099>一键换装</a><a value=4100>不看商业</a><a value=4101>不看地下室</a><a value=4103>7日新上</a>							</dd>
+														<dd class="searchCondition" id="rentTags" >
+								<a class="buxian cur" value="0">不限</a>
+								<a value=1>近地铁</a><a value=4>随时看</a><a value=16>可月租</a><a value=32>拎包入住</a><a value=64>集中供暖</a><a value=65536>房租月付</a><a value=131072>服务费8折 </a><a value=262144>0押金</a>							</dd>
+											</dl>
+										<dl >
+						<dt>类型：</dt>
+						<dd class="searchCondition" id="rentType">
+							<a class="buxian cur" value="0">不限</a>
+							<a value=1>整租</a><a value=2>合租</a>						</dd>
+					</dl>
+					        <div>
+          <div class="zdy-btn">
+            <button class="quxiao">取消</button>
+            <button class="queding">确定</button>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+	<a href="javascript:" class="top-qk fl" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','清空条件点击']);">清空条件<i class="iconNew icon-qk"></i></a>
+	<div class="search-box fr">
+		<div class="search-inp fl">
+			<div class="house-type fl">
+				<h2>
+					<span class="name">租房</span>
+					<i class="iconNew icon-arrow"></i>
+				</h2>
+
+				<div class="house-layer searchCondition" id="houseType">
+					<a name="houseType" value="1" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','业务类型-二手房点击']);">二手房</a>
+					<a name="houseType" value="2" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','业务类型-租房点击']);">租&nbsp;&nbsp;&nbsp;房</a>
+				</div>
+			</div>
+			<span class="top-line fl"></span>
+			<input id="searchBar" type="text" class="searchInp fl" placeholder="区域、商圈、小区、地铁应有尽有" autocomplete="off">
+			<input type="text" class="hiddenInp"/>
+			<button class="btn-search fr">搜索</button>
+		</div>
+		<div class="search-menu hide">
+			<p class="search-hot">历史搜索</p>
+			<ul>
+			</ul>
+			<p class="search-del">清除历史记录</p>
+		</div>
+	</div>
+	<!--<div class="top-login fr">
+		<a href="#" target="_blank" class="log">登录</a>
+		<a href="#" target="_blank">注册</a>
+	</div>-->
+</div>
+<!-- 顶部 end -->
+<div class="map-wrapper">
+	<!-- 地图 start-->
+	<div id="WjMapPC" class="map-main">
+
+	</div>
+	<!-- 地图 end-->
+	<!-- 画圈选房/周边/移动地图时搜索 start-->
+	<div class="side-layer clear">
+		<!--<a class="quanfang">画圈选房</a>-->
+
+		<div class="zhoubian">
+			<h3><span>周边</span><i class="iconNew icon-arrow"></i></h3>
+
+			<div class="zb-menu searchCondition" id="surround">
+				<a class="cur" value="">不显示周边</a>
+									<a value="地铁">地铁</a>
+									<a value="公交">公交</a>
+				<a value="学校">学校</a>
+				<a value="银行">银行</a>
+				<a value="我爱我家">我爱我家门店</a>
+			</div>
+		</div>
+		<p class="yidong"><i class="icon icon-check"></i>移动地图时显示周边信息</p>
+	</div>
+	<!-- 画圈选房/周边/移动地图时搜索 end-->
+	<!-- 找房结果 start-->
+	<div class="find-box">
+					<ul class="tit-tab searchCondition" id="updateMode">
+				<li value="location" class="cur" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','区域找房点击']);"><span class="tab1">区域找房</span></li>
+				<li value="subway" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','地铁找房点击']);"><span class="tab2">地铁找房</span></li>
+				<li value="commute" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','通勤找房点击']);"><span class="tab3">通勤找房</span></li>
+			</ul>
+					<div class="find-con-box">
+			<div class="loading" style="display: none;"></div>
+			<div class="find-con show">
+				<div class="selected" id="locationSelectedBox">
+					<div class="current-box clear"  id="mapLocation">
+						<p class="dangqian curr-shanq fl">
+							<i class="iconNew icon-dw"></i>
+							<span id="locationName">北京</span>
+							<i class="iconNew icon-down"></i>
+						</p>
+						<p class="junjia fr" >
+							均价
+							<span>55506</span>
+							元/㎡
+						</p>
+					</div>
+				</div>
+				<div class="selected hide" id="subwaySelectedBox">
+					<div class="current-box clear " id="subwaySelect">
+						<p class="dangqian curr-xian">当前选择：<span>--</span><i class="iconNew icon-down"></i></p>
+					</div>
+					<div class="current-box clear hide" id="subwayLocation">
+						<p class="dangqian fl">
+							<i class="iconNew icon-dw"></i>
+							<span></span>
+						</p>
+						<p class="junjia fr">
+							均价
+							<span>--</span>
+							元/㎡
+						</p>
+					</div>
+				</div>
+				<div class="selected hide" id="commuteSelectedBox">
+					<div class="current-box clear " id="commuteSelect">
+						<p class="dangqian curr-tq">当前选择：<span>--</span><i class="iconNew icon-down"></i></p>
+					</div>
+					<div class="current-box clear hide" id="commuteLocation">
+						<p class="dangqian fl">
+							<i class="iconNew icon-dw"></i>
+							<span></span>
+						</p>
+						<p class="junjia fr">
+							均价
+							<span>--</span>
+							元/㎡
+						</p>
+					</div>
+				</div>
+
+				<!--区域找房条件页-->
+				<div class="location-list clear conList">
+					<div class="curr-menu">
+						<div class="curr-menu-l fl">
+							<div class="curr-tab-box">
+								<ul class="curr-tab searchCondition" id="districts">
+									<!--<li class="cur" value="0" lng="116.39147" lat="39.90555" price="55506">全部</li>-->
+									<li value="6" lng="116.49674" lat="39.93258" price="67803" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"朝阳"}'>朝阳</li><li value="5" lng="116.32949" lat="39.99316" price="94705" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"海淀"}'>海淀</li><li value="1" lng="116.41493" lat="39.9272" price="99877" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"东城"}'>东城</li><li value="2" lng="116.37855" lat="39.91649" price="116935" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"西城"}'>西城</li><li value="7" lng="116.30185" lat="39.84615" price="58242" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"丰台"}'>丰台</li><li value="8" lng="116.22789" lat="39.90617" price="52858" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"石景山"}'>石景山</li><li value="970" lng="116.66406" lat="39.91199" price="43550" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"通州"}'>通州</li><li value="21" lng="116.2405" lat="40.22647" price="42890" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"昌平"}'>昌平</li><li value="990" lng="116.35355" lat="39.73293" price="40862" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"大兴"}'>大兴</li><li value="200000014" lng="116.488459" lat="39.806143" price="48590" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"亦庄"}'>亦庄</li><li value="1010" lng="116.65839" lat="40.13294" price="37894" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"顺义"}'>顺义</li><li value="1030" lng="116.15337" lat="39.74106" price="27564" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"房山"}'>房山</li><li value="100000800" lng="116.108265" lat="39.946491" price="43010" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"门头沟"}'>门头沟</li><li value="100000801" lng="117.130111" lat="40.14829" price="23643" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"平谷"}'>平谷</li><li value="100000802" lng="116.638376" lat="40.322571" price="27248" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"怀柔"}'>怀柔</li><li value="100000803" lng="116.849427" lat="40.382955" price="25568" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"密云"}'>密云</li><li value="100000804" lng="115.981186" lat="40.462693" price="24036" gio-trace="tracegio_bi" gioeventid="maptrafficclick" giojson='{"module_var":"区域找房","buttonname_var":"筛选","businesstype_var":"二手房/租房","elementname_var":"延庆"}'>延庆</li>								</ul>
+							</div>
+						</div>
+						<div class="curr-menu-con fl">
+							<div class="curr-tabcon show">
+								<ul class="searchCondition" id="businessArea">
+
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--地铁找房条件页-->
+				<div class="subway-list hide conList">
+					<div class="current-box clear">
+						<p class="dangqian dit-dangqian fl">请选择地铁线路</p>
+						<p class="fr dit-total">本市共有<span>24</span>条地铁线路</p>
+					</div>
+					<div class="xl-tab-box">
+						<ul class="xl-tab searchCondition" id="subwayLine">
+
+						</ul>
+					</div>
+					<div class="xl-con clear">
+						<ul class="fl searchCondition" id="subwayStation">
+
+						</ul>
+					</div>
+				</div>
+				<!--通勤找房条件页-->
+				<div class="commute-list hide conList ">
+					<p class="tq-note">通勤找房可为您找到在指定时间内能到达工作地的房源</p>
+
+					<div class="tq-con">
+						<div id="landMark" class="tq-item">
+							<input type="text" name="" placeholder="请输入目标地点" class="tq-inp" autocomplete="off"/>
+
+							<div class="gj-menu">
+								<ul>
+
+								</ul>
+							</div>
+						</div>
+						<div class="tq-item">
+							<label class="tq-name">出行方式</label>
+
+							<div class="select-box">
+								<h3 class="sel-tit">
+									<p class="sel-name">步行</p>
+									<span class="icon"></span>
+								</h3>
+								<ul id="transport" class="sel-menu searchCondition">
+									<li value="1">步行</li>
+									<li value="2">自驾</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tq-item">
+							<label class="tq-name">时间选择</label>
+
+							<div class="select-box">
+								<h3 class="sel-tit">
+									<p class="sel-name">5分钟以内</p>
+									<span class="icon"></span>
+								</h3>
+								<ul id="commuteTime" class="sel-menu searchCondition">
+									<li class="transport_walk" value="1">5分钟以内</li>
+									<li value="2">10分钟以内</li>
+									<li class="transport_walk" value="3">15分钟以内</li>
+									<li class="transport_drive" value="4" style="display: none">20分钟以内</li>
+									<li value="6">30分钟以内</li>
+									<li value="9">45分钟以内</li>
+									<li class="transport_drive" value="12" style="display: none">1小时以内</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tq-item"><a class="chazhao-btn" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','通勤找房-开始查找点击']);">开始查找</a></div>
+					</div>
+					<dl class="tq-lz">
+						<dt>举个例子</dt>
+						<dd>如您的工作地在中关村软件园，您每天开车上班，并且希望在30分钟内到达，那么在地图上为您推荐的就是在30分钟内可驾车到达中关村软件园的房源。</dd>
+					</dl>
+				</div>
+				<div class="current-box clear houseOrder">
+					<p class="total fl">共为您找到<em>--</em>套房源</p>
+					<ul class="sort-box fr searchCondition" id="order">
+						<li value="default" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','默认排序点击']);">默认</li>
+						<li value="price" onmousedown="_trackData.push(['addaction','PC_bj_地图首页','按价格排序点击']);">按价格<i class="icon icon-sort-up" style="display: none"></i><i class="icon icon-sort-down" style="display: none"></i></li>
+						<!--<li value="time">按时间<i class="icon icon-sort-up" style="display: none"></i><i class="icon icon-sort-down" style="display: none"></i></li>-->
+					</ul>
+				</div>
+				<div class="house-scr-box">
+					<div class="house-scr">
+						<div id="community-box"></div>
+						<ul class="house-list" id="houseList">
+						</ul>
+					</div>
+				</div>
+			</div>
+			<a class="arrow-btn arrow-up"></a>
+		</div>
+	</div>
+	<!-- 找房结果 end-->
+</div>
+<!-- 登录 start-->
+<div class="login-pop hide">
+	<div class="login-box">
+		<!--手机快捷登录 start-->
+		<div class="login-con fast-login hide">
+			<div class="page-tit">
+				<p class="tit-name">手机快捷登录</p>
+				<p class="tit-note">未注册手机将自动创建账号</p>
+			</div>
+			<div class="form-box">
+				<div class="form-item">
+					<input type="text" class="inp inp1 phone-num" autocomplete="off" name="" id="phone-num" placeholder="请输入手机号" value="" maxlength="11"/>
+                    <input type="hidden" id="td_id" name="td_id" value=""/>
+                    <input type="hidden" id="dx_id" name="dx_id" value=""/>
+					<button type="button" class="send-code" data-page="2" >发送验证码</button>
+				</div>
+				<div class="form-item">
+					<input type="text" class="inp phone-code" autocomplete="off" name="" placeholder="请输入验证码" value=""/>
+				</div>
+				<div class="error"></div>
+				<div class="yhxy-note">点击“立即登录”按钮视为阅读并同意<a href="https://res.5i5j.com/zt/20190711/xieyi.html" target="_blank">《用户协议》</a>及<a href="https://res.5i5j.com/zt/20190711/sm.html" target="_blank">《隐私政策》</a></div>
+				<a class="login-btn" data-page="1" >立即登录</a>
+				<a class="change-btn" data-change="1" >账号密码登录</a>
+			</div>
+		</div>
+		<!--手机快捷登录 end-->
+		<!--账号密码登录 start-->
+		<div class="login-con passw-login hide">
+			<div class="page-tit">
+				<p class="tit-name">账号密码登录</p>
+			</div>
+			<div class="form-box">
+				<form id="form1">
+				<div class="form-item">
+					<input type="text" class="inp phone-num" autocomplete="off" name="mobile" placeholder="请输入手机号" value="" maxlength="11"/>
+				</div>
+				<div class="form-item">
+					<input type="password" class="inp password-num" autocomplete="off" name="pwd" placeholder="请输入密码" value=""/>
+					<span class="pass-eye pass-show"></span>
+				</div>
+				<div class="error"></div>
+				<div class="yhxy-note">点击“立即登录”按钮视为阅读并同意<a href="https://res.5i5j.com/zt/20190711/xieyi.html" target="_blank">《用户协议》</a>及<a href="https://res.5i5j.com/zt/20190711/sm.html" target="_blank">《隐私政策》</a></div>
+				<a class="login-btn" data-page="2" >立即登录</a>
+				<div>
+				<a class="change-btn" data-change="2" >手机快捷登录</a>
+				<a class="change-btn wjmima" data-change="3" >忘记密码</a>
+				</div>
+				</form>
+			</div>
+		</div>
+		<!--账号密码登录 end-->
+		<!--找回密码 start-->
+		<div class="login-con find-passw hide">
+			<div class="page-tit">
+				<p class="tit-name">找回密码</p>
+			</div>
+			<div class="form-box">
+				<div class="form-item">
+					<input type="text" class="inp inp1 phone-num" autocomplete="off" name="" id="phone-nums" placeholder="请输入手机号" value="" maxlength="11"/>
+					<button type="button" class="send-code" data-page="3" >发送验证码</button>
+				</div>
+				<div class="form-item">
+					<input type="text" class="inp phone-code" autocomplete="off" name="" id="phone-code" placeholder="请输入验证码" value=""/>
+				</div>
+				<div class="form-item">
+					<input type="password" class="inp password-num" autocomplete="off" name="" id="password-num" placeholder="请输入新密码（6--20位字母、数字）" value=""/>
+					<span class="pass-eye pass-show"></span>
+				</div>
+				<div class="error"></div>
+				<a class="login-btns" data-page="3" id="commit-btn" >修改密码</a>
+				<a class="change-btn" data-change="1" >账号密码登录</a>
+			</div>
+		</div>
+		<!--找回密码 end-->
+		<!--手机号注册 start-->
+		<div class="login-con reg-login hide">
+			<div class="page-tit">
+				<p class="tit-name">手机号注册</p>
+			</div>
+			<div class="form-box">
+				<div class="form-item">
+					<input type="text" class="inp inp1 phone-num" autocomplete="off" name="" id="phone-num" placeholder="请输入手机号" value="" maxlength="11"/>
+					<button type="button" class="send-code" data-page="1" >发送验证码</button>
+				</div>
+				<div class="form-item">
+					<input type="text" class="inp phone-code" autocomplete="off" name="" id="phone-code" placeholder="请输入验证码" value=""/>
+				</div>
+				<div class="form-item">
+					<input type="password" class="inp password-num" autocomplete="off" name="" id="password-num" placeholder="请输入新密码（6--20位字母、数字）" value=""/>
+					<span class="pass-eye pass-show"></span>
+				</div>
+				<div class="error"></div>
+				<div class="res-yhxy"><i class="on"></i>我已阅读并同意<a href="https://res.5i5j.com/zt/20190711/xieyi.html" target="_blank">《用户协议》</a>及<a href="https://res.5i5j.com/zt/20190711/sm.html" target="_blank">《隐私政策》</a></div>
+				<a td-trace="tracetd_bi" tdEventId="登录页面_注册" tdJson="" loginTdEventId="登录页面_注册成功" class="login-btn" data-page="3" onmousedown="_trackData.push(['addaction','PC_bj_注册页','注册按钮']);">立即注册</a>
+				<a class="change-btn" data-change="1" onmousedown="_trackData.push(['addaction','PC_bj_注册页','去登录按钮']);">账号密码登录</a>
+			</div>
+		</div>
+		<!--手机号注册 end-->
+		<div class="login-close"><i></i></div>
+	</div>
+</div>
+<div class="loginLoading-box hide">
+	<div class="loginLoading-con">
+		<div class="pic"></div>
+		<p>正在登录中…</p>
+	</div>
+</div>
+<!-- 登录 end-->
+<script type="text/javascript">
+	var resUrl='https://res.5i5j.com/pc/map';
+	var resHostUrl='https://res.5i5j.com';
+    var shumei_flag = 1;
+    var tongdun_flag = 0;
+    var dingxiang_flag = 1;
+</script>
+<script type="text/javascript" src="https://res.5i5j.com/pc/common/image-error.js?c3861d27b5287ac28d098c21a4db8774"></script>
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=iMplFNfYyAf4e7EleegtObtcOZdliriG"></script>
+
+<script>
+    // init var for centerAndZoom
+    var zoomShowDistrict = 0;
+    var zoomShowBusinessArea= 0;
+    var zoomShowCommunity= 0;
+    console.log('zoomShowDistrict', zoomShowDistrict);
+    console.log('zoomShowBusinessArea', zoomShowBusinessArea);
+    console.log('zoomShowCommunity', zoomShowCommunity);
+    contactUserId = "0";
+</script>
+
+<script src="https://res.5i5j.com/pc/map/js/WjMap.js?2020020316114f463b5a7dfef8bdb8180729bff5778d"></script><script src="https://res.5i5j.com/pc/map/js/bj.js"></script><script src="https://res.5i5j.com/pc/common/jquery-1.10.2.min.js"></script><script src="https://res.5i5j.com/pc/common/md5.js"></script><script src="https://res.5i5j.com/pc/map/js/scroll.js"></script><script src="https://res.5i5j.com/pc/map/js/effect.js?201911121727"></script><script src="https://res.5i5j.com/pc/map/js/wjmapInstance.js?2020042916114f463b5a7dfef8bdb8180729bff5778d"></script><link href="https://res.5i5j.com/im/css/xxSty.css" rel="stylesheet">
+<!-- <link href="https://res.5i5j.com/im/css/newim.css?time=1635491375" rel="stylesheet"> -->
+<link href="https://res.5i5j.com/im/css/newimry.css?time=202109081540" rel="stylesheet">
+<!-- <script src="http://cdn.ronghub.com/RongIMLib-3.0.5-dev.js"></script> -->
+<script src="https://cdn.ronghub.com/RongIMLib-4.4.1.prod.js"></script>
+<!-- <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script> -->
+
+    <!-- 默认 -->
+    <div  class="mess_default " gio-trace="tracegio_bi" gioEventId="onlineconsult" gioJson={"module_var":"咨询经纪人","buttonname_var":"咨询经纪人"}>
+                <div class="consulting  skip-login " info="0">咨询经纪人</div>
+    </div>
+    <!-- 默认 End-->
+
+    <!--单消息列表-->
+    <div class="oneMess_list hide">
+        <div class="oneMess_tophead">
+            <div class="topBrokerName">
+                <div class="imBroker">咨询经纪人</div>
+                <div class="imBottomArrow"></div>
+            </div>
+        </div>
+        <div class="oneMess_item_list">
+            <div class="scrollContainer">
+                
+                <!-- 暂无消息 -->
+                <div class="messWu hide">
+                    <p>您暂时没有新消息</p>
+                </div>
+                <!-- 暂无消息 End-->
+        
+            </div>
+        </div>
+    </div>
+    <!--单消息列表 End-->
+
+    <!--两列消息列表-->
+    <div class="twoMess_list hide">
+        <div class="twoMess_box">
+            <div class="twoMess_topbg">
+                <div class="twoMess_close">关闭</div>
+            </div>
+            <div class="twoMessMain">
+                
+                <!-- 表情 -->
+                <div class="faceDiv hide"></div>
+                <!-- 表情 End-->
+
+                <!--最新活动-->
+                <div class="messMain_box">
+                    <div class="messMain_fixed">
+                        <p>最新活动</p>
+                    </div>
+                    <div class="messMain_tant">
+
+                        <div class="messItem_times">12-24</div>
+                        <!--在线活动卡片-->
+                        <div class="newActivity_box">
+                            <a href="#">
+                                <div class="activity">
+                                    <img src="https://res.5i5j.com/uploads/images/2019/0621/17/1561110163392898.png">
+                                    <div class="activity_tit">【5i5j爱家节】注册APP抽奖最高10元现金</div>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--下线活动卡片-->
+                        <div class="newActivity_box offline_activity">
+                            <a href="#">
+                                <div class="activity">
+                                    <img src="https://res.5i5j.com/uploads/images/2019/0621/17/1561110163392898.png">
+                                    <div class="activity_tit">活动已结束</div>
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <!--选房卡-->
+                <div class="messMain_box">
+                    <div class="messMain_fixed">
+                        <p>选房卡</p>
+                    </div>
+                    <div class="messMain_tant">
+
+                        <div class="messTabBox">
+                            <div class="messTabMenu">
+                                <div class="menu_house cur">我要买房<i></i></div>
+                                <div class="menu_house">我要租房<i></i></div>
+                            </div>
+                            <div class="messTabCon">
+
+                                <div class="messHouse show">
+                                    <div class="messHouse_color">
+                                        <div class="messHouse_tit">
+                                            <span>选房卡</span>
+                                            <i>2017.02.23</i>
+                                            <i>10:30</i>
+                                        </div>
+                                        <div class="messHouse_tag">
+                                            <span>400-500万</span>
+                                            <span>一室</span>
+                                            <span>低于200㎡</span>
+                                            <span>四号线</span>
+                                            <span>4800-5600万</span>
+                                        </div>
+                                    </div>
+                                    <div class="tabHouse_nums">帮你匹配到<span>3</span>套房源</div>
+                                    <div class="messItem_times">昨天 20:08</div>
+                                    <div class="tabHouse_list">
+                                        <a href="#">
+                                            <div class="tabHouse_img">
+                                                <img src="http://image2.5i5j.com//group2/M00/9C/88/CgqJM10-ikKAdk-iAAc85Gmsvh0260.jpg">
+                                                <div class="tabHouse_time">02.22挂牌</div>
+                                            </div>
+                                            <div class="tabHouse_info">
+                                                <div class="tabHouse_des">天通苑一区采光好</div>
+                                                <div class="tabHouse_det">
+                                                    <span>3室2厅1卫</span>
+                                                    <span>141㎡</span>
+                                                    <span>南北</span>
+                                                    <span>顶层/6层</span>
+                                                </div>
+                                                <div class="tabHouse_tags">
+                                                    <span>近地铁</span>
+                                                    <span>不限购</span>
+                                                    <span>有钥匙</span>
+                                                </div>
+                                                <div class="tabHouse_prices">
+                                                    <div class="tabHouse_wan"><span>6380</span>万</div>
+                                                    <div class="tabHouse_yuan">54978元/㎡</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="tabHouse_list">
+                                        <a href="#">
+                                            <div class="tabHouse_img">
+                                                <img src="http://image2.5i5j.com//group2/M00/9C/88/CgqJM10-ikKAdk-iAAc85Gmsvh0260.jpg">
+                                                <div class="tabHouse_time">02.22挂牌</div>
+                                            </div>
+                                            <div class="tabHouse_info">
+                                                <div class="tabHouse_des">天通苑一区采光好</div>
+                                                <div class="tabHouse_det">
+                                                    <span>3室2厅1卫</span>
+                                                    <span>141㎡</span>
+                                                    <span>南北</span>
+                                                    <span>顶层/6层</span>
+                                                </div>
+                                                <div class="tabHouse_tags">
+                                                    <span>近地铁</span>
+                                                    <span>不限购</span>
+                                                    <span>有钥匙</span>
+                                                </div>
+                                                <div class="tabHouse_prices">
+                                                    <div class="tabHouse_wan"><span>6380</span>万</div>
+                                                    <div class="tabHouse_yuan">54978元/㎡</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="messHouse">
+
+                                    <div class="messHouse_color">
+                                        <div class="messHouse_tit">
+                                            <span>选房卡</span>
+                                            <i>2017.02.23</i>
+                                            <i>10:30</i>
+                                        </div>
+                                        <div class="messHouse_tag">
+                                            <span>整租</span>
+                                            <span>一室</span>
+                                            <span>二室</span>
+                                            <span>低于140㎡</span>
+                                            <span>改善住房</span>
+                                        </div>
+                                    </div>
+                                    <div class="tabHouse_nums">帮你匹配到<span>1</span>套房源</div>
+                                    <div class="messItem_times">昨天 20:08</div>
+                                    <div class="tabHouse_list">
+                                        <a href="#">
+                                            <div class="tabHouse_img">
+                                                <img src="http://image2.5i5j.com//group2/M00/9C/88/CgqJM10-ikKAdk-iAAc85Gmsvh0260.jpg">
+                                                <div class="tabHouse_time">02.22挂牌</div>
+                                            </div>
+                                            <div class="tabHouse_info">
+                                                <div class="tabHouse_des">天通苑一区采光好</div>
+                                                <div class="tabHouse_det">
+                                                    <span>3室2厅1卫</span>
+                                                    <span>141㎡</span>
+                                                    <span>南北</span>
+                                                    <span>顶层/6层</span>
+                                                </div>
+                                                <div class="tabHouse_tags">
+                                                    <span>近地铁</span>
+                                                    <span>不限购</span>
+                                                    <span>有钥匙</span>
+                                                </div>
+                                                <div class="tabHouse_prices">
+                                                    <div class="tabHouse_yue"><span>7500</span>元/月</div>
+                                                    <div class="tabHouse_fang">出租方式：整租</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--两列消息列表 End-->
+    
+    <div class="messageMask-box hide"></div>
+
+    <input type="hidden" id="toReceiver" value="">
+    <input type="hidden" id="lastData" value="">
+<script src="https://res.5i5j.com/im/js/jquery.emoticons.js?time=2021090214"></script>
+<script src="https://res.5i5j.com/im/js/send-data.js?time=2021090214"></script>
+<script src="https://res.5i5j.com/im/js/upload.js?time=2021090214"></script>
+<script src="https://res.5i5j.com/im/js/init.js?time=2021090214"></script>
+<!-- <script src="/zt/modelShow/js/plugin/aliyun-oss-sdk.min.js"></script> -->
+
+<!-- JS参数初始化 -->
+<script>
+   var token = '';   // token 融云生成
+   var RESOURCES = 'https://res.5i5j.com',baseUrl = 'https://res.5i5j.com';   //静态资源地址 
+
+   var userId = '';  // 当前用户UID
+   var userName = ''; // 当前用户昵称
+   var userPic = '';   // 当前用户头像
+   var userPhone = '';
+   var cityId = '1'; //城市ID
+   var cityIdDomain = '{"1":"bj","2":"hz","5":"sz","6":"ty","7":"tj","8":"nj","9":"sh","15":"cd","16":"nn","18":"zz","19":"wx","20":"wh","21":"qd","22":"cs","24":"nc","25":"cz","99":"dg","51":"hf","52":"xa","53":"yt","54":"hhht","55":"lf","56":"ly"}'; // 城市域名
+   var cityName = '北京'; //城市名称中文
+   var showchat = true;  // 是否第一次打开某个会话窗口 true是  false 否
+   var fromType = '';
+   var im_host = 'https://vrim.5i5j.com';  // 爱聊接口URL
+   var userInfo = {  // 用户信息
+        "userhid": userId,
+        "nickname": userName,
+        "imageurl": userPic,
+        "phonenum": userPhone,
+        "cityID": cityId
+    };
+    var facePath = "https://res.5i5j.com/pc/im/images/face/";    // 表情包路径
+    var faceMap = {"[):]":"ee_1.png","[:D]":"ee_2.png","[;)]":"ee_3.png","[:-o]":"ee_4.png","[:p]":"ee_5.png","[(H)]":"ee_6.png","[:@]":"ee_7.png","[:s]":"ee_8.png","[:$]":"ee_9.png","[:(]":"ee_10.png","[:'(]":"ee_11.png","[:|]":"ee_12.png","[(a)]":"ee_13.png","[8o|]":"ee_14.png","[8-|]":"ee_15.png","[+o(]":"ee_16.png","[<o)]":"ee_17.png","[|-)]":"ee_18.png","[*-)]":"ee_19.png","[:-#]":"ee_20.png","[:-*]":"ee_21.png","[^o)]":"ee_22.png","[8-)]":"ee_23.png","[(|)]":"ee_24.png","[(u)]":"ee_25.png","[(S)]":"ee_26.png","[(*)]":"ee_27.png","[(#)]":"ee_28.png","[(R)]":"ee_29.png","[({)]":"ee_30.png","[(})]":"ee_31.png","[(k)]":"ee_32.png","[(F)]":"ee_33.png","[(W)]":"ee_34.png","[(D)]":"ee_35.png"};       // 表情包替换列表
+    var host = '["","9","9","83"]';   // 域名后缀
+    var imHouse = JSON.parse('[]'); // 房源卡片
+    var allowOpen = false;  // 是否允许点开会话列表 默认否
+    var appKey = '6tnym1br6h1h7';
+    console.log(imHouse);
+
+    var officeBrokerId = '';
+    var officeBrokerIcon = '';
+    var officeBrokerName = '';
+    var officeBrokerMobile = '';
+    var officeBrokerPhone = '';
+    var officeBrokerExtra = '';
+    var officeBrokerDescription = '';
+    var office_api_web = 'http://10.9.12.55';
+    var cityId_office = '1';
+</script>
+<script src="https://res.5i5j.com/im/js/renderIm.js?time=1635491375"></script>
+<script src="https://res.5i5j.com/im/js/ryIm.js?time=1635491375"></script>
+<script src="https://res.5i5j.com/pc/common/image-error.js?time=1635491375>"></script>
+<script src="https://res.5i5j.com/wap/common/jquery.cookie.js?time=1635491375"></script>
+<style>
+.houseTagPriceHeart{
+  padding:6px 10px;
+  line-height: 23px;
+  text-align: center;
+  background: #ffb000;
+  font-size: 12px;
+}
+</style><link href="https://res.5i5j.com/pc/im/css/newim.css" rel="stylesheet"><script type="text/javascript">
+
+	var houseDirection = {"5":{"name":"\u5357\u5317","value":"10"},"3":{"name":"\u5357","value":"3,5,6,10"},"1":{"name":"\u4e1c","value":"1,5,7,9"},"2":{"name":"\u897f","value":"2,6,8,9"},"4":{"name":"\u5317","value":"4,7,8,10"}};
+
+	//设置地图传入城市
+	var city = {
+		id:1,
+		name: '北京',
+		lng:116.39147,
+		lat:39.90555,
+		zoom: (zoomShowDistrict>=11) ? zoomShowDistrict : 12, // 有一个最小值 11的限制
+		price:55506	};
+	//初始化地图组件
+	var wiwjMap = new WjMap(city);
+	//设置地图信息
+
+	wiwjMap.mapData = {
+		//读入行政区列表
+		locations: {"6":{"id":6,"name":"\u671d\u9633","companysid":1,"orderweight":1,"spell":"chaoyangqu","cnspell":"CYQ","location":[116.49674,39.93258],"isdeleted":0,"lng":116.49674,"lat":39.93258,"businessAreas":{"36841":{"id":36841,"name":"\u5065\u7fd4\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"jianxiangqiao","cnspell":"JXQ","location":[116.38491,39.99376],"isdeleted":0,"lng":116.38491,"lat":39.99376,"price":77223},"36874":{"id":36874,"name":"\u828d\u836f\u5c45","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shaoyaoju","cnspell":"SYJ","location":[116.44163,39.98991],"isdeleted":0,"lng":116.44163,"lat":39.98991,"price":87918},"36886":{"id":36886,"name":"\u5317\u82d1","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"beiyuan","cnspell":"BY","location":[116.43289,40.03666],"isdeleted":0,"lng":116.43289,"lat":40.03666,"price":66086},"36889":{"id":36889,"name":"\u592a\u9633\u5bab","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"taiyanggong","cnspell":"TYG","location":[116.45125,39.97813],"isdeleted":0,"lng":116.45125,"lat":39.97813,"price":107692},"36899":{"id":36899,"name":"\u5927\u5c71\u5b50","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dashanzi","cnspell":"DSZ","location":[116.49488,39.99034],"isdeleted":0,"lng":116.49488,"lat":39.99034,"price":58083},"36901":{"id":36901,"name":"\u9152\u4ed9\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"jiuxianqiao","cnspell":"JXQ","location":[116.49643,39.97378],"isdeleted":0,"lng":116.49643,"lat":39.97378,"price":70327},"36906":{"id":36906,"name":"\u4e1c\u575d","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dongba","cnspell":"DB","location":[116.56429,39.97624],"isdeleted":0,"lng":116.56429,"lat":39.97624,"price":60116},"36913":{"id":36913,"name":"\u56e2\u7ed3\u6e56","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"tuanjiehu","cnspell":"TJH","location":[116.46833,39.93938],"isdeleted":0,"lng":116.46833,"lat":39.93938,"price":69011},"36914":{"id":36914,"name":"\u751c\u6c34\u56ed","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"tianshuiyuan","cnspell":"TSY","location":[116.48799,39.93344],"isdeleted":0,"lng":116.48799,"lat":39.93344,"price":71491},"36917":{"id":36917,"name":"\u7ea2\u5e99","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"hongmiao","cnspell":"HM","location":[116.4878,39.92378],"isdeleted":0,"lng":116.4878,"lat":39.92378,"price":70827},"36919":{"id":36919,"name":"\u77f3\u4f5b\u8425","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shifoying","cnspell":"SFY","location":[116.50919,39.9382],"isdeleted":0,"lng":116.50919,"lat":39.9382,"price":64592},"36922":{"id":36922,"name":"\u7518\u9732\u56ed","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"ganluyuan","cnspell":"GLY","location":[116.52454,39.9252],"isdeleted":0,"lng":116.52454,"lat":39.9252,"price":60764},"36923":{"id":36923,"name":"\u56db\u60e0","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"sihui","cnspell":"SH","location":[116.50194,39.91486],"isdeleted":0,"lng":116.50194,"lat":39.91486,"price":61893},"36924":{"id":36924,"name":"\u9ad8\u7891\u5e97","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"gaobeidian","cnspell":"GBD","location":[116.5383,39.91579],"isdeleted":0,"lng":116.5383,"lat":39.91579,"price":54123},"36925":{"id":36925,"name":"\u5b9a\u798f\u5e84","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dingfuzhuang","cnspell":"DFZ","location":[116.56441,39.92248],"isdeleted":0,"lng":116.56441,"lat":39.92248,"price":49903},"36926":{"id":36926,"name":"\u53cc\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shuangqiao","cnspell":"SQ","location":[116.58333,39.91577],"isdeleted":0,"lng":116.58333,"lat":39.91577,"price":48661},"36927":{"id":36927,"name":"\u7ba1\u5e84","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"guanzhuang","cnspell":"GZ","location":[116.59651,39.92002],"isdeleted":0,"lng":116.59651,"lat":39.92002,"price":49604},"36929":{"id":36929,"name":"\u767e\u5b50\u6e7e","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"baiziwan","cnspell":"BZW","location":[116.50849,39.90264],"isdeleted":0,"lng":116.50849,"lat":39.90264,"price":58743},"36932":{"id":36932,"name":"\u52b2\u677e","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"jinsong","cnspell":"JS","location":[116.46801,39.89002],"isdeleted":0,"lng":116.46801,"lat":39.89002,"price":58869},"36935":{"id":36935,"name":"\u53cc\u4e95","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shuangjing","cnspell":"SJ","location":[116.46845,39.89918],"isdeleted":0,"lng":116.46845,"lat":39.89918,"price":76344},"36938":{"id":36938,"name":"\u57a1\u5934","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"fatou","cnspell":"FT","location":[116.51894,39.86948],"isdeleted":0,"lng":116.51894,"lat":39.86948,"price":50736},"36939":{"id":36939,"name":"\u5341\u516b\u91cc\u5e97","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shibalidian","cnspell":"SBLD","location":[116.49322,39.85094],"isdeleted":0,"lng":116.49322,"lat":39.85094,"price":49622},"43237":{"id":43237,"name":"\u6f58\u5bb6\u56ed","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"panjiayuan","cnspell":"PJY","location":[116.46167,39.88028],"isdeleted":0,"lng":116.46167,"lat":39.88028,"price":59654},"45481":{"id":45481,"name":"\u4e1c\u5927\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dongdaqiao","cnspell":"DDQ","location":[116.45825,39.92862],"isdeleted":0,"lng":116.45825,"lat":39.92862,"price":87565},"45482":{"id":45482,"name":"\u5de5\u4f53","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"gongti","cnspell":"GT","location":[116.45382,39.93923],"isdeleted":0,"lng":116.45382,"lat":39.93923,"price":74384},"45640":{"id":45640,"name":"\u5e38\u8425","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"changying","cnspell":"CY","location":[116.60544,39.93151],"isdeleted":0,"lng":116.60544,"lat":39.93151,"price":53214},"50692":{"id":50692,"name":"\u60e0\u65b0\u897f\u8857","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"huixinxijie","cnspell":"HXXJ","location":[116.42344,39.99463],"isdeleted":0,"lng":116.42344,"lat":39.99463,"price":78303},"10000001":{"id":10000001,"name":"CBD","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"cbd","cnspell":"CBD","location":[116.482,39.9149],"isdeleted":0,"lng":116.482,"lat":39.9149,"price":71967},"10000004":{"id":10000004,"name":"\u5b89\u8d1e","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"anzhen","cnspell":"AZ","location":[116.41025,39.97473],"isdeleted":0,"lng":116.41025,"lat":39.97473,"price":86048},"10000005":{"id":10000005,"name":"\u5965\u6797\u5339\u514b\u516c\u56ed","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"aolinpikegongyuan","cnspell":"ALPKGY","location":[116.3968,40.02525],"isdeleted":0,"lng":116.3968,"lat":40.02525,"price":79422},"10000023":{"id":10000023,"name":"\u5927\u60a6\u57ce","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dayuecheng","cnspell":"DYC","location":[116.53361,39.92277],"isdeleted":0,"lng":116.53361,"lat":39.92277,"price":82376},"10000025":{"id":10000025,"name":"\u671d\u9633\u516c\u56ed","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chaoyanggongyuan","cnspell":"CYGY","location":[116.48879,39.93987],"isdeleted":0,"lng":116.48879,"lat":39.93987,"price":88112},"10000026":{"id":10000026,"name":"\u671d\u9633\u95e8","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chaoyangmen","cnspell":"CYM","location":[116.44019,39.92978],"isdeleted":0,"lng":116.44019,"lat":39.92978},"10000030":{"id":10000030,"name":"\u5927\u671b\u8def","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dawanglu","cnspell":"DWL","location":[116.48344,39.91414],"isdeleted":0,"lng":116.48344,"lat":39.91414,"price":84606},"10000037":{"id":10000037,"name":"\u8c46\u5404\u5e84","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dougezhuang","cnspell":"DGZ","location":[116.50825,39.94451],"isdeleted":0,"lng":116.50825,"lat":39.94451,"price":52585},"10000050":{"id":10000050,"name":"\u56fd\u5c55","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"guozhan","cnspell":"GZ","location":[116.44902,39.96729],"isdeleted":0,"lng":116.44902,"lat":39.96729,"price":71619},"10000057":{"id":10000057,"name":"\u534e\u5a01\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"huaweiqiao","cnspell":"HWQ","location":[116.46768,39.87703],"isdeleted":0,"lng":116.46768,"lat":39.87703,"price":60848},"10000065":{"id":10000065,"name":"\u5efa\u56fd\u95e8\u5916","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"jianguomenwai","cnspell":"JGMW","location":[116.44313,39.91434],"isdeleted":0,"lng":116.44313,"lat":39.91434,"price":71225},"10000096":{"id":10000096,"name":"\u4e09\u91cc\u5c6f","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"sanlitun","cnspell":"SLT","location":[116.45917,39.94263],"isdeleted":0,"lng":116.45917,"lat":39.94263,"price":81637},"10000097":{"id":10000097,"name":"\u4e09\u5143\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"sanyuanqiao","cnspell":"SYQ","location":[116.46362,39.9664],"isdeleted":0,"lng":116.46362,"lat":39.9664,"price":76613},"10000104":{"id":10000104,"name":"\u5341\u91cc\u5821","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shilibao","cnspell":"SLB","location":[116.50847,39.92923],"isdeleted":0,"lng":116.50847,"lat":39.92923,"price":61258},"10000119":{"id":10000119,"name":"\u671b\u4eac","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"wangjing","cnspell":"WJ","location":[116.47602,40.00425],"isdeleted":0,"lng":116.47602,"lat":40.00425,"price":73210},"10000121":{"id":10000121,"name":"\u897f\u575d\u6cb3","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"xibahe","cnspell":"XBH","location":[116.44541,39.97404],"isdeleted":0,"lng":116.44541,"lat":39.97404,"price":80368},"10000132":{"id":10000132,"name":"\u4e9a\u8fd0\u6751","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"yayuncun","cnspell":"YYC","location":[116.41913,40.00262],"isdeleted":0,"lng":116.41913,"lat":40.00262,"price":79188},"10000133":{"id":10000133,"name":"\u4e9a\u8fd0\u6751\u5c0f\u8425","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"yayuncunxiaoying","cnspell":"YYCXY","location":[116.42505,39.99602],"isdeleted":0,"lng":116.42505,"lat":39.99602,"price":79932},"10000136":{"id":10000136,"name":"\u71d5\u838e","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"yansha","cnspell":"YS","location":[116.47419,39.95586],"isdeleted":0,"lng":116.47419,"lat":39.95586,"price":73784},"100000138":{"id":100000138,"name":"\u6b22\u4e50\u8c37","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"huanlegu","cnspell":"HLG","location":[116.50159,39.8741],"isdeleted":0,"lng":116.50159,"lat":39.8741,"price":62361},"100001072":{"id":100001072,"name":"\u5317\u5de5\u5927","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"beigongda","cnspell":"bgd","location":[116.48453,39.88395],"isdeleted":0,"lng":116.48453,"lat":39.88395,"price":66137},"100001073":{"id":100001073,"name":"\u671d\u9752","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chaoqing","cnspell":"cq","location":[116.48241,39.88251],"isdeleted":0,"lng":116.48241,"lat":39.88251,"price":73981},"100001075":{"id":100001075,"name":"\u671d\u9633\u5176\u5b83","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chaoyangqita","cnspell":"zyjt","location":[116.6012,39.98379],"isdeleted":0,"lng":116.6012,"lat":39.98379,"price":40574},"100001076":{"id":100001076,"name":"\u5357\u6c99\u6ee9","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"nanshatan","cnspell":"nst","location":[116.37967,40.00576],"isdeleted":0,"lng":116.37967,"lat":40.00576,"price":82839},"100001077":{"id":100001077,"name":"\u519c\u5c55\u9986","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"nongzhanguan","cnspell":"nzg","location":[116.47055,39.94668],"isdeleted":0,"lng":116.47055,"lat":39.94668,"price":75144},"100001078":{"id":100001078,"name":"\u5341\u91cc\u6cb3","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shilihe","cnspell":"slh","location":[116.47357,39.85781],"isdeleted":0,"lng":116.47357,"lat":39.85781,"price":62327},"200000615":{"id":200000615,"name":"\u5b89\u5b9a\u95e8","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"andingmen","cnspell":"ADM","location":[116.414597,39.955441],"isdeleted":0,"lng":116.414597,"lat":39.955441,"price":80188},"200000620":{"id":200000620,"name":"\u6210\u5bff\u5bfa","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chengshousi","cnspell":"CSS","location":[116.454315,39.851457],"isdeleted":0,"lng":116.454315,"lat":39.851457},"200000622":{"id":200000622,"name":"\u4e1c\u76f4\u95e8","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"dongzhimen","cnspell":"DZM","location":[116.441454,39.947892],"isdeleted":0,"lng":116.441454,"lat":39.947892},"200000623":{"id":200000623,"name":"\u65b9\u5e84","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"fangzhuang","cnspell":"FZ","location":[116.433956,39.867562],"isdeleted":0,"lng":116.433956,"lat":39.867562},"200000626":{"id":200000626,"name":"\u5e7f\u6e20\u95e8","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"guangqumen","cnspell":"GQM","location":[116.449998,39.898584],"isdeleted":0,"lng":116.449998,"lat":39.898584},"200000627":{"id":200000627,"name":"\u548c\u5e73\u91cc","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"hepingli","cnspell":"HPL","location":[116.428887,39.964871],"isdeleted":0,"lng":116.428887,"lat":39.964871,"price":79929},"200000631":{"id":200000631,"name":"\u7acb\u6c34\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"lishuiqiao","cnspell":"LSQ","location":[116.418274,40.059244],"isdeleted":0,"lng":116.418274,"lat":40.059244,"price":34356},"200000649":{"id":200000649,"name":"\u4e2d\u592e\u522b\u5885\u533a","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"zhongyangbieshuqu","cnspell":"ZYBSQ","location":[116.534071,40.06264],"isdeleted":0,"lng":116.534071,"lat":40.06264,"price":56440},"200000650":{"id":200000650,"name":"\u671d\u9633\u95e8\u5916","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"chaoyangmenwai","cnspell":"CYMW","location":[116.445549,39.923907],"isdeleted":0,"lng":116.445549,"lat":39.923907,"price":79562},"200000830":{"id":200000830,"name":"\u4eae\u9a6c\u6865","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"liangmaqiao","cnspell":"LMQ","location":[116.468743,39.955006],"isdeleted":0,"lng":116.468743,"lat":39.955006,"price":60877},"200000831":{"id":200000831,"name":"\u9996\u90fd\u673a\u573a","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"shoudujichang","cnspell":"SDJC","location":[116.609564,40.083812],"isdeleted":0,"lng":116.609564,"lat":40.083812,"price":37742},"200000834":{"id":200000834,"name":"\u9a6c\u7538","companysid":1,"parentid":6,"parentname":"\u671d\u9633","spell":"madian","cnspell":"MD","location":[116.388693,39.980106],"isdeleted":0,"lng":116.388693,"lat":39.980106,"price":81785}},"price":67803},"5":{"id":5,"name":"\u6d77\u6dc0","companysid":1,"orderweight":2,"spell":"haidianqu","cnspell":"HDQ","location":[116.32949,39.99316],"isdeleted":0,"lng":116.32949,"lat":39.99316,"businessAreas":{"36822":{"id":36822,"name":"\u5c0f\u897f\u5929","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xiaoxitian","cnspell":"XXT","location":[116.36807,39.95832],"isdeleted":0,"lng":116.36807,"lat":39.95832,"price":97815},"36829":{"id":36829,"name":"\u7261\u4e39\u56ed","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"mudanyuan","cnspell":"MDY","location":[116.37751,39.9841],"isdeleted":0,"lng":116.37751,"lat":39.9841,"price":101934},"36831":{"id":36831,"name":"\u9b4f\u516c\u6751","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"weigongcun","cnspell":"WGC","location":[116.32987,39.96345],"isdeleted":0,"lng":116.32987,"lat":39.96345,"price":112009},"36835":{"id":36835,"name":"\u53cc\u6986\u6811","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"shuangyushu","cnspell":"SYS","location":[116.33253,39.97543],"isdeleted":0,"lng":116.33253,"lat":39.97543,"price":101640},"36837":{"id":36837,"name":"\u77e5\u6625\u8def","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"zhichunlu","cnspell":"ZCL","location":[116.34761,39.98206],"isdeleted":0,"lng":116.34761,"lat":39.98206,"price":106630},"36839":{"id":36839,"name":"\u4e94\u9053\u53e3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"wudaokou","cnspell":"WDK","location":[116.34443,39.99856],"isdeleted":0,"lng":116.34443,"lat":39.99856,"price":103786},"36845":{"id":36845,"name":"\u4e2d\u5173\u6751","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"zhongguancun","cnspell":"ZGC","location":[116.32306,39.98995],"isdeleted":0,"lng":116.32306,"lat":39.98995,"price":103602},"36847":{"id":36847,"name":"\u5706\u660e\u56ed","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"yuanmingyuan","cnspell":"YMY","location":[116.31593,40.00546],"isdeleted":0,"lng":116.31593,"lat":40.00546,"price":111648},"36853":{"id":36853,"name":"\u9a6c\u8fde\u6d3c","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"malianwa","cnspell":"MLW","location":[116.29382,40.03701],"isdeleted":0,"lng":116.29382,"lat":40.03701,"price":85878},"36854":{"id":36854,"name":"\u4e0a\u5730","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"shangdi","cnspell":"SD","location":[116.32683,40.03869],"isdeleted":0,"lng":116.32683,"lat":40.03869,"price":85397},"36857":{"id":36857,"name":"\u897f\u4e8c\u65d7","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xierqi","cnspell":"XEQ","location":[116.31261,40.05892],"isdeleted":0,"lng":116.31261,"lat":40.05892,"price":77387},"36858":{"id":36858,"name":"\u6e05\u6cb3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"qinghe","cnspell":"QH","location":[116.35263,40.03769],"isdeleted":0,"lng":116.35263,"lat":40.03769,"price":78837},"36859":{"id":36859,"name":"\u897f\u4e09\u65d7","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xisanqi","cnspell":"XSQ","location":[116.35015,40.06462],"isdeleted":0,"lng":116.35015,"lat":40.06462,"price":69253},"36986":{"id":36986,"name":"\u519b\u535a","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"junbo","cnspell":"JB","location":[116.32753,39.91687],"isdeleted":0,"lng":116.32753,"lat":39.91687,"price":90985},"36991":{"id":36991,"name":"\u516c\u4e3b\u575f","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"gongzhufen","cnspell":"GZF","location":[116.31678,39.9135],"isdeleted":0,"lng":116.31678,"lat":39.9135,"price":99160},"36994":{"id":36994,"name":"\u4e94\u68f5\u677e","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"wukesong","cnspell":"WKS","location":[116.28042,39.91383],"isdeleted":0,"lng":116.28042,"lat":39.91383,"price":95874},"36996":{"id":36996,"name":"\u4e07\u5bff\u8def","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"wanshoulu","cnspell":"WSL","location":[116.30155,39.91371],"isdeleted":0,"lng":116.30155,"lat":39.91371,"price":121671},"36997":{"id":36997,"name":"\u5b9a\u6167\u5bfa","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"dinghuisi","cnspell":"DHS","location":[116.28534,39.9303],"isdeleted":0,"lng":116.28534,"lat":39.9303,"price":91505},"36999":{"id":36999,"name":"\u7d2b\u7af9\u6865","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"zizhuqiao","cnspell":"ZZQ","location":[116.31657,39.94825],"isdeleted":0,"lng":116.31657,"lat":39.94825,"price":98288},"37000":{"id":37000,"name":"\u5382\u6d3c","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"changwa","cnspell":"CW","location":[116.31042,39.96023],"isdeleted":0,"lng":116.31042,"lat":39.96023,"price":111905},"37003":{"id":37003,"name":"\u9890\u548c\u56ed","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"yiheyuan","cnspell":"YHY","location":[116.27688,39.99949],"isdeleted":0,"lng":116.27688,"lat":39.99949,"price":103562},"37007":{"id":37007,"name":"\u897f\u5317\u65fa","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xibeiwang","cnspell":"XBW","location":[116.2675,40.05182],"isdeleted":0,"lng":116.2675,"lat":40.05182,"price":95050},"37031":{"id":37031,"name":"\u7530\u6751","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"tiancun","cnspell":"TC","location":[116.2652,39.93563],"isdeleted":0,"lng":116.2652,"lat":39.93563,"price":82521},"37093":{"id":37093,"name":"\u7389\u6cc9\u8def","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"yuquanlu","cnspell":"YQL","location":[116.25947,39.9135],"isdeleted":0,"lng":116.25947,"lat":39.9135,"price":85068},"42731":{"id":42731,"name":"\u4e8c\u91cc\u5e84","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"erlizhuang","cnspell":"ELZ","location":[116.37133,40.00548],"isdeleted":0,"lng":116.37133,"lat":40.00548,"price":97282},"42770":{"id":42770,"name":"\u767d\u77f3\u6865","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"baishiqiao","cnspell":"BSQ","location":[116.33244,39.95194],"isdeleted":0,"lng":116.33244,"lat":39.95194,"price":84518},"43130":{"id":43130,"name":"\u5b66\u9662\u8def","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xueyuanlu","cnspell":"XYL","location":[116.35995,39.99499],"isdeleted":0,"lng":116.35995,"lat":39.99499,"price":94077},"45308":{"id":45308,"name":"\u4e16\u7eaa\u57ce","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"shijicheng","cnspell":"SJC","location":[116.29111,39.96538],"isdeleted":0,"lng":116.29111,"lat":39.96538,"price":116879},"48533":{"id":48533,"name":"\u82cf\u5dde\u6865","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"suzhouqiao","cnspell":"SZQ","location":[116.31485,39.96743],"isdeleted":0,"lng":116.31485,"lat":39.96743,"price":100621},"48871":{"id":48871,"name":"\u7682\u541b\u5e99","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"zaojunmiao","cnspell":"ZJM","location":[116.3453,39.96578],"isdeleted":0,"lng":116.3453,"lat":39.96578,"price":97452},"10000020":{"id":10000020,"name":"\u5317\u592a\u5e73\u5e84","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"beitaipingzhuang","cnspell":"BTPZ","location":[116.37565,39.97332],"isdeleted":0,"lng":116.37565,"lat":39.97332,"price":107105},"10000109":{"id":10000109,"name":"\u56db\u5b63\u9752","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"sijiqing","cnspell":"SJQ","location":[116.2736,39.95491],"isdeleted":0,"lng":116.2736,"lat":39.95491,"price":90660},"10000116":{"id":10000116,"name":"\u4e07\u67f3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"wanliu","cnspell":"WL","location":[116.30566,39.97274],"isdeleted":0,"lng":116.30566,"lat":39.97274,"price":145144},"10000117":{"id":10000117,"name":"\u4e07\u6cc9\u6cb3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"wanquanhe","cnspell":"WQH","location":[116.30715,39.99126],"isdeleted":0,"lng":116.30715,"lat":39.99126,"price":102082},"10000123":{"id":10000123,"name":"\u897f\u5c71","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xishan","cnspell":"XS","location":[116.14356,39.96443],"isdeleted":0,"lng":116.14356,"lat":39.96443,"price":78438},"100001098":{"id":100001098,"name":"\u5b89\u5b81\u5e84","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"anningzhuang","cnspell":"anz","location":[116.33341,40.05365],"isdeleted":0,"lng":116.33341,"lat":40.05365,"price":76676},"100001099":{"id":100001099,"name":"\u6d77\u6dc0\u5317\u90e8\u65b0\u533a","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"haidianbeibuxinqu","cnspell":"hdbbxq","location":[116.21748,40.08766],"isdeleted":0,"lng":116.21748,"lat":40.08766,"price":59459},"100001100":{"id":100001100,"name":"\u6d77\u6dc0\u5176\u5b83","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"haidianqita","cnspell":"hdqt","location":[116.11674,40.07537],"isdeleted":0,"lng":116.11674,"lat":40.07537,"price":43407},"100001121":{"id":100001121,"name":"\u9a6c\u7538","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"madian","cnspell":"md","location":[116.38528,39.97609],"isdeleted":0,"lng":116.38528,"lat":39.97609,"price":86587},"100001122":{"id":100001122,"name":"\u7518\u5bb6\u53e3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"ganjiakou","cnspell":"gjk","location":[116.33621,39.93118],"isdeleted":0,"lng":116.33621,"lat":39.93118,"price":112214},"100001271":{"id":100001271,"name":"\u4ea4\u901a\u5927\u5b66","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"jiaotongdaxue","cnspell":"jtdx","location":[116.34935,39.95795],"isdeleted":0,"lng":116.34935,"lat":39.95795,"price":94439},"100001272":{"id":100001272,"name":"\u5b66\u9662\u5357\u8def","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xueyuannanlu","cnspell":"xynl","location":[116.37718,39.96392],"isdeleted":0,"lng":116.37718,"lat":39.96392,"price":99964},"200000614":{"id":200000614,"name":"\u897f\u76f4\u95e8","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xizhimen","cnspell":"XZM","location":[116.361446,39.946471],"isdeleted":0,"lng":116.361446,"lat":39.946471,"price":97903},"200000618":{"id":200000618,"name":"\u5965\u6797\u5339\u514b\u516c\u56ed","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"aolinpikegongyuan","cnspell":"ALPKGY","location":[116.39876,40.007933],"isdeleted":0,"lng":116.39876,"lat":40.007933},"200000632":{"id":200000632,"name":"\u516d\u91cc\u6865","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"liuliqiao","cnspell":"LLQ","location":[116.317399,39.892286],"isdeleted":0,"lng":116.317399,"lat":39.892286,"price":74755},"200000645":{"id":200000645,"name":"\u65b0\u8857\u53e3","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"xinjiekou","cnspell":"XJK","location":[116.374132,39.94658],"isdeleted":0,"lng":116.374132,"lat":39.94658,"price":103781},"200000837":{"id":200000837,"name":"\u6768\u5e84","companysid":1,"parentid":5,"parentname":"\u6d77\u6dc0","spell":"yangzhuang","cnspell":"YZ","location":[116.19534,39.930138],"isdeleted":0,"lng":116.19534,"lat":39.930138,"price":70156}},"price":94705},"1":{"id":1,"name":"\u4e1c\u57ce","companysid":1,"orderweight":3,"spell":"dongchengqu","cnspell":"DCQ","location":[116.41493,39.9272],"isdeleted":0,"lng":116.41493,"lat":39.9272,"businessAreas":{"36795":{"id":36795,"name":"\u4e1c\u76f4\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dongzhimen","cnspell":"DZM","location":[116.4412,39.94851],"isdeleted":0,"lng":116.4412,"lat":39.94851,"price":97844},"36797":{"id":36797,"name":"\u4e1c\u56db\u5341\u6761","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dongsishitiao","cnspell":"DSST","location":[116.44063,39.93984],"isdeleted":0,"lng":116.44063,"lat":39.93984,"price":96142},"36799":{"id":36799,"name":"\u671d\u9633\u95e8\u5185","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"chaoyangmennei","cnspell":"CYMN","location":[116.43897,39.93044],"isdeleted":0,"lng":116.43897,"lat":39.93044,"price":98051},"36802":{"id":36802,"name":"\u738b\u5e9c\u4e95","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"wangfujing","cnspell":"WFJ","location":[116.41817,39.92235],"isdeleted":0,"lng":116.41817,"lat":39.92235,"price":125010},"36815":{"id":36815,"name":"\u524d\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"qianmen","cnspell":"QM","location":[116.4047,39.9049],"isdeleted":0,"lng":116.4047,"lat":39.9049,"price":127078},"45658":{"id":45658,"name":"\u5d07\u6587\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"chongwenmen","cnspell":"CWM","location":[116.42443,39.90695],"isdeleted":0,"lng":116.42443,"lat":39.90695,"price":98818},"45666":{"id":45666,"name":"\u4ea4\u9053\u53e3","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"jiaodaokou","cnspell":"JDK","location":[116.41585,39.94645],"isdeleted":0,"lng":116.41585,"lat":39.94645,"price":134690},"45668":{"id":45668,"name":"\u4e1c\u5355","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dongdan","cnspell":"DD","location":[116.42524,39.9145],"isdeleted":0,"lng":116.42524,"lat":39.9145,"price":117027},"45669":{"id":45669,"name":"\u91d1\u5b9d\u8857","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"jinbaojie","cnspell":"JBJ","location":[116.44114,39.92153],"isdeleted":0,"lng":116.44114,"lat":39.92153,"price":105897},"48892":{"id":48892,"name":"\u706f\u5e02\u53e3","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dengshikou","cnspell":"DSK","location":[116.42416,39.9236],"isdeleted":0,"lng":116.42416,"lat":39.9236,"price":116200},"55494":{"id":55494,"name":"\u4e1c\u56db","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dongsi","cnspell":"DS","location":[116.42397,39.93066],"isdeleted":0,"lng":116.42397,"lat":39.93066,"price":116876},"10000002":{"id":10000002,"name":"\u5b89\u5b9a\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"andingmen","cnspell":"ADM","location":[116.41465,39.95594],"isdeleted":0,"lng":116.41465,"lat":39.95594,"price":116494},"10000033":{"id":10000033,"name":"\u4e1c\u82b1\u5e02","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"donghuashi","cnspell":"DHS","location":[116.44064,39.9036],"isdeleted":0,"lng":116.44064,"lat":39.9036,"price":102071},"10000048":{"id":10000048,"name":"\u5e7f\u6e20\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"guangqumen","cnspell":"GQM","location":[116.45184,39.89983],"isdeleted":0,"lng":116.45184,"lat":39.89983,"price":95006},"10000054":{"id":10000054,"name":"\u548c\u5e73\u91cc","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"hepingli","cnspell":"HPL","location":[116.42834,39.96456],"isdeleted":0,"lng":116.42834,"lat":39.96456,"price":108932},"10000064":{"id":10000064,"name":"\u5efa\u56fd\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"jianguomen","cnspell":"JGM","location":[116.44178,39.9145],"isdeleted":0,"lng":116.44178,"lat":39.9145,"price":87357},"10000141":{"id":10000141,"name":"\u6c38\u5b9a\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"yongdingmen","cnspell":"YDM","location":[116.40567,39.87915],"isdeleted":0,"lng":116.40567,"lat":39.87915,"price":81598},"100000598":{"id":100000598,"name":"\u5929\u575b","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"tiantan","cnspell":"TT","location":[116.417,39.88647],"isdeleted":0,"lng":116.417,"lat":39.88647,"price":83796},"100001119":{"id":100001119,"name":"\u5de6\u5b89\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"zuoanmen","cnspell":"zam","location":[116.44619,39.87845],"isdeleted":0,"lng":116.44619,"lat":39.87845,"price":94740},"200000375":{"id":200000375,"name":"\u4e1c\u76f4\u95e8\u5916","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dongzhimenwai","cnspell":"dzmw","location":[116.445147,39.9491],"isdeleted":0,"lng":116.445147,"lat":39.9491,"price":94139},"200000387":{"id":200000387,"name":"\u671d\u9633\u95e8\u5916","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"chaoyangmenwai","cnspell":"CYMW","location":[116.445549,39.923907],"isdeleted":0,"lng":116.445549,"lat":39.923907,"price":100036},"200000617":{"id":200000617,"name":"\u5b89\u8d1e","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"anzhen","cnspell":"AZ","location":[116.411674,39.977229],"isdeleted":0,"lng":116.411674,"lat":39.977229,"price":74300},"200000621":{"id":200000621,"name":"\u5730\u5b89\u95e8","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"dianmen","cnspell":"DAM","location":[116.392454,39.940351],"isdeleted":0,"lng":116.392454,"lat":39.940351,"price":136431},"200000624":{"id":200000624,"name":"\u5de5\u4f53","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"gongti","cnspell":"GT","location":[116.453576,39.937016],"isdeleted":0,"lng":116.453576,"lat":39.937016,"price":95964},"200000628":{"id":200000628,"name":"\u5efa\u56fd\u95e8\u5916","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"jianguomenwai","cnspell":"JGMW","location":[116.447587,39.914276],"isdeleted":0,"lng":116.447587,"lat":39.914276,"price":112718},"200000633":{"id":200000633,"name":"\u516d\u94fa\u7095","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"liupukang","cnspell":"LPK","location":[116.395892,39.960884],"isdeleted":0,"lng":116.395892,"lat":39.960884},"200000637":{"id":200000637,"name":"\u84b2\u9ec4\u6986","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"puhuangyu","cnspell":"PHY","location":[116.428894,39.871689],"isdeleted":0,"lng":116.428894,"lat":39.871689},"200000640":{"id":200000640,"name":"\u9676\u7136\u4ead","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"taoranting","cnspell":"TRT","location":[116.380902,39.884625],"isdeleted":0,"lng":116.380902,"lat":39.884625},"200000641":{"id":200000641,"name":"\u897f\u5355","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"xidan","cnspell":"XD","location":[116.382001,39.913329],"isdeleted":0,"lng":116.382001,"lat":39.913329},"200000643":{"id":200000643,"name":"\u897f\u7f57\u56ed","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"xiluoyuan","cnspell":"XLY","location":[116.400183,39.867284],"isdeleted":0,"lng":116.400183,"lat":39.867284},"200000646":{"id":200000646,"name":"\u6d0b\u6865","companysid":1,"parentid":1,"parentname":"\u4e1c\u57ce","spell":"yangqiao","cnspell":"YQ","location":[116.396147,39.863451],"isdeleted":0,"lng":116.396147,"lat":39.863451}},"price":99877},"2":{"id":2,"name":"\u897f\u57ce","companysid":1,"orderweight":4,"spell":"xichengqu","cnspell":"XCQ","location":[116.37855,39.91649],"isdeleted":0,"lng":116.37855,"lat":39.91649,"businessAreas":{"36808":{"id":36808,"name":"\u65b0\u8857\u53e3","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"xinjiekou","cnspell":"XJK","location":[116.37413,39.94658],"isdeleted":0,"lng":116.37413,"lat":39.94658,"price":113747},"36809":{"id":36809,"name":"\u897f\u56db","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"xisi","cnspell":"XS","location":[116.37993,39.93003],"isdeleted":0,"lng":116.37993,"lat":39.93003,"price":156777},"36811":{"id":36811,"name":"\u5b98\u56ed","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"guanyuan","cnspell":"GY","location":[116.36464,39.93705],"isdeleted":0,"lng":116.36464,"lat":39.93705,"price":108811},"36813":{"id":36813,"name":"\u91d1\u878d\u8857","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"jinrongjie","cnspell":"JRJ","location":[116.36628,39.92166],"isdeleted":0,"lng":116.36628,"lat":39.92166,"price":146154},"36819":{"id":36819,"name":"\u8f66\u516c\u5e84","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"chegongzhuang","cnspell":"CGZ","location":[116.36183,39.93835],"isdeleted":0,"lng":116.36183,"lat":39.93835,"price":112401},"36861":{"id":36861,"name":"\u516d\u94fa\u7095","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"liupukang","cnspell":"LPK","location":[116.39706,39.95976],"isdeleted":0,"lng":116.39706,"lat":39.95976,"price":139998},"36950":{"id":36950,"name":"\u767d\u7eb8\u574a","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"baizhifang","cnspell":"BZF","location":[116.36788,39.88699],"isdeleted":0,"lng":116.36788,"lat":39.88699,"price":92905},"36952":{"id":36952,"name":"\u957f\u693f\u8857","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"changchunjie","cnspell":"CCJ","location":[116.36991,39.90534],"isdeleted":0,"lng":116.36991,"lat":39.90534,"price":106560},"36953":{"id":36953,"name":"\u5929\u5b81\u5bfa","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"tianningsi","cnspell":"TNS","location":[116.35261,39.90002],"isdeleted":0,"lng":116.35261,"lat":39.90002,"price":98763},"36955":{"id":36955,"name":"\u9a6c\u8fde\u9053","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"maliandao","cnspell":"MLD","location":[116.33324,39.88953],"isdeleted":0,"lng":116.33324,"lat":39.88953,"price":91500},"36971":{"id":36971,"name":"\u5e7f\u5b89\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"guanganmen","cnspell":"GAM","location":[116.35857,39.89566],"isdeleted":0,"lng":116.35857,"lat":39.89566,"price":102612},"36985":{"id":36985,"name":"\u6728\u6a28\u5730","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"muxidi","cnspell":"MXD","location":[116.34346,39.91313],"isdeleted":0,"lng":116.34346,"lat":39.91313,"price":136434},"45403":{"id":45403,"name":"\u5c55\u89c8\u8def","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"zhanlanlu","cnspell":"ZLL","location":[116.35051,39.93513],"isdeleted":0,"lng":116.35051,"lat":39.93513,"price":126977},"45667":{"id":45667,"name":"\u5730\u5b89\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"dianmen","cnspell":"DAM","location":[116.40209,39.94205],"isdeleted":0,"lng":116.40209,"lat":39.94205,"price":160328},"45670":{"id":45670,"name":"\u725b\u8857","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"niujie","cnspell":"NJ","location":[116.37011,39.89233],"isdeleted":0,"lng":116.37011,"lat":39.89233,"price":102072},"45680":{"id":45680,"name":"\u5ba3\u6b66\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"xuanwumen","cnspell":"XWM","location":[116.38084,39.90588],"isdeleted":0,"lng":116.38084,"lat":39.90588,"price":115787},"45681":{"id":45681,"name":"\u897f\u5355","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"xidan","cnspell":"XD","location":[116.3822,39.91333],"isdeleted":0,"lng":116.3822,"lat":39.91333,"price":134868},"47917":{"id":47917,"name":"\u5fb7\u80dc\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"deshengmen","cnspell":"DSM","location":[116.38557,39.9555],"isdeleted":0,"lng":116.38557,"lat":39.9555,"price":137902},"10000043":{"id":10000043,"name":"\u961c\u6210\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"fuchengmen","cnspell":"FCM","location":[116.36281,39.92952],"isdeleted":0,"lng":116.36281,"lat":39.92952,"price":112230},"10000111":{"id":10000111,"name":"\u9676\u7136\u4ead","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"taoranting","cnspell":"TRT","location":[116.3809,39.88462],"isdeleted":0,"lng":116.3809,"lat":39.88462,"price":114601},"10000147":{"id":10000147,"name":"\u6708\u575b","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"yuetan","cnspell":"YT","location":[116.35786,39.92381],"isdeleted":0,"lng":116.35786,"lat":39.92381,"price":139880},"100001108":{"id":100001108,"name":"\u53f3\u5b89\u95e8\u5185","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"youanmennei","cnspell":"yamn","location":[116.37065,39.87958],"isdeleted":0,"lng":116.37065,"lat":39.87958,"price":105966},"200000530":{"id":200000530,"name":"\u897f\u76f4\u95e8","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"xizhimen","cnspell":"XZM","location":[116.361446,39.946471],"isdeleted":0,"lng":116.361446,"lat":39.946471,"price":111378},"200000619":{"id":200000619,"name":"\u83dc\u6237\u8425","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"caihuying","cnspell":"CHY","location":[116.35194,39.873342],"isdeleted":0,"lng":116.35194,"lat":39.873342},"200000634":{"id":200000634,"name":"\u9a6c\u7538","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"madian","cnspell":"MD","location":[116.38528,39.976096],"isdeleted":0,"lng":116.38528,"lat":39.976096,"price":147807},"200000639":{"id":200000639,"name":"\u592a\u5e73\u6865","companysid":1,"parentid":2,"parentname":"\u897f\u57ce","spell":"taipingqiao","cnspell":"TPQ","location":[116.369769,39.916362],"isdeleted":0,"lng":116.369769,"lat":39.916362}},"price":116935},"7":{"id":7,"name":"\u4e30\u53f0","companysid":1,"orderweight":5,"spell":"fengtaiqu","cnspell":"FTQ","location":[116.30185,39.84615],"isdeleted":0,"lng":116.30185,"lat":39.84615,"businessAreas":{"36957":{"id":36957,"name":"\u65b9\u5e84","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"fangzhuang","cnspell":"FZ","location":[116.43414,39.86754],"isdeleted":0,"lng":116.43414,"lat":39.86754,"price":67318},"36959":{"id":36959,"name":"\u6210\u5bff\u5bfa","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"chengshousi","cnspell":"CSS","location":[116.44345,39.85876],"isdeleted":0,"lng":116.44345,"lat":39.85876,"price":56297},"36960":{"id":36960,"name":"\u84b2\u9ec4\u6986","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"puhuangyu","cnspell":"PHY","location":[116.42818,39.87169],"isdeleted":0,"lng":116.42818,"lat":39.87169,"price":61085},"36963":{"id":36963,"name":"\u897f\u7f57\u56ed","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"xiluoyuan","cnspell":"XLY","location":[116.39836,39.86864],"isdeleted":0,"lng":116.39836,"lat":39.86864,"price":60246},"36964":{"id":36964,"name":"\u6d0b\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"yangqiao","cnspell":"YQ","location":[116.3933,39.86333],"isdeleted":0,"lng":116.3933,"lat":39.86333,"price":56592},"36965":{"id":36965,"name":"\u9a6c\u5bb6\u5821","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"majiabao","cnspell":"MJB","location":[116.37787,39.85919],"isdeleted":0,"lng":116.37787,"lat":39.85919,"price":59949},"36967":{"id":36967,"name":"\u548c\u4e49","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"heyi","cnspell":"HY","location":[116.40835,39.81619],"isdeleted":0,"lng":116.40835,"lat":39.81619,"price":46297},"36970":{"id":36970,"name":"\u7389\u6cc9\u8425","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"yuquanying","cnspell":"YQY","location":[116.34953,39.85316],"isdeleted":0,"lng":116.34953,"lat":39.85316,"price":63142},"36975":{"id":36975,"name":"\u4e30\u76ca\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"fengyiqiao","cnspell":"FYQ","location":[116.32343,39.86386],"isdeleted":0,"lng":116.32343,"lat":39.86386,"price":65721},"36980":{"id":36980,"name":"\u4e94\u91cc\u5e97","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"wulidian","cnspell":"WLD","location":[116.26175,39.86596],"isdeleted":0,"lng":116.26175,"lat":39.86596,"price":46977},"36983":{"id":36983,"name":"\u5cb3\u5404\u5e84","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"yuegezhuang","cnspell":"YGZ","location":[116.2846,39.8851],"isdeleted":0,"lng":116.2846,"lat":39.8851,"price":62230},"36992":{"id":36992,"name":"\u516d\u91cc\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"liuliqiao","cnspell":"LLQ","location":[116.30961,39.88642],"isdeleted":0,"lng":116.30961,"lat":39.88642,"price":66579},"36993":{"id":36993,"name":"\u9752\u5854","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"qingta","cnspell":"QT","location":[116.27495,39.8994],"isdeleted":0,"lng":116.27495,"lat":39.8994,"price":52425},"37091":{"id":37091,"name":"\u5362\u6c9f\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"lugouqiao","cnspell":"LGQ","location":[116.22377,39.85556],"isdeleted":0,"lng":116.22377,"lat":39.85556,"price":41420},"43230":{"id":43230,"name":"\u8d75\u516c\u53e3","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"zhaogongkou","cnspell":"ZGK","location":[116.42024,39.86297],"isdeleted":0,"lng":116.42024,"lat":39.86297,"price":57479},"43234":{"id":43234,"name":"\u5218\u5bb6\u7a91","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"liujiayao","cnspell":"LJY","location":[116.42856,39.86369],"isdeleted":0,"lng":116.42856,"lat":39.86369,"price":54934},"45661":{"id":45661,"name":"\u89d2\u95e8","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"jiaomen","cnspell":"JM","location":[116.3873,39.85286],"isdeleted":0,"lng":116.3873,"lat":39.85286,"price":56464},"45683":{"id":45683,"name":"\u53f3\u5b89\u95e8\u5916","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"youanmenwai","cnspell":"YAMW","location":[116.37114,39.86921],"isdeleted":0,"lng":116.37114,"lat":39.86921,"price":77033},"45684":{"id":45684,"name":"\u83dc\u6237\u8425","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"caihuying","cnspell":"CHY","location":[116.35196,39.87447],"isdeleted":0,"lng":116.35196,"lat":39.87447,"price":72923},"48834":{"id":48834,"name":"\u8349\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"caoqiao","cnspell":"CQ","location":[116.35924,39.85159],"isdeleted":0,"lng":116.35924,"lat":39.85159,"price":65871},"48931":{"id":48931,"name":"\u5b8b\u5bb6\u5e84","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"songjiazhuang","cnspell":"SJZ","location":[116.43491,39.85204],"isdeleted":0,"lng":116.43491,"lat":39.85204,"price":55615},"10000015":{"id":10000015,"name":"\u5317\u5927\u5730","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"beidadi","cnspell":"BDD","location":[116.28932,39.8601],"isdeleted":0,"lng":116.28932,"lat":39.8601,"price":70905},"10000029":{"id":10000029,"name":"\u5927\u7ea2\u95e8","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"dahongmen","cnspell":"DHM","location":[116.40804,39.8489],"isdeleted":0,"lng":116.40804,"lat":39.8489,"price":58188},"10000056":{"id":10000056,"name":"\u82b1\u4e61","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"huaxiang","cnspell":"HX","location":[116.33693,39.83806],"isdeleted":0,"lng":116.33693,"lat":39.83806,"price":56969},"10000070":{"id":10000070,"name":"\u770b\u4e39\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"kandanqiao","cnspell":"KDQ","location":[116.2926,39.84696],"isdeleted":0,"lng":116.2926,"lat":39.84696,"price":52242},"10000087":{"id":10000087,"name":"\u6728\u6a28\u56ed","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"muxiyuan","cnspell":"MXY","location":[116.41126,39.86428],"isdeleted":0,"lng":116.41126,"lat":39.86428,"price":52910},"10000092":{"id":10000092,"name":"\u4e03\u91cc\u5e84","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"qilizhuang","cnspell":"QLZ","location":[116.30077,39.87343],"isdeleted":0,"lng":116.30077,"lat":39.87343,"price":58549},"10000150":{"id":10000150,"name":"\u957f\u8f9b\u5e97","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"changxindian","cnspell":"CXD","location":[116.21637,39.83242],"isdeleted":0,"lng":116.21637,"lat":39.83242,"price":39112},"100001056":{"id":100001056,"name":"\u592a\u5e73\u6865","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"taipingqiao","cnspell":"tpq","location":[116.36977,39.91634],"isdeleted":0,"lng":116.36977,"lat":39.91634,"price":70315},"100001093":{"id":100001093,"name":"\u5317\u4eac\u5357\u7ad9","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"beijingnanzhan","cnspell":"bjnz","location":[116.38581,39.87118],"isdeleted":0,"lng":116.38581,"lat":39.87118,"price":66510},"100001094":{"id":100001094,"name":"\u4e30\u53f0\u5176\u5b83","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"fengtaiqita","cnspell":"ftjt","location":[116.29261,39.86488],"isdeleted":0,"lng":116.29261,"lat":39.86488,"price":40727},"100001095":{"id":100001095,"name":"\u79d1\u6280\u56ed\u533a","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"kejiyuanqu","cnspell":"kjyo","location":[116.28635,39.82915],"isdeleted":0,"lng":116.28635,"lat":39.82915,"price":54611},"100001096":{"id":100001096,"name":"\u4e3d\u6cfd","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"lize","cnspell":"lz","location":[116.35264,39.87383],"isdeleted":0,"lng":116.35264,"lat":39.87383,"price":104177},"100001097":{"id":100001097,"name":"\u65b0\u5bab","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"xingong","cnspell":"xg","location":[116.36671,39.82348],"isdeleted":0,"lng":116.36671,"lat":39.82348,"price":48669},"100001384":{"id":100001384,"name":"\u65b0\u53d1\u5730","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"xinfadi","cnspell":"xfd","location":[116.34874,39.82309],"isdeleted":0,"lng":116.34874,"lat":39.82309,"price":48090},"100001385":{"id":100001385,"name":"\u603b\u90e8\u57fa\u5730","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"zongbujidi","cnspell":"zbjd","location":[116.2955,39.8355],"isdeleted":0,"lng":116.2955,"lat":39.8355,"price":66984},"200000625":{"id":200000625,"name":"\u5e7f\u5b89\u95e8","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"guanganmen","cnspell":"GAM","location":[116.349346,39.892696],"isdeleted":0,"lng":116.349346,"lat":39.892696},"200000629":{"id":200000629,"name":"\u65e7\u5bab","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"jiugong","cnspell":"JG","location":[116.467432,39.812543],"isdeleted":0,"lng":116.467432,"lat":39.812543,"price":49887},"200000636":{"id":200000636,"name":"\u9a6c\u8fde\u9053","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"maliandao","cnspell":"MLD","location":[116.336797,39.888441],"isdeleted":0,"lng":116.336797,"lat":39.888441,"price":80498},"200000638":{"id":200000638,"name":"\u5341\u91cc\u6cb3","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"shilihe","cnspell":"SLH","location":[116.465111,39.871591],"isdeleted":0,"lng":116.465111,"lat":39.871591},"200000642":{"id":200000642,"name":"\u897f\u7ea2\u95e8","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"xihongmen","cnspell":"XHM","location":[116.335169,39.795445],"isdeleted":0,"lng":116.335169,"lat":39.795445,"price":87303},"200000647":{"id":200000647,"name":"\u6c38\u5b9a\u95e8","companysid":1,"parentid":7,"parentname":"\u4e30\u53f0","spell":"yongdingmen","cnspell":"YDM","location":[116.406575,39.875389],"isdeleted":0,"lng":116.406575,"lat":39.875389}},"price":58242},"8":{"id":8,"name":"\u77f3\u666f\u5c71","companysid":1,"orderweight":6,"spell":"shijingshanqu","cnspell":"SJSQ","location":[116.22789,39.90617],"isdeleted":0,"lng":116.22789,"lat":39.90617,"businessAreas":{"37010":{"id":37010,"name":"\u8001\u5c71","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"laoshan","cnspell":"LS","location":[116.2253,39.91621],"isdeleted":0,"lng":116.2253,"lat":39.91621,"price":53875},"37016":{"id":37016,"name":"\u516b\u89d2","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"bajiao","cnspell":"BJ","location":[116.20501,39.91896],"isdeleted":0,"lng":116.20501,"lat":39.91896,"price":52667},"37027":{"id":37027,"name":"\u82f9\u679c\u56ed","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"pingguoyuan","cnspell":"PGY","location":[116.19388,39.93433],"isdeleted":0,"lng":116.19388,"lat":39.93433,"price":50810},"37029":{"id":37029,"name":"\u6768\u5e84","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"yangzhuang","cnspell":"YZ","location":[116.20142,39.92915],"isdeleted":0,"lng":116.20142,"lat":39.92915,"price":52011},"10000008":{"id":10000008,"name":"\u516b\u5927\u5904","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"badachu","cnspell":"BDC","location":[116.20613,39.94986],"isdeleted":0,"lng":116.20613,"lat":39.94986,"price":52210},"10000045":{"id":10000045,"name":"\u53e4\u57ce","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"gucheng","cnspell":"GC","location":[116.19707,39.91341],"isdeleted":0,"lng":116.19707,"lat":39.91341,"price":46850},"10000081":{"id":10000081,"name":"\u9c81\u8c37","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"lugu","cnspell":"LG","location":[116.23316,39.90565],"isdeleted":0,"lng":116.23316,"lat":39.90565,"price":56063},"100001112":{"id":100001112,"name":"\u77f3\u666f\u5c71\u5176\u5b83","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"shijingshanqita","cnspell":"dysjt","location":[116.22558,39.91179],"isdeleted":0,"lng":116.22558,"lat":39.91179,"price":61888},"200000648":{"id":200000648,"name":"\u7389\u6cc9\u8def","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"yuquanlu","cnspell":"YQL","location":[116.25947,39.913501],"isdeleted":0,"lng":116.25947,"lat":39.913501,"price":64506},"200000822":{"id":200000822,"name":"\u91d1\u5b89\u6865","companysid":1,"parentid":8,"parentname":"\u77f3\u666f\u5c71","spell":"jinanqiao","cnspell":"JAQ","location":[116.169048,39.929569],"isdeleted":0,"lng":116.169048,"lat":39.929569,"price":50556}},"price":52858},"970":{"id":970,"name":"\u901a\u5dde","companysid":1,"orderweight":7,"spell":"tongzhouqu","cnspell":"TZQ","location":[116.66406,39.91199],"isdeleted":0,"lng":116.66406,"lat":39.91199,"businessAreas":{"37060":{"id":37060,"name":"\u901a\u5dde\u5317\u82d1","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"tongzhoubeiyuan","cnspell":"TZBY","location":[116.64361,39.91006],"isdeleted":0,"lng":116.64361,"lat":39.91006,"price":45108},"37064":{"id":37064,"name":"\u679c\u56ed","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"guoyuan","cnspell":"GY","location":[116.65297,39.89957],"isdeleted":0,"lng":116.65297,"lat":39.89957,"price":44481},"37065":{"id":37065,"name":"\u68a8\u56ed","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"liyuan","cnspell":"LY","location":[116.67075,39.88117],"isdeleted":0,"lng":116.67075,"lat":39.88117,"price":43167},"37151":{"id":37151,"name":"\u4e54\u5e84","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"qiaozhuang","cnspell":"QZ","location":[116.69373,39.89815],"isdeleted":0,"lng":116.69373,"lat":39.89815,"price":42582},"45321":{"id":45321,"name":"\u7389\u6865","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"yuqiao","cnspell":"YQ","location":[116.68858,39.89229],"isdeleted":0,"lng":116.68858,"lat":39.89229,"price":47786},"48972":{"id":48972,"name":"\u6b66\u5937\u82b1\u56ed","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"wuyihuayuan","cnspell":"WYHY","location":[116.70572,39.92308],"isdeleted":0,"lng":116.70572,"lat":39.92308,"price":53808},"48973":{"id":48973,"name":"\u65b0\u534e\u5927\u8857","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"xinhuadajie","cnspell":"XHDJ","location":[116.66412,39.91416],"isdeleted":0,"lng":116.66412,"lat":39.91416,"price":45517},"48978":{"id":48978,"name":"\u571f\u6865","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"tuqiao","cnspell":"TQ","location":[116.69301,39.87772],"isdeleted":0,"lng":116.69301,"lat":39.87772,"price":52060},"10000017":{"id":10000017,"name":"\u5317\u5173","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"beiguan","cnspell":"BG","location":[116.65878,39.92646],"isdeleted":0,"lng":116.65878,"lat":39.92646,"price":39970},"100001103":{"id":100001103,"name":"\u4e5d\u68f5\u6811(\u5bb6\u4e50\u798f)","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"jiukeshujialefu","cnspell":"jks(gyf)","location":[116.66303,39.8958],"isdeleted":0,"lng":116.66303,"lat":39.8958,"price":47288},"100001104":{"id":100001104,"name":"\u4e34\u6cb3\u91cc","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"linheli","cnspell":"lhl","location":[116.68546,39.88123],"isdeleted":0,"lng":116.68546,"lat":39.88123,"price":44682},"100001105":{"id":100001105,"name":"\u6f5e\u82d1","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"luyuan","cnspell":"ly","location":[116.68541,39.94131],"isdeleted":0,"lng":116.68541,"lat":39.94131,"price":44656},"100001106":{"id":100001106,"name":"\u901a\u5dde\u5176\u5b83","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"tongzhouqita","cnspell":"tzjt","location":[116.59224,39.77474],"isdeleted":0,"lng":116.59224,"lat":39.77474,"price":35780},"200000283":{"id":200000283,"name":"\u9a6c\u9a79\u6865","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"majuqiao","cnspell":"mjq","location":[116.55195,39.75232],"isdeleted":0,"lng":116.55195,"lat":39.75232,"price":32763},"200000402":{"id":200000402,"name":"\u4e07\u8fbe","companysid":1,"parentid":970,"parentname":"\u901a\u5dde","spell":"wanda","cnspell":"WD","location":[116.648115,39.911458],"isdeleted":0,"lng":116.648115,"lat":39.911458,"price":44185}},"price":43550},"21":{"id":21,"name":"\u660c\u5e73","companysid":1,"orderweight":8,"spell":"changpingqu","cnspell":"CPQ","location":[116.2405,40.22647],"isdeleted":0,"lng":116.2405,"lat":40.22647,"businessAreas":{"36887":{"id":36887,"name":"\u5929\u901a\u82d1","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"tiantongyuan","cnspell":"TTY","location":[116.42716,40.0719],"isdeleted":0,"lng":116.42716,"lat":40.0719,"price":38905},"37051":{"id":37051,"name":"\u56de\u9f99\u89c2","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"huilongguan","cnspell":"HLG","location":[116.34232,40.07642],"isdeleted":0,"lng":116.34232,"lat":40.07642,"price":47633},"40490":{"id":40490,"name":"\u660c\u5e73\u53bf\u57ce","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"changpingxiancheng","cnspell":"CPXC","location":[116.23303,40.22993],"isdeleted":0,"lng":116.23303,"lat":40.22993,"price":44789},"49171":{"id":49171,"name":"\u970d\u8425","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"huoying","cnspell":"HY","location":[116.36672,40.07712],"isdeleted":0,"lng":116.36672,"lat":40.07712,"price":50822},"49211":{"id":49211,"name":"\u7acb\u6c34\u6865","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"lishuiqiao","cnspell":"LSQ","location":[116.41827,40.05924],"isdeleted":0,"lng":116.41827,"lat":40.05924,"price":53443},"50031":{"id":50031,"name":"\u5317\u4e03\u5bb6","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"beiqijia","cnspell":"BQJ","location":[116.43697,40.1242],"isdeleted":0,"lng":116.43697,"lat":40.1242,"price":39812},"54551":{"id":54551,"name":"\u5c0f\u6c64\u5c71","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"xiaotangshan","cnspell":"XTS","location":[116.40027,40.18201],"isdeleted":0,"lng":116.40027,"lat":40.18201,"price":45706},"10000089":{"id":10000089,"name":"\u5357\u53e3","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"nankou","cnspell":"NK","location":[116.14211,40.25306],"isdeleted":0,"lng":116.14211,"lat":40.25306,"price":28545},"10000098":{"id":10000098,"name":"\u6c99\u6cb3","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"shahe","cnspell":"SH","location":[116.29505,40.15469],"isdeleted":0,"lng":116.29505,"lat":40.15469,"price":48578},"100001070":{"id":100001070,"name":"\u5357\u90b5","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"nanshao","cnspell":"ns","location":[116.29244,40.21421],"isdeleted":0,"lng":116.29244,"lat":40.21421,"price":46179},"100001071":{"id":100001071,"name":"\u897f\u5173\u73af\u5c9b","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"xiguanhuandao","cnspell":"xghd","location":[116.22326,40.22859],"isdeleted":0,"lng":116.22326,"lat":40.22859,"price":33137},"100001113":{"id":100001113,"name":"\u660c\u5e73\u5176\u5b83","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"changpingqita","cnspell":"cpqt","location":[116.23811,40.22898],"isdeleted":0,"lng":116.23811,"lat":40.22898,"price":35071},"100001116":{"id":100001116,"name":"\u9f99\u6cfd","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"longze","cnspell":"lz","location":[116.33063,40.07754],"isdeleted":0,"lng":116.33063,"lat":40.07754,"price":57565},"100001117":{"id":100001117,"name":"\u9f13\u697c\u5927\u8857","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"guloudajie","cnspell":"gldj","location":[116.26846,40.18913],"isdeleted":0,"lng":116.26846,"lat":40.18913,"price":39229},"100001118":{"id":100001118,"name":"\u4e1c\u5173","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"dongguan","cnspell":"dg","location":[116.26853,40.22794],"isdeleted":0,"lng":116.26853,"lat":40.22794,"price":39500},"200000616":{"id":200000616,"name":"\u5b89\u5b81\u5e84","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"anningzhuang","cnspell":"ANZ","location":[116.330602,40.052831],"isdeleted":0,"lng":116.330602,"lat":40.052831,"price":50689},"200000644":{"id":200000644,"name":"\u897f\u4e09\u65d7","companysid":1,"parentid":21,"parentname":"\u660c\u5e73","spell":"xisanqi","cnspell":"XSQ","location":[116.368106,40.067225],"isdeleted":0,"lng":116.368106,"lat":40.067225,"price":45652}},"price":42890},"990":{"id":990,"name":"\u5927\u5174","companysid":1,"orderweight":9,"spell":"daxingqu","cnspell":"DXQ","location":[116.35355,39.73293],"isdeleted":0,"lng":116.35355,"lat":39.73293,"businessAreas":{"37053":{"id":37053,"name":"\u65e7\u5bab","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"jiugong","cnspell":"JG","location":[116.46761,39.81246],"isdeleted":0,"lng":116.46761,"lat":39.81246,"price":42691},"37055":{"id":37055,"name":"\u897f\u7ea2\u95e8","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"xihongmen","cnspell":"XHM","location":[116.33516,39.79544],"isdeleted":0,"lng":116.33516,"lat":39.79544,"price":42801},"51916":{"id":51916,"name":"\u9ec4\u6751\u5317","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"huangcunbei","cnspell":"HCB","location":[116.33929,39.73003],"isdeleted":0,"lng":116.33929,"lat":39.73003,"price":51299},"10000059":{"id":10000059,"name":"\u9ec4\u6751","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"huangcun","cnspell":"HC","location":[116.34468,39.7411],"isdeleted":0,"lng":116.34468,"lat":39.7411,"price":38364},"10000112":{"id":10000112,"name":"\u5929\u5bab\u9662","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"tiangongyuan","cnspell":"TGY","location":[116.32643,39.67612],"isdeleted":0,"lng":116.32643,"lat":39.67612,"price":36616},"100001080":{"id":100001080,"name":"\u5927\u5174\u5176\u5b83","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"daxingqita","cnspell":"dxqt","location":[116.40432,39.68855],"isdeleted":0,"lng":116.40432,"lat":39.68855,"price":34536},"100001082":{"id":100001082,"name":"\u89c2\u97f3\u5bfa","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"guanyinsi","cnspell":"gys","location":[116.44346,40.36466],"isdeleted":0,"lng":116.44346,"lat":40.36466,"price":32481},"100001083":{"id":100001083,"name":"\u9ec4\u6751\u706b\u8f66\u7ad9","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"huangcunhuochezhan","cnspell":"hchjz","location":[116.33796,39.72654],"isdeleted":0,"lng":116.33796,"lat":39.72654,"price":38354},"100001084":{"id":100001084,"name":"\u9ec4\u6751\u4e2d","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"huangcunzhong","cnspell":"hcz","location":[116.34263,39.74098],"isdeleted":0,"lng":116.34263,"lat":39.74098,"price":39224},"100001088":{"id":100001088,"name":"\u67a3\u56ed","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"zaoyuan","cnspell":"zy","location":[116.33897,39.75907],"isdeleted":0,"lng":116.33897,"lat":39.75907,"price":45323},"200000630":{"id":200000630,"name":"\u79d1\u6280\u56ed\u533a","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"kejiyuanqu","cnspell":"KJYQ","location":[116.334386,39.840802],"isdeleted":0,"lng":116.334386,"lat":39.840802,"price":34006},"200000835":{"id":200000835,"name":"\u9ad8\u7c73\u5e97","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"gaomidian","cnspell":"GMD","location":[116.336543,39.779477],"isdeleted":0,"lng":116.336543,"lat":39.779477,"price":41611},"200000836":{"id":200000836,"name":"\u5927\u5174\u65b0\u673a\u573a","companysid":1,"parentid":990,"parentname":"\u5927\u5174","spell":"daxingxinjichang","cnspell":"DXXJC","location":[116.42396,39.511576],"isdeleted":0,"lng":116.42396,"lat":39.511576}},"price":40862},"200000014":{"id":200000014,"name":"\u4ea6\u5e84","companysid":1,"orderweight":10,"spell":"yizhuang","cnspell":"YZ","location":[116.488459,39.806143],"isdeleted":0,"lng":116.488459,"lat":39.806143,"businessAreas":{"200000282":{"id":200000282,"name":"\u4ea6\u5e84\u5f00\u53d1\u533a","companysid":1,"parentid":200000014,"parentname":"\u4ea6\u5e84","spell":"yizhuangkaifaqu","cnspell":"yzkfq","location":[116.51175,39.80184],"isdeleted":0,"lng":116.51175,"lat":39.80184,"price":48590},"200000635":{"id":200000635,"name":"\u9a6c\u9a79\u6865","companysid":1,"parentid":200000014,"parentname":"\u4ea6\u5e84","spell":"majuqiao","cnspell":"MJQ","location":[116.565089,39.751867],"isdeleted":0,"lng":116.565089,"lat":39.751867}},"price":48590},"1010":{"id":1010,"name":"\u987a\u4e49","companysid":1,"orderweight":11,"spell":"shunyiqu","cnspell":"SYQ","location":[116.65839,40.13294],"isdeleted":0,"lng":116.65839,"lat":40.13294,"businessAreas":{"55476":{"id":55476,"name":"\u540e\u6c99\u5cea","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"houshayu","cnspell":"HSY","location":[116.57079,40.11986],"isdeleted":0,"lng":116.57079,"lat":40.11986,"price":43873},"10000084":{"id":10000084,"name":"\u9a6c\u5761","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"mapo","cnspell":"MP","location":[116.66438,40.17713],"isdeleted":0,"lng":116.66438,"lat":40.17713,"price":36049},"10000105":{"id":10000105,"name":"\u9996\u90fd\u673a\u573a","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"shoudujichang","cnspell":"SDJC","location":[116.60344,40.0881],"isdeleted":0,"lng":116.60344,"lat":40.0881,"price":36601},"10000107":{"id":10000107,"name":"\u987a\u4e49\u57ce","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"shunyicheng","cnspell":"SYC","location":[116.663674,40.136136],"isdeleted":0,"lng":116.663674,"lat":40.136136,"price":37496},"10000114":{"id":10000114,"name":"\u5929\u7afa","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"tianzhu","cnspell":"TZ","location":[116.59428,40.05523],"isdeleted":0,"lng":116.59428,"lat":40.05523,"price":50547},"10000153":{"id":10000153,"name":"\u4e2d\u592e\u522b\u5885\u533a","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"zhongyangbieshuqu","cnspell":"ZYBSQ","location":[116.49588,40.10547],"isdeleted":0,"lng":116.49588,"lat":40.10547,"price":52558},"100001111":{"id":100001111,"name":"\u987a\u4e49\u5176\u5b83","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"shunyiqita","cnspell":"SYQT","location":[116.656513,40.103385],"isdeleted":0,"lng":116.656513,"lat":40.103385,"price":31401},"200000832":{"id":200000832,"name":"\u674e\u6865","companysid":1,"parentid":1010,"parentname":"\u987a\u4e49","spell":"liqiao","cnspell":"LQ","location":[116.673597,40.04853],"isdeleted":0,"lng":116.673597,"lat":40.04853,"price":32286}},"price":37894},"1030":{"id":1030,"name":"\u623f\u5c71","companysid":1,"orderweight":12,"spell":"fangshanqu","cnspell":"FSQ","location":[116.15337,39.74106],"isdeleted":0,"lng":116.15337,"lat":39.74106,"businessAreas":{"10000038":{"id":10000038,"name":"\u7aa6\u5e97","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"doudian","cnspell":"DD","location":[116.07453,39.65773],"isdeleted":0,"lng":116.07453,"lat":39.65773,"price":21521},"10000077":{"id":10000077,"name":"\u826f\u4e61","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"liangxiang","cnspell":"LX","location":[116.1441,39.73872],"isdeleted":0,"lng":116.1441,"lat":39.73872,"price":29165},"10000078":{"id":10000078,"name":"\u7409\u7483\u6cb3","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"liulihe","cnspell":"LLH","location":[116.03808,39.60824],"isdeleted":0,"lng":116.03808,"lat":39.60824,"price":17022},"10000137":{"id":10000137,"name":"\u71d5\u5c71","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"yanshan","cnspell":"YS","location":[115.97977,39.72588],"isdeleted":0,"lng":115.97977,"lat":39.72588,"price":18935},"10000151":{"id":10000151,"name":"\u957f\u9633","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"changyang","cnspell":"CY","location":[116.21926,39.76941],"isdeleted":0,"lng":116.21926,"lat":39.76941,"price":37396},"10000154":{"id":10000154,"name":"\u5468\u53e3\u5e97","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"zhoukoudian","cnspell":"ZKD","location":[115.95189,39.69126],"isdeleted":0,"lng":115.95189,"lat":39.69126,"price":20168},"100000168":{"id":100000168,"name":"\u97e9\u6751\u6cb3","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"hancunhe","cnspell":"HCH","location":[115.97098,39.60897],"isdeleted":0,"lng":115.97098,"lat":39.60897,"price":15467},"100000186":{"id":100000186,"name":"\u960e\u6751","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"yancun","cnspell":"YC","location":[116.09945,39.72134],"isdeleted":0,"lng":116.09945,"lat":39.72134,"price":25318},"100001115":{"id":100001115,"name":"\u623f\u5c71\u5176\u5b83","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"fangshanqita","cnspell":"fsjt","location":[116.10891,39.74602],"isdeleted":0,"lng":116.10891,"lat":39.74602,"price":21172},"100001120":{"id":100001120,"name":"\u623f\u5c71\u57ce\u5173","companysid":1,"parentid":1030,"parentname":"\u623f\u5c71","spell":"fangshanchengguan","cnspell":"fscg","location":[115.99895,39.70623],"isdeleted":0,"lng":115.99895,"lat":39.70623,"price":22321}},"price":27564},"100000800":{"id":100000800,"name":"\u95e8\u5934\u6c9f","companysid":1,"orderweight":13,"spell":"mentougou","cnspell":"MTG","location":[116.108265,39.946491],"isdeleted":0,"lng":116.108265,"lat":39.946491,"businessAreas":{"100001373":{"id":100001373,"name":"\u6ee8\u6cb3\u897f\u533a","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"binhexiqu","cnspell":"bhxo","location":[116.06115,39.89037],"isdeleted":0,"lng":116.06115,"lat":39.89037,"price":37523},"100001374":{"id":100001374,"name":"\u57ce\u5b50","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"chengzi","cnspell":"cz","location":[116.10099,39.95923],"isdeleted":0,"lng":116.10099,"lat":39.95923,"price":38710},"100001376":{"id":100001376,"name":"\u5927\u5cea","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"dayu","cnspell":"dy","location":[116.11037,39.94184],"isdeleted":0,"lng":116.11037,"lat":39.94184,"price":46502},"100001377":{"id":100001377,"name":"\u51af\u6751","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"fengcun","cnspell":"pc","location":[116.10823,39.91608],"isdeleted":0,"lng":116.10823,"lat":39.91608,"price":44225},"100001378":{"id":100001378,"name":"\u77f3\u95e8\u8425","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"shimenying","cnspell":"dmy","location":[116.11439,39.89874],"isdeleted":0,"lng":116.11439,"lat":39.89874},"100001379":{"id":100001379,"name":"\u95e8\u5934\u6c9f\u5176\u4ed6","companysid":1,"parentid":100000800,"parentname":"\u95e8\u5934\u6c9f","spell":"mentougouqita","cnspell":"mtgjt","location":[116.10243,39.95212],"isdeleted":0,"lng":116.10243,"lat":39.95212,"price":42735}},"price":43010},"100000801":{"id":100000801,"name":"\u5e73\u8c37","companysid":1,"orderweight":14,"spell":"pinggu","cnspell":"PG","location":[117.130111,40.14829],"isdeleted":0,"lng":117.130111,"lat":40.14829,"businessAreas":{"100001383":{"id":100001383,"name":"\u5e73\u8c37\u5176\u5b83","companysid":1,"parentid":100000801,"parentname":"\u5e73\u8c37","spell":"pingguqita","cnspell":"pyjt","location":[117.12565,40.14849],"isdeleted":0,"lng":117.12565,"lat":40.14849,"price":23643}},"price":23643},"100000802":{"id":100000802,"name":"\u6000\u67d4","companysid":1,"orderweight":15,"spell":"huairou","cnspell":"HR","location":[116.638376,40.322571],"isdeleted":0,"lng":116.638376,"lat":40.322571,"businessAreas":{"100001382":{"id":100001382,"name":"\u6000\u67d4\u5176\u5b83","companysid":1,"parentid":100000802,"parentname":"\u6000\u67d4","spell":"huairouqita","cnspell":"hrqt","location":[116.63494,40.32284],"isdeleted":0,"lng":116.63494,"lat":40.32284,"price":27248}},"price":27248},"100000803":{"id":100000803,"name":"\u5bc6\u4e91","companysid":1,"orderweight":16,"spell":"miyun","cnspell":"MY","location":[116.849427,40.382955],"isdeleted":0,"lng":116.849427,"lat":40.382955,"businessAreas":{"100001381":{"id":100001381,"name":"\u5bc6\u4e91\u5176\u5b83","companysid":1,"parentid":100000803,"parentname":"\u5bc6\u4e91","spell":"miyunqita","cnspell":"myqt","location":[116.84955,40.38415],"isdeleted":0,"lng":116.84955,"lat":40.38415,"price":25568}},"price":25568},"100000804":{"id":100000804,"name":"\u5ef6\u5e86","companysid":1,"orderweight":17,"spell":"yanqing","cnspell":"YQ","location":[115.981186,40.462693],"isdeleted":0,"lng":115.981186,"lat":40.462693,"businessAreas":{"100001380":{"id":100001380,"name":"\u5ef6\u5e86\u5176\u5b83","companysid":1,"parentid":100000804,"parentname":"\u5ef6\u5e86","spell":"yanqingqita","cnspell":"yqjt","location":[115.98279,40.46327],"isdeleted":0,"lng":115.98279,"lat":40.46327,"price":24036}},"price":24036}},
+		subwayLine: {"1":{"id":1,"name":"1\u53f7\u7ebf","spell":"1haoxian","janespell":"1HX","companysid":1,"lineid":1,"sort":1,"stations":{"113":{"spell":"gucheng","name":"\u53e4\u57ce","companysid":1,"lineid":1,"id":113,"sort":2,"lng":116.19707,"lat":39.91341},"114":{"spell":"bajiaoyouleyuan","name":"\u516b\u89d2\u6e38\u4e50\u56ed","companysid":1,"lineid":1,"id":114,"sort":3,"lng":116.21939,"lat":39.91308},"115":{"spell":"babaoshan","name":"\u516b\u5b9d\u5c71","companysid":1,"lineid":1,"id":115,"sort":4,"lng":116.2423,"lat":39.913181},"116":{"spell":"yuquanlu","name":"\u7389\u6cc9\u8def","companysid":1,"lineid":1,"id":116,"sort":5,"lng":116.25947,"lat":39.9135},"117":{"spell":"wukesong","name":"\u4e94\u68f5\u677e","companysid":1,"lineid":1,"id":117,"sort":6,"lng":116.28042,"lat":39.91383},"118":{"spell":"wanshoulu","name":"\u4e07\u5bff\u8def","companysid":1,"lineid":1,"id":118,"sort":7,"lng":116.30155,"lat":39.91371},"119":{"spell":"gongzhufen","name":"\u516c\u4e3b\u575f","companysid":1,"lineid":1,"id":119,"sort":8,"lng":116.316581,"lat":39.913489},"120":{"spell":"junshibowuguan","name":"\u519b\u4e8b\u535a\u7269\u9986","companysid":1,"lineid":1,"id":120,"sort":9,"lng":116.330365,"lat":39.913233},"121":{"spell":"muzuodi","name":"\u6728\u6a28\u5730","companysid":1,"lineid":1,"id":121,"sort":10,"lng":116.3441,"lat":39.91312},"122":{"spell":"nanlishilu","name":"\u5357\u793c\u58eb\u8def","companysid":1,"lineid":1,"id":122,"sort":11,"lng":116.35922,"lat":39.91298},"123":{"spell":"fuxingmen","name":"\u590d\u5174\u95e8","companysid":1,"lineid":1,"id":123,"sort":12,"lng":116.364388,"lat":39.913022},"124":{"spell":"xidan","name":"\u897f\u5355","companysid":1,"lineid":1,"id":124,"sort":13,"lng":116.383446,"lat":39.913344},"125":{"spell":"tiananmenxi","name":"\u5929\u5b89\u95e8\u897f","companysid":1,"lineid":1,"id":125,"sort":14,"lng":116.39805,"lat":39.91378},"126":{"spell":"tiananmendong","name":"\u5929\u5b89\u95e8\u4e1c","companysid":1,"lineid":1,"id":126,"sort":15,"lng":116.40785,"lat":39.91408},"127":{"spell":"wangfujing","name":"\u738b\u5e9c\u4e95","companysid":1,"lineid":1,"id":127,"sort":16,"lng":116.4178,"lat":39.9144},"128":{"spell":"dongdan","name":"\u4e1c\u5355","companysid":1,"lineid":1,"id":128,"sort":17,"lng":116.426017,"lat":39.914489},"129":{"spell":"jianguomen","name":"\u5efa\u56fd\u95e8","companysid":1,"lineid":1,"id":129,"sort":18,"lng":116.440861,"lat":39.914489},"130":{"spell":"yonganli","name":"\u6c38\u5b89\u91cc","companysid":1,"lineid":1,"id":130,"sort":19,"lng":116.45709,"lat":39.91422},"131":{"spell":"guomao","name":"\u56fd\u8d38","companysid":1,"lineid":1,"id":131,"sort":20,"lng":116.466692,"lat":39.914112},"132":{"spell":"dawanglu","name":"\u5927\u671b\u8def","companysid":1,"lineid":1,"id":132,"sort":21,"lng":116.48239,"lat":39.91414},"133":{"spell":"sihui","name":"\u56db\u60e0","companysid":1,"lineid":1,"id":133,"sort":22,"lng":116.501937,"lat":39.914886},"134":{"spell":"sihuidong","name":"\u56db\u60e0\u4e1c","companysid":1,"lineid":1,"id":134,"sort":23,"lng":116.52232,"lat":39.914907}}},"2":{"id":2,"name":"2\u53f7\u7ebf","spell":"2haoxian","janespell":"2HX","companysid":1,"lineid":2,"sort":2,"stations":{"135":{"spell":"xizhimen","name":"\u897f\u76f4\u95e8","companysid":1,"lineid":2,"id":135,"sort":1,"lng":116.362129,"lat":39.946022},"136":{"spell":"jishuitan","name":"\u79ef\u6c34\u6f6d","companysid":1,"lineid":2,"id":136,"sort":2,"lng":116.379197,"lat":39.954758},"137":{"spell":"guloudajie","name":"\u9f13\u697c\u5927\u8857","companysid":1,"lineid":2,"id":137,"sort":3,"lng":116.399957,"lat":39.955353},"138":{"spell":"andingmen","name":"\u5b89\u5b9a\u95e8","companysid":1,"lineid":2,"id":138,"sort":4,"lng":116.4146,"lat":39.95544},"139":{"spell":"yonghegong","name":"\u96cd\u548c\u5bab","companysid":1,"lineid":2,"id":139,"sort":5,"lng":116.423245,"lat":39.955553},"140":{"spell":"dongzhimen","name":"\u4e1c\u76f4\u95e8","companysid":1,"lineid":2,"id":140,"sort":6,"lng":116.440313,"lat":39.947319},"141":{"spell":"dongsishitiao","name":"\u4e1c\u56db\u5341\u6761","companysid":1,"lineid":2,"id":141,"sort":7,"lng":116.44064,"lat":39.93984},"142":{"spell":"chaoyangmen","name":"\u671d\u9633\u95e8","companysid":1,"lineid":2,"id":142,"sort":8,"lng":116.441104,"lat":39.930646},"143":{"spell":"jianguomen","name":"\u5efa\u56fd\u95e8","companysid":1,"lineid":2,"id":143,"sort":9,"lng":116.442334,"lat":39.914489},"144":{"spell":"beijingzhan","name":"\u5317\u4eac\u7ad9","companysid":1,"lineid":2,"id":144,"sort":10,"lng":116.43363,"lat":39.91112},"145":{"spell":"chongwenmen","name":"\u5d07\u6587\u95e8","companysid":1,"lineid":2,"id":145,"sort":11,"lng":116.423892,"lat":39.907356},"146":{"spell":"qianmen","name":"\u524d\u95e8","companysid":1,"lineid":2,"id":146,"sort":12,"lng":116.40428,"lat":39.90653},"147":{"spell":"hepingmen","name":"\u548c\u5e73\u95e8","companysid":1,"lineid":2,"id":147,"sort":13,"lng":116.39062,"lat":39.90636},"148":{"spell":"xuanwumen","name":"\u5ba3\u6b66\u95e8","companysid":1,"lineid":2,"id":148,"sort":14,"lng":116.38085,"lat":39.90588},"149":{"spell":"changchunjie","name":"\u957f\u693f\u8857","companysid":1,"lineid":2,"id":149,"sort":15,"lng":116.36991,"lat":39.90534},"150":{"spell":"fuxingmen","name":"\u590d\u5174\u95e8","companysid":1,"lineid":2,"id":150,"sort":16,"lng":116.363176,"lat":39.913008},"151":{"spell":"fuchengmen","name":"\u961c\u6210\u95e8","companysid":1,"lineid":2,"id":151,"sort":17,"lng":116.36282,"lat":39.92952},"152":{"spell":"chegongzhuang","name":"\u8f66\u516c\u5e84","companysid":1,"lineid":2,"id":152,"sort":18,"lng":116.362453,"lat":39.938499}}},"4":{"id":3,"name":"4\u53f7\u7ebf","spell":"4haoxian","janespell":"4HX","companysid":1,"lineid":4,"sort":3,"stations":{"153":{"spell":"anheqiaobei","name":"\u5b89\u6cb3\u6865\u5317","companysid":1,"lineid":4,"id":153,"sort":1,"lng":116.27644,"lat":40.018644},"154":{"spell":"beigongmen","name":"\u5317\u5bab\u95e8","companysid":1,"lineid":4,"id":154,"sort":2,"lng":116.284004,"lat":40.008669},"155":{"spell":"xiyuan","name":"\u897f\u82d1","companysid":1,"lineid":4,"id":155,"sort":3,"lng":116.297164,"lat":40.004711},"156":{"spell":"yuanmingyuan","name":"\u5706\u660e\u56ed","companysid":1,"lineid":4,"id":156,"sort":4,"lng":116.31593,"lat":40.00546},"157":{"spell":"beijingdaxuedongmen","name":"\u5317\u4eac\u5927\u5b66\u4e1c\u95e8","companysid":1,"lineid":4,"id":157,"sort":5,"lng":116.32226,"lat":39.99801},"158":{"spell":"zhongguancun","name":"\u4e2d\u5173\u6751","companysid":1,"lineid":4,"id":158,"sort":6,"lng":116.32307,"lat":39.98996},"159":{"spell":"haidianhuangzhuang","name":"\u6d77\u6dc0\u9ec4\u5e84","companysid":1,"lineid":4,"id":159,"sort":7,"lng":116.32435,"lat":39.98186},"160":{"spell":"renmindaxue","name":"\u4eba\u6c11\u5927\u5b66","companysid":1,"lineid":4,"id":160,"sort":8,"lng":116.32809,"lat":39.97277},"161":{"spell":"weigongcun","name":"\u9b4f\u516c\u6751","companysid":1,"lineid":4,"id":161,"sort":9,"lng":116.329889,"lat":39.963448},"162":{"spell":"guojiatushuguan","name":"\u56fd\u5bb6\u56fe\u4e66\u9986","companysid":1,"lineid":4,"id":162,"sort":10,"lng":116.3319,"lat":39.94886},"163":{"spell":"dongwuyuan","name":"\u52a8\u7269\u56ed","companysid":1,"lineid":4,"id":163,"sort":11,"lng":116.345223,"lat":39.943917},"164":{"spell":"xizhimen","name":"\u897f\u76f4\u95e8","companysid":1,"lineid":4,"id":164,"sort":12,"lng":116.362098,"lat":39.946009},"165":{"spell":"xinjiekou","name":"\u65b0\u8857\u53e3","companysid":1,"lineid":4,"id":165,"sort":13,"lng":116.374149,"lat":39.946569},"166":{"spell":"pinganli","name":"\u5e73\u5b89\u91cc","companysid":1,"lineid":4,"id":166,"sort":14,"lng":116.379332,"lat":39.939733},"167":{"spell":"xisi","name":"\u897f\u56db","companysid":1,"lineid":4,"id":167,"sort":15,"lng":116.379938,"lat":39.93002},"168":{"spell":"lingjinghutong","name":"\u7075\u5883\u80e1\u540c","companysid":1,"lineid":4,"id":168,"sort":16,"lng":116.380244,"lat":39.922132},"169":{"spell":"xidan","name":"\u897f\u5355","companysid":1,"lineid":4,"id":169,"sort":17,"lng":116.38058,"lat":39.913309},"170":{"spell":"xuanwumen","name":"\u5ba3\u6b66\u95e8","companysid":1,"lineid":4,"id":170,"sort":18,"lng":116.38085,"lat":39.90588},"171":{"spell":"caishikou","name":"\u83dc\u5e02\u53e3","companysid":1,"lineid":4,"id":171,"sort":19,"lng":116.380989,"lat":39.895379},"172":{"spell":"taoranting","name":"\u9676\u7136\u4ead","companysid":1,"lineid":4,"id":172,"sort":20,"lng":116.380917,"lat":39.884619},"173":{"spell":"beijingnanzhan","name":"\u5317\u4eac\u5357\u7ad9","companysid":1,"lineid":4,"id":173,"sort":21,"lng":116.385193,"lat":39.870956},"174":{"spell":"majiabao","name":"\u9a6c\u5bb6\u5821","companysid":1,"lineid":4,"id":174,"sort":22,"lng":116.37788,"lat":39.8592},"175":{"spell":"jiaomenxi","name":"\u89d2\u95e8\u897f","companysid":1,"lineid":4,"id":175,"sort":23,"lng":116.37764,"lat":39.85193},"176":{"spell":"gongyixiqiao","name":"\u516c\u76ca\u897f\u6865","companysid":1,"lineid":4,"id":176,"sort":24,"lng":116.377333,"lat":39.843051},"2159":{"spell":"xingong","name":"\u65b0\u5bab","companysid":1,"lineid":4,"id":2159,"sort":25,"lng":116.37201,"lat":39.81884},"2160":{"spell":"xihongmen","name":"\u897f\u7ea2\u95e8","companysid":1,"lineid":4,"id":2160,"sort":26,"lng":116.3353,"lat":39.79567},"2161":{"spell":"gaomidianbei","name":"\u9ad8\u7c73\u5e97\u5317","companysid":1,"lineid":4,"id":2161,"sort":27,"lng":116.337331,"lat":39.779548},"2162":{"spell":"gaomidianan","name":"\u9ad8\u7c73\u5e97\u5357","companysid":1,"lineid":4,"id":2162,"sort":28,"lng":116.33841,"lat":39.769059},"2163":{"spell":"zaoyuan","name":"\u67a3\u56ed","companysid":1,"lineid":4,"id":2163,"sort":29,"lng":116.33897,"lat":39.75907},"2164":{"spell":"qingyuanlu","name":"\u6e05\u6e90\u8def","companysid":1,"lineid":4,"id":2164,"sort":30,"lng":116.33901,"lat":39.74835},"2165":{"spell":"chuangcunxidajie","name":"\u9ec4\u6751\u897f\u5927\u8857","companysid":1,"lineid":4,"id":2165,"sort":31,"lng":116.339128,"lat":39.73738},"2166":{"spell":"huangcunhuochezhan","name":"\u9ec4\u6751\u706b\u8f66\u7ad9","companysid":1,"lineid":4,"id":2166,"sort":32,"lng":116.33948,"lat":39.72832},"2513":{"spell":"yihezhuang","name":"\u4e49\u548c\u5e84","companysid":1,"lineid":4,"id":2513,"sort":33,"lng":116.325538,"lat":39.718296},"2167":{"spell":"shengwuyiyaojidi","name":"\u751f\u7269\u533b\u836f\u57fa\u5730","companysid":1,"lineid":4,"id":2167,"sort":34,"lng":116.32865,"lat":39.69308},"2168":{"spell":"tiangongyuan","name":"\u5929\u5bab\u9662","companysid":1,"lineid":4,"id":2168,"sort":35,"lng":116.32643,"lat":39.67612}}},"5":{"id":4,"name":"5\u53f7\u7ebf","spell":"5haoxian","janespell":"5HX","companysid":1,"lineid":5,"sort":4,"stations":{"177":{"spell":"tiantongyuanbei","name":"\u5929\u901a\u82d1\u5317","companysid":1,"lineid":5,"id":177,"sort":1,"lng":116.419392,"lat":40.08959},"178":{"spell":"tiantongyuan","name":"\u5929\u901a\u82d1","companysid":1,"lineid":5,"id":178,"sort":2,"lng":116.419239,"lat":40.081469},"179":{"spell":"tiantongyuannan","name":"\u5929\u901a\u82d1\u5357","companysid":1,"lineid":5,"id":179,"sort":3,"lng":116.419131,"lat":40.072739},"180":{"spell":"lishuiqiao","name":"\u7acb\u6c34\u6865","companysid":1,"lineid":5,"id":180,"sort":4,"lng":116.418803,"lat":40.059307},"181":{"spell":"lishuiqiaonan","name":"\u7acb\u6c34\u6865\u5357","companysid":1,"lineid":5,"id":181,"sort":5,"lng":116.420995,"lat":40.048134},"182":{"spell":"beiyuanlubei","name":"\u5317\u82d1\u8def\u5317","companysid":1,"lineid":5,"id":182,"sort":6,"lng":116.424535,"lat":40.03681},"183":{"spell":"datunludong","name":"\u5927\u5c6f\u8def\u4e1c","companysid":1,"lineid":5,"id":183,"sort":7,"lng":116.42391,"lat":40.010096},"184":{"spell":"huixinxijiebeikou","name":"\u60e0\u65b0\u897f\u8857\u5317\u53e3","companysid":1,"lineid":5,"id":184,"sort":8,"lng":116.42353,"lat":39.99415},"185":{"spell":"huixinxijienankou","name":"\u60e0\u65b0\u897f\u8857\u5357\u53e3","companysid":1,"lineid":5,"id":185,"sort":9,"lng":116.424054,"lat":39.983264},"186":{"spell":"hepingxiqiao","name":"\u548c\u5e73\u897f\u6865","companysid":1,"lineid":5,"id":186,"sort":10,"lng":116.424481,"lat":39.97449},"187":{"spell":"hepinglibeijie","name":"\u548c\u5e73\u91cc\u5317\u8857","companysid":1,"lineid":5,"id":187,"sort":11,"lng":116.42505,"lat":39.96475},"188":{"spell":"yonghegong","name":"\u96cd\u548c\u5bab","companysid":1,"lineid":5,"id":188,"sort":12,"lng":116.423012,"lat":39.954641},"189":{"spell":"beixinqiao","name":"\u5317\u65b0\u6865","companysid":1,"lineid":5,"id":189,"sort":13,"lng":116.423308,"lat":39.947101},"190":{"spell":"zhangzizhonglu","name":"\u5f20\u81ea\u5fe0\u8def","companysid":1,"lineid":5,"id":190,"sort":14,"lng":116.423591,"lat":39.93991},"191":{"spell":"dongsi","name":"\u4e1c\u56db","companysid":1,"lineid":5,"id":191,"sort":15,"lng":116.423951,"lat":39.930754},"192":{"spell":"dengshikou","name":"\u706f\u5e02\u53e3","companysid":1,"lineid":5,"id":192,"sort":16,"lng":116.42417,"lat":39.9236},"193":{"spell":"dongdan","name":"\u4e1c\u5355","companysid":1,"lineid":5,"id":193,"sort":17,"lng":116.424503,"lat":39.914489},"194":{"spell":"chongwenmen","name":"\u5d07\u6587\u95e8","companysid":1,"lineid":5,"id":194,"sort":18,"lng":116.425006,"lat":39.906526},"195":{"spell":"ciqikou","name":"\u78c1\u5668\u53e3","companysid":1,"lineid":5,"id":195,"sort":19,"lng":116.425356,"lat":39.899323},"196":{"spell":"tiantandongmen","name":"\u5929\u575b\u4e1c\u95e8","companysid":1,"lineid":5,"id":196,"sort":20,"lng":116.427409,"lat":39.888487},"197":{"spell":"puhuangyu","name":"\u84b2\u9ec4\u6986","companysid":1,"lineid":5,"id":197,"sort":21,"lng":116.428195,"lat":39.871686},"198":{"spell":"liujiayao","name":"\u5218\u5bb6\u7a91","companysid":1,"lineid":5,"id":198,"sort":22,"lng":116.428572,"lat":39.863684},"199":{"spell":"songjiazhuang","name":"\u5b8b\u5bb6\u5e84","companysid":1,"lineid":5,"id":199,"sort":23,"lng":116.434928,"lat":39.851869}}},"6":{"id":5,"name":"6\u53f7\u7ebf","spell":"6haoxian","janespell":"6HX","companysid":1,"lineid":6,"sort":5,"stations":{"2633":{"spell":"jinanqiao","name":"\u91d1\u5b89\u6865","companysid":1,"lineid":6,"id":2633,"sort":1,"lng":116.169034,"lat":39.929962},"2634":{"spell":"yangzhuang","name":"\u6768\u5e84","companysid":1,"lineid":6,"id":2634,"sort":2,"lng":116.194192,"lat":39.934174},"2635":{"spell":"xihuangcun","name":"\u897f\u9ec4\u6751","companysid":1,"lineid":6,"id":2635,"sort":3,"lng":116.213386,"lat":39.939411},"2636":{"spell":"liaogongzhuang","name":"\u5ed6\u516c\u5e84","companysid":1,"lineid":6,"id":2636,"sort":4,"lng":116.233537,"lat":39.938025},"2637":{"spell":"tiancun","name":"\u7530\u6751","companysid":1,"lineid":6,"id":2637,"sort":5,"lng":116.259357,"lat":39.935623},"200":{"spell":"haidianwuluju","name":"\u6d77\u6dc0\u4e94\u8def\u5c45","companysid":1,"lineid":6,"id":200,"sort":6,"lng":116.28274,"lat":39.9386},"201":{"spell":"cishousi","name":"\u6148\u5bff\u5bfa","companysid":1,"lineid":6,"id":201,"sort":7,"lng":116.300097,"lat":39.93908},"202":{"spell":"huayuanqiao","name":"\u82b1\u56ed\u6865","companysid":1,"lineid":6,"id":202,"sort":8,"lng":116.31756,"lat":39.93838},"203":{"spell":"baishiqiaonan","name":"\u767d\u77f3\u6865\u5357","companysid":1,"lineid":6,"id":203,"sort":9,"lng":116.331829,"lat":39.938153},"204":{"spell":"chegongzhuangxi","name":"\u8f66\u516c\u5e84\u897f","companysid":1,"lineid":6,"id":204,"sort":10,"lng":116.350662,"lat":39.938063},"205":{"spell":"chegongzhuang","name":"\u8f66\u516c\u5e84","companysid":1,"lineid":6,"id":205,"sort":11,"lng":116.361226,"lat":39.938181},"206":{"spell":"pinganli","name":"\u5e73\u5b89\u91cc","companysid":1,"lineid":6,"id":206,"sort":12,"lng":116.377966,"lat":39.938776},"207":{"spell":"beihaibei","name":"\u5317\u6d77\u5317","companysid":1,"lineid":6,"id":207,"sort":13,"lng":116.392901,"lat":39.939474},"208":{"spell":"nanluoguxiang","name":"\u5357\u9523\u9f13\u5df7","companysid":1,"lineid":6,"id":208,"sort":14,"lng":116.409479,"lat":39.939547},"209":{"spell":"dongsi","name":"\u4e1c\u56db","companysid":1,"lineid":6,"id":209,"sort":15,"lng":116.422886,"lat":39.930525},"210":{"spell":"chaoyangmen","name":"\u671d\u9633\u95e8","companysid":1,"lineid":6,"id":210,"sort":16,"lng":116.440219,"lat":39.930439},"211":{"spell":"dongdaqiao","name":"\u4e1c\u5927\u6865","companysid":1,"lineid":6,"id":211,"sort":17,"lng":116.458261,"lat":39.928613},"212":{"spell":"hujialou","name":"\u547c\u5bb6\u697c","companysid":1,"lineid":6,"id":212,"sort":18,"lng":116.468219,"lat":39.928952},"213":{"spell":"jintailu","name":"\u91d1\u53f0\u8def","companysid":1,"lineid":6,"id":213,"sort":19,"lng":116.485076,"lat":39.928717},"214":{"spell":"shilibao","name":"\u5341\u91cc\u5821","companysid":1,"lineid":6,"id":214,"sort":20,"lng":116.50848,"lat":39.92924},"215":{"spell":"qingnianlu","name":"\u9752\u5e74\u8def","companysid":1,"lineid":6,"id":215,"sort":21,"lng":116.523838,"lat":39.92946},"216":{"spell":"zuozuopo","name":"\u8921\u88e2\u5761","companysid":1,"lineid":6,"id":216,"sort":22,"lng":116.570249,"lat":39.92982},"217":{"spell":"huangqu","name":"\u9ec4\u6e20","companysid":1,"lineid":6,"id":217,"sort":23,"lng":116.584931,"lat":39.929924},"218":{"spell":"changying","name":"\u5e38\u8425","companysid":1,"lineid":6,"id":218,"sort":24,"lng":116.605462,"lat":39.931497},"219":{"spell":"caofang","name":"\u8349\u623f","companysid":1,"lineid":6,"id":219,"sort":25,"lng":116.622557,"lat":39.930657},"220":{"spell":"wuzixueyuanlu","name":"\u7269\u8d44\u5b66\u9662\u8def","companysid":1,"lineid":6,"id":220,"sort":26,"lng":116.645558,"lat":39.933077},"221":{"spell":"tongzhoubeiguan","name":"\u901a\u5dde\u5317\u5173","companysid":1,"lineid":6,"id":221,"sort":27,"lng":116.66807,"lat":39.924684},"222":{"spell":"beiyunhexi","name":"\u5317\u8fd0\u6cb3\u897f","companysid":1,"lineid":6,"id":222,"sort":28,"lng":116.694453,"lat":39.908923},"223":{"spell":"beiyunhedong","name":"\u5317\u8fd0\u6cb3\u4e1c","companysid":1,"lineid":6,"id":223,"sort":29,"lng":116.708354,"lat":39.909228},"224":{"spell":"haojiafu","name":"\u90dd\u5bb6\u5e9c","companysid":1,"lineid":6,"id":224,"sort":30,"lng":116.724973,"lat":39.909297},"225":{"spell":"dongxiayuan","name":"\u4e1c\u590f\u56ed","companysid":1,"lineid":6,"id":225,"sort":31,"lng":116.7409,"lat":39.90949},"226":{"spell":"lucheng","name":"\u6f5e\u57ce","companysid":1,"lineid":6,"id":226,"sort":32,"lng":116.7548,"lat":39.90889}}},"7":{"id":6,"name":"7\u53f7\u7ebf","spell":"7haoxian","janespell":"7HX","companysid":1,"lineid":7,"sort":6,"stations":{"227":{"spell":"beijingxizhan","name":"\u5317\u4eac\u897f\u7ad9","companysid":1,"lineid":7,"id":227,"sort":1,"lng":116.32785,"lat":39.900659},"228":{"spell":"wanzi","name":"\u6e7e\u5b50","companysid":1,"lineid":7,"id":228,"sort":2,"lng":116.334421,"lat":39.895891},"229":{"spell":"daguanying","name":"\u8fbe\u5b98\u8425","companysid":1,"lineid":7,"id":229,"sort":3,"lng":116.342088,"lat":39.895663},"230":{"spell":"guanganmennei","name":"\u5e7f\u5b89\u95e8\u5185","companysid":1,"lineid":7,"id":230,"sort":4,"lng":116.364645,"lat":39.895414},"231":{"spell":"caishikou","name":"\u83dc\u5e02\u53e3","companysid":1,"lineid":7,"id":231,"sort":5,"lng":116.380518,"lat":39.895352},"232":{"spell":"hufangqiao","name":"\u864e\u574a\u6865","companysid":1,"lineid":7,"id":232,"sort":6,"lng":116.390664,"lat":39.89568},"233":{"spell":"zhushikou","name":"\u73e0\u5e02\u53e3","companysid":1,"lineid":7,"id":233,"sort":7,"lng":116.404592,"lat":39.897656},"234":{"spell":"qiaowan","name":"\u6865\u6e7e","companysid":1,"lineid":7,"id":234,"sort":8,"lng":116.414914,"lat":39.898995},"235":{"spell":"ciqikou","name":"\u78c1\u5668\u53e3","companysid":1,"lineid":7,"id":235,"sort":9,"lng":116.426744,"lat":39.899323},"236":{"spell":"guangqumennei","name":"\u5e7f\u6e20\u95e8\u5185","companysid":1,"lineid":7,"id":236,"sort":10,"lng":116.440951,"lat":39.8996},"237":{"spell":"guangqumenwai","name":"\u5e7f\u6e20\u95e8\u5916","companysid":1,"lineid":7,"id":237,"sort":11,"lng":116.455926,"lat":39.899289},"238":{"spell":"shuangjing","name":"\u53cc\u4e95","companysid":1,"lineid":7,"id":238,"sort":12,"lng":116.468435,"lat":39.899161},"239":{"spell":"jiulongshan","name":"\u4e5d\u9f99\u5c71","companysid":1,"lineid":7,"id":239,"sort":13,"lng":116.48535,"lat":39.899012},"240":{"spell":"dajiaoting","name":"\u5927\u90ca\u4ead","companysid":1,"lineid":7,"id":240,"sort":14,"lng":116.494719,"lat":39.89906},"241":{"spell":"baiziwan","name":"\u767e\u5b50\u6e7e","companysid":1,"lineid":7,"id":241,"sort":15,"lng":116.503832,"lat":39.898926},"242":{"spell":"huagong","name":"\u5316\u5de5","companysid":1,"lineid":7,"id":242,"sort":16,"lng":116.51009,"lat":39.89322},"243":{"spell":"nanlouzuozhuang","name":"\u5357\u697c\u6893\u5e84","companysid":1,"lineid":7,"id":243,"sort":17,"lng":116.507821,"lat":39.880771},"244":{"spell":"huanlegujingqu","name":"\u6b22\u4e50\u8c37\u666f\u533a","companysid":1,"lineid":7,"id":244,"sort":18,"lng":116.505943,"lat":39.872894},"245":{"spell":"fatou","name":"\u57a1\u5934","companysid":1,"lineid":7,"id":245,"sort":19,"lng":116.518233,"lat":39.867189},"246":{"spell":"shuanghe","name":"\u53cc\u5408","companysid":1,"lineid":7,"id":246,"sort":20,"lng":116.533274,"lat":39.86639},"247":{"spell":"jiaohuachang","name":"\u7126\u5316\u5382","companysid":1,"lineid":7,"id":247,"sort":21,"lng":116.543641,"lat":39.861683},"3135":{"spell":"haungchang","name":"\u9ec4\u5382","companysid":1,"lineid":7,"id":3135,"sort":22,"lng":116.560434,"lat":39.855018},"3136":{"spell":"langxinzhuang","name":"\u90ce\u8f9b\u5e84","companysid":1,"lineid":7,"id":3136,"sort":23,"lng":116.576754,"lat":39.862205},"3137":{"spell":"heizhuanghu","name":"\u9ed1\u5e84\u6237","companysid":1,"lineid":7,"id":3137,"sort":24,"lng":116.605874,"lat":39.864663},"3138":{"spell":"wanshengxi","name":"\u4e07\u76db\u897f","companysid":1,"lineid":7,"id":3138,"sort":25,"lng":116.638987,"lat":39.86981},"3139":{"spell":"wanshengdong","name":"\u4e07\u76db\u4e1c","companysid":1,"lineid":7,"id":3139,"sort":26,"lng":116.663868,"lat":39.869695},"3140":{"spell":"qunfang","name":"\u7fa4\u82b3","companysid":1,"lineid":7,"id":3140,"sort":27,"lng":116.677326,"lat":39.869546},"3141":{"spell":"gaoloujin","name":"\u9ad8\u697c\u91d1","companysid":1,"lineid":7,"id":3141,"sort":28,"lng":116.691094,"lat":39.868934},"3142":{"spell":"huazhuang","name":"\u82b1\u5e84","companysid":1,"lineid":7,"id":3142,"sort":29,"lng":116.701597,"lat":39.862395}}},"8":{"id":7,"name":"8\u53f7\u7ebf","spell":"8haoxian","janespell":"8HX","companysid":1,"lineid":8,"sort":7,"stations":{"248":{"spell":"zhuxinzhuang","name":"\u6731\u8f9b\u5e84","companysid":1,"lineid":8,"id":248,"sort":1,"lng":116.320192,"lat":40.110328},"249":{"spell":"yuzhilu","name":"\u80b2\u77e5\u8def","companysid":1,"lineid":8,"id":249,"sort":2,"lng":116.3339,"lat":40.09371},"250":{"spell":"pingxifu","name":"\u5e73\u897f\u5e9c","companysid":1,"lineid":8,"id":250,"sort":3,"lng":116.35725,"lat":40.09579},"251":{"spell":"huilongguandongdajie","name":"\u56de\u9f99\u89c2\u4e1c\u5927\u8857","companysid":1,"lineid":8,"id":251,"sort":4,"lng":116.369765,"lat":40.086944},"252":{"spell":"huoying","name":"\u970d\u8425","companysid":1,"lineid":8,"id":252,"sort":5,"lng":116.36663,"lat":40.077818},"253":{"spell":"yuxin","name":"\u80b2\u65b0","companysid":1,"lineid":8,"id":253,"sort":6,"lng":116.354,"lat":40.06612},"254":{"spell":"xixiaokou","name":"\u897f\u5c0f\u53e3","companysid":1,"lineid":8,"id":254,"sort":7,"lng":116.358213,"lat":40.052697},"255":{"spell":"yongtaizhuang","name":"\u6c38\u6cf0\u5e84","companysid":1,"lineid":8,"id":255,"sort":8,"lng":116.36116,"lat":40.04369},"256":{"spell":"linzuoqiao","name":"\u6797\u8403\u6865","companysid":1,"lineid":8,"id":256,"sort":9,"lng":116.378923,"lat":40.027982},"257":{"spell":"senlingongyuannanmen","name":"\u68ee\u6797\u516c\u56ed\u5357\u95e8","companysid":1,"lineid":8,"id":257,"sort":10,"lng":116.39905,"lat":40.016195},"258":{"spell":"aolinpikegongyuan","name":"\u5965\u6797\u5339\u514b\u516c\u56ed","companysid":1,"lineid":8,"id":258,"sort":11,"lng":116.399306,"lat":40.007184},"259":{"spell":"aotizhongxin","name":"\u5965\u4f53\u4e2d\u5fc3","companysid":1,"lineid":8,"id":259,"sort":12,"lng":116.400199,"lat":39.992433},"260":{"spell":"beitucheng","name":"\u5317\u571f\u57ce","companysid":1,"lineid":8,"id":260,"sort":13,"lng":116.400658,"lat":39.983253},"261":{"spell":"anhuaqiao","name":"\u5b89\u534e\u6865","companysid":1,"lineid":8,"id":261,"sort":14,"lng":116.400622,"lat":39.97487},"262":{"spell":"andelibeijie","name":"\u5b89\u5fb7\u91cc\u5317\u8857","companysid":1,"lineid":8,"id":262,"sort":15,"lng":116.400896,"lat":39.963925},"263":{"spell":"guloudajie","name":"\u9f13\u697c\u5927\u8857","companysid":1,"lineid":8,"id":263,"sort":16,"lng":116.400289,"lat":39.95407},"264":{"spell":"shishahai","name":"\u4ec0\u5239\u6d77","companysid":1,"lineid":8,"id":264,"sort":17,"lng":116.402566,"lat":39.944131},"265":{"spell":"nanluoguxiang","name":"\u5357\u9523\u9f13\u5df7","companysid":1,"lineid":8,"id":265,"sort":18,"lng":116.409915,"lat":39.94011},"2620":{"spell":"zhongguomeishuguan","name":"\u4e2d\u56fd\u7f8e\u672f\u9986","companysid":1,"lineid":8,"id":2620,"sort":19,"lng":116.417375,"lat":39.930646}}},"144":{"id":3147,"name":"8\u53f7\u7ebf\u5357\u6bb5","spell":"8haoxiannanduan","janespell":"8HXND","companysid":1,"lineid":144,"sort":8,"stations":{"3596":{"spell":"zhushikou","name":"\u73e0\u5e02\u53e3","companysid":1,"lineid":144,"id":3596,"sort":2,"lng":116.405247,"lat":39.897186},"3149":{"spell":"tianqiao","name":"\u5929\u6865","companysid":1,"lineid":144,"id":3149,"sort":3,"lng":116.405247,"lat":39.888891},"3150":{"spell":"yongdingmenwai","name":"\u6c38\u5b9a\u95e8\u5916","companysid":1,"lineid":144,"id":3150,"sort":4,"lng":116.405983,"lat":39.872792},"3151":{"spell":"muxiyuan","name":"\u6728\u6a28\u56ed","companysid":1,"lineid":144,"id":3151,"sort":5,"lng":116.406334,"lat":39.865682},"3161":{"spell":"haihutun","name":"\u6d77\u6237\u5c6f","companysid":1,"lineid":144,"id":3161,"sort":6,"lng":116.406712,"lat":39.858215},"3153":{"spell":"dahongmennan","name":"\u5927\u7ea2\u95e8\u5357","companysid":1,"lineid":144,"id":3153,"sort":7,"lng":116.407454,"lat":39.842626},"3155":{"spell":"heyi","name":"\u548c\u4e49","companysid":1,"lineid":144,"id":3155,"sort":8,"lng":116.408508,"lat":39.821382},"3156":{"spell":"donggaodi","name":"\u4e1c\u9ad8\u5730","companysid":1,"lineid":144,"id":3156,"sort":9,"lng":116.415686,"lat":39.811433},"3157":{"spell":"huojianwanyuan","name":"\u706b\u7bad\u4e07\u6e90","companysid":1,"lineid":144,"id":3157,"sort":10,"lng":116.425129,"lat":39.805336},"3158":{"spell":"wufutang","name":"\u4e94\u798f\u5802","companysid":1,"lineid":144,"id":3158,"sort":11,"lng":116.430158,"lat":39.791422},"3159":{"spell":"demao","name":"\u5fb7\u8302","companysid":1,"lineid":144,"id":3159,"sort":12,"lng":116.448258,"lat":39.778312},"3160":{"spell":"yinghai","name":"\u701b\u6d77","companysid":1,"lineid":144,"id":3160,"sort":13,"lng":116.455615,"lat":39.766756}}},"9":{"id":8,"name":"9\u53f7\u7ebf","spell":"9haoxian","janespell":"9HX","companysid":1,"lineid":9,"sort":9,"stations":{"266":{"spell":"guogongzhuang","name":"\u90ed\u516c\u5e84","companysid":1,"lineid":9,"id":266,"sort":1,"lng":116.30857,"lat":39.82076},"267":{"spell":"fengtaikejiyuan","name":"\u4e30\u53f0\u79d1\u6280\u56ed","companysid":1,"lineid":9,"id":267,"sort":2,"lng":116.303654,"lat":39.83144},"268":{"spell":"kezuolu","name":"\u79d1\u6021\u8def","companysid":1,"lineid":9,"id":268,"sort":3,"lng":116.30381,"lat":39.83866},"269":{"spell":"fengtainanlu","name":"\u4e30\u53f0\u5357\u8def","companysid":1,"lineid":9,"id":269,"sort":4,"lng":116.30285,"lat":39.8472},"270":{"spell":"fengtaidongdajie","name":"\u4e30\u53f0\u4e1c\u5927\u8857","companysid":1,"lineid":9,"id":270,"sort":5,"lng":116.30022,"lat":39.86144},"271":{"spell":"qilizhuang","name":"\u4e03\u91cc\u5e84","companysid":1,"lineid":9,"id":271,"sort":6,"lng":116.300788,"lat":39.87343},"272":{"spell":"liuliqiao","name":"\u516d\u91cc\u6865","companysid":1,"lineid":9,"id":272,"sort":7,"lng":116.309632,"lat":39.886408},"273":{"spell":"liuliqiaodong","name":"\u516d\u91cc\u6865\u4e1c","companysid":1,"lineid":9,"id":273,"sort":8,"lng":116.321472,"lat":39.892757},"274":{"spell":"beijingxizhan","name":"\u5317\u4eac\u897f\u7ad9","companysid":1,"lineid":9,"id":274,"sort":9,"lng":116.327796,"lat":39.900704},"275":{"spell":"junshibowuguan","name":"\u519b\u4e8b\u535a\u7269\u9986","companysid":1,"lineid":9,"id":275,"sort":10,"lng":116.32829,"lat":39.91343},"276":{"spell":"baiduizi","name":"\u767d\u5806\u5b50","companysid":1,"lineid":9,"id":276,"sort":11,"lng":116.332377,"lat":39.929702},"277":{"spell":"baishiqiaonan","name":"\u767d\u77f3\u6865\u5357","companysid":1,"lineid":9,"id":277,"sort":12,"lng":116.332283,"lat":39.93862},"278":{"spell":"guojiatushuguan","name":"\u56fd\u5bb6\u56fe\u4e66\u9986","companysid":1,"lineid":9,"id":278,"sort":13,"lng":116.3319,"lat":39.94886}}},"10":{"id":9,"name":"10\u53f7\u7ebf","spell":"10haoxian","janespell":"10HX","companysid":1,"lineid":10,"sort":10,"stations":{"279":{"spell":"bagou","name":"\u5df4\u6c9f","companysid":1,"lineid":10,"id":279,"sort":1,"lng":116.300519,"lat":39.980451},"280":{"spell":"suzhoujie","name":"\u82cf\u5dde\u8857","companysid":1,"lineid":10,"id":280,"sort":2,"lng":116.31277,"lat":39.9817},"281":{"spell":"haidianhuangzhuang","name":"\u6d77\u6dc0\u9ec4\u5e84","companysid":1,"lineid":10,"id":281,"sort":3,"lng":116.32435,"lat":39.98186},"282":{"spell":"zhichunli","name":"\u77e5\u6625\u91cc","companysid":1,"lineid":10,"id":282,"sort":4,"lng":116.336101,"lat":39.982051},"283":{"spell":"zhichunlu","name":"\u77e5\u6625\u8def","companysid":1,"lineid":10,"id":283,"sort":5,"lng":116.34861,"lat":39.982058},"284":{"spell":"xitucheng","name":"\u897f\u571f\u57ce","companysid":1,"lineid":10,"id":284,"sort":6,"lng":116.36049,"lat":39.982016},"285":{"spell":"mudanyuan","name":"\u7261\u4e39\u56ed","companysid":1,"lineid":10,"id":285,"sort":7,"lng":116.376462,"lat":39.982365},"286":{"spell":"jiandemen","name":"\u5065\u5fb7\u95e8","companysid":1,"lineid":10,"id":286,"sort":8,"lng":116.38782,"lat":39.98283},"287":{"spell":"beitucheng","name":"\u5317\u571f\u57ce","companysid":1,"lineid":10,"id":287,"sort":9,"lng":116.40066,"lat":39.98326},"288":{"spell":"anzhenmen","name":"\u5b89\u8d1e\u95e8","companysid":1,"lineid":10,"id":288,"sort":10,"lng":116.41237,"lat":39.98332},"289":{"spell":"huixinxijienankou","name":"\u60e0\u65b0\u897f\u8857\u5357\u53e3","companysid":1,"lineid":10,"id":289,"sort":11,"lng":116.424036,"lat":39.983267},"290":{"spell":"shaoyaoju","name":"\u828d\u836f\u5c45","companysid":1,"lineid":10,"id":290,"sort":12,"lng":116.444288,"lat":39.983056},"291":{"spell":"taiyanggong","name":"\u592a\u9633\u5bab","companysid":1,"lineid":10,"id":291,"sort":13,"lng":116.454071,"lat":39.978347},"292":{"spell":"sanyuanqiao","name":"\u4e09\u5143\u6865","companysid":1,"lineid":10,"id":292,"sort":14,"lng":116.463445,"lat":39.966406},"293":{"spell":"liangmaqiao","name":"\u4eae\u9a6c\u6865","companysid":1,"lineid":10,"id":293,"sort":15,"lng":116.468758,"lat":39.954986},"294":{"spell":"nongyezhanlanguan","name":"\u519c\u4e1a\u5c55\u89c8\u9986","companysid":1,"lineid":10,"id":294,"sort":16,"lng":116.46877,"lat":39.94698},"295":{"spell":"tuanjiehu","name":"\u56e2\u7ed3\u6e56","companysid":1,"lineid":10,"id":295,"sort":17,"lng":116.46834,"lat":39.93938},"296":{"spell":"hujialou","name":"\u547c\u5bb6\u697c","companysid":1,"lineid":10,"id":296,"sort":18,"lng":116.46824,"lat":39.92898},"297":{"spell":"jintaixizhao","name":"\u91d1\u53f0\u5915\u7167","companysid":1,"lineid":10,"id":297,"sort":19,"lng":116.46828,"lat":39.92296},"298":{"spell":"guomao","name":"\u56fd\u8d38","companysid":1,"lineid":10,"id":298,"sort":20,"lng":116.468376,"lat":39.914724},"299":{"spell":"shuangjing","name":"\u53cc\u4e95","companysid":1,"lineid":10,"id":299,"sort":21,"lng":116.468466,"lat":39.899171},"300":{"spell":"jinsong","name":"\u52b2\u677e","companysid":1,"lineid":10,"id":300,"sort":22,"lng":116.468026,"lat":39.890023},"301":{"spell":"panjiayuan","name":"\u6f58\u5bb6\u56ed","companysid":1,"lineid":10,"id":301,"sort":23,"lng":116.46774,"lat":39.88173},"302":{"spell":"shilihe","name":"\u5341\u91cc\u6cb3","companysid":1,"lineid":10,"id":302,"sort":24,"lng":116.465762,"lat":39.871558},"303":{"spell":"fenzhongsi","name":"\u5206\u949f\u5bfa","companysid":1,"lineid":10,"id":303,"sort":25,"lng":116.46035,"lat":39.85789},"304":{"spell":"chengshousi","name":"\u6210\u5bff\u5bfa","companysid":1,"lineid":10,"id":304,"sort":26,"lng":116.45432,"lat":39.85146},"305":{"spell":"songjiazhuang","name":"\u5b8b\u5bb6\u5e84","companysid":1,"lineid":10,"id":305,"sort":27,"lng":116.434879,"lat":39.851969},"306":{"spell":"shiliuzhuang","name":"\u77f3\u69b4\u5e84","companysid":1,"lineid":10,"id":306,"sort":28,"lng":116.42057,"lat":39.85211},"307":{"spell":"dahongmen","name":"\u5927\u7ea2\u95e8","companysid":1,"lineid":10,"id":307,"sort":29,"lng":116.406263,"lat":39.85182},"308":{"spell":"jiaomendong","name":"\u89d2\u95e8\u4e1c","companysid":1,"lineid":10,"id":308,"sort":30,"lng":116.39277,"lat":39.851485},"309":{"spell":"jiaomenxi","name":"\u89d2\u95e8\u897f","companysid":1,"lineid":10,"id":309,"sort":31,"lng":116.377656,"lat":39.851917},"310":{"spell":"caoqiao","name":"\u8349\u6865","companysid":1,"lineid":10,"id":310,"sort":32,"lng":116.359259,"lat":39.851588},"311":{"spell":"jijiamiao","name":"\u7eaa\u5bb6\u5e99","companysid":1,"lineid":10,"id":311,"sort":33,"lng":116.33953,"lat":39.85012},"312":{"spell":"shoujingmao","name":"\u9996\u7ecf\u8d38","companysid":1,"lineid":10,"id":312,"sort":34,"lng":116.32661,"lat":39.85032},"313":{"spell":"fengtaizhan","name":"\u4e30\u53f0\u7ad9","companysid":1,"lineid":10,"id":313,"sort":35,"lng":116.311487,"lat":39.856013},"314":{"spell":"niwa","name":"\u6ce5\u6d3c","companysid":1,"lineid":10,"id":314,"sort":36,"lng":116.310823,"lat":39.864691},"315":{"spell":"xiju","name":"\u897f\u5c40","companysid":1,"lineid":10,"id":315,"sort":37,"lng":116.309911,"lat":39.871942},"316":{"spell":"liuliqiao","name":"\u516d\u91cc\u6865","companysid":1,"lineid":10,"id":316,"sort":38,"lng":116.309619,"lat":39.886414},"317":{"spell":"lianhuaqiao","name":"\u83b2\u82b1\u6865","companysid":1,"lineid":10,"id":317,"sort":39,"lng":116.316837,"lat":39.904066},"318":{"spell":"gongzhufen","name":"\u516c\u4e3b\u575f","companysid":1,"lineid":10,"id":318,"sort":40,"lng":116.316832,"lat":39.913607},"319":{"spell":"xidiaoyutai","name":"\u897f\u9493\u9c7c\u53f0","companysid":1,"lineid":10,"id":319,"sort":41,"lng":116.30419,"lat":39.92967},"320":{"spell":"cishousi","name":"\u6148\u5bff\u5bfa","companysid":1,"lineid":10,"id":320,"sort":42,"lng":116.301265,"lat":39.939433},"321":{"spell":"chedaogou","name":"\u8f66\u9053\u6c9f","companysid":1,"lineid":10,"id":321,"sort":43,"lng":116.30029,"lat":39.95489},"322":{"spell":"changchunqiao","name":"\u957f\u6625\u6865","companysid":1,"lineid":10,"id":322,"sort":44,"lng":116.300474,"lat":39.964862},"323":{"spell":"huoqiying","name":"\u706b\u5668\u8425","companysid":1,"lineid":10,"id":323,"sort":45,"lng":116.29561,"lat":39.97238}}},"13":{"id":10,"name":"13\u53f7\u7ebf","spell":"13haoxian","janespell":"13HX","companysid":1,"lineid":13,"sort":11,"stations":{"324":{"spell":"xizhimen","name":"\u897f\u76f4\u95e8","companysid":1,"lineid":13,"id":324,"sort":1,"lng":116.359771,"lat":39.947447},"325":{"spell":"dazhongsi","name":"\u5927\u949f\u5bfa","companysid":1,"lineid":13,"id":325,"sort":2,"lng":116.35182,"lat":39.97203},"326":{"spell":"zhichunlu","name":"\u77e5\u6625\u8def","companysid":1,"lineid":13,"id":326,"sort":3,"lng":116.346656,"lat":39.982061},"327":{"spell":"wudaokou","name":"\u4e94\u9053\u53e3","companysid":1,"lineid":13,"id":327,"sort":4,"lng":116.344451,"lat":39.998559},"328":{"spell":"shangdi","name":"\u4e0a\u5730","companysid":1,"lineid":13,"id":328,"sort":5,"lng":116.32684,"lat":40.0387},"3449":{"spell":"qinghezhan","name":"\u6e05\u6cb3\u7ad9","companysid":1,"lineid":13,"id":3449,"sort":6,"lng":116.321038,"lat":40.047309},"329":{"spell":"xierqi","name":"\u897f\u4e8c\u65d7","companysid":1,"lineid":13,"id":329,"sort":7,"lng":116.312673,"lat":40.058924},"330":{"spell":"longze","name":"\u9f99\u6cfd","companysid":1,"lineid":13,"id":330,"sort":8,"lng":116.326184,"lat":40.076642},"331":{"spell":"huilongguan","name":"\u56de\u9f99\u89c2","companysid":1,"lineid":13,"id":331,"sort":9,"lng":116.342326,"lat":40.076407},"332":{"spell":"huoying","name":"\u970d\u8425","companysid":1,"lineid":13,"id":332,"sort":10,"lng":116.366836,"lat":40.076421},"333":{"spell":"lishuiqiao","name":"\u7acb\u6c34\u6865","companysid":1,"lineid":13,"id":333,"sort":11,"lng":116.417779,"lat":40.059169},"334":{"spell":"beiyuan","name":"\u5317\u82d1","companysid":1,"lineid":13,"id":334,"sort":12,"lng":116.44131,"lat":40.04886},"335":{"spell":"wangjingxi","name":"\u671b\u4eac\u897f","companysid":1,"lineid":13,"id":335,"sort":13,"lng":116.45377,"lat":40.000417},"336":{"spell":"shaoyaoju","name":"\u828d\u836f\u5c45","companysid":1,"lineid":13,"id":336,"sort":14,"lng":116.442882,"lat":39.984024},"337":{"spell":"guangximen","name":"\u5149\u7199\u95e8","companysid":1,"lineid":13,"id":337,"sort":15,"lng":116.43836,"lat":39.97447},"338":{"spell":"liufang","name":"\u67f3\u82b3","companysid":1,"lineid":13,"id":338,"sort":16,"lng":116.439276,"lat":39.964105},"339":{"spell":"dongzhimen","name":"\u4e1c\u76f4\u95e8","companysid":1,"lineid":13,"id":339,"sort":17,"lng":116.441728,"lat":39.94865}}},"141":{"id":18,"name":"14\u53f7\u7ebf\uff08\u897f\uff09","spell":"14haoxianxi","janespell":"14HXX","companysid":1,"lineid":141,"sort":12,"stations":{"340":{"spell":"zhangguozhuang","name":"\u5f20\u90ed\u5e84","companysid":1,"lineid":141,"id":340,"sort":1,"lng":116.19341,"lat":39.8641},"341":{"spell":"yuanboyuan","name":"\u56ed\u535a\u56ed","companysid":1,"lineid":141,"id":341,"sort":2,"lng":116.208371,"lat":39.867093},"342":{"spell":"dawayao","name":"\u5927\u74e6\u7a91","companysid":1,"lineid":141,"id":342,"sort":3,"lng":116.246971,"lat":39.86521},"343":{"spell":"guozhuangzi","name":"\u90ed\u5e84\u5b50","companysid":1,"lineid":141,"id":343,"sort":4,"lng":116.25984,"lat":39.87076},"344":{"spell":"dajing","name":"\u5927\u4e95","companysid":1,"lineid":141,"id":344,"sort":5,"lng":116.28183,"lat":39.87157},"345":{"spell":"qilizhuang","name":"\u4e03\u91cc\u5e84","companysid":1,"lineid":141,"id":345,"sort":6,"lng":116.300339,"lat":39.872586},"346":{"spell":"xiju","name":"\u897f\u5c40","companysid":1,"lineid":141,"id":346,"sort":7,"lng":116.309906,"lat":39.87251}}},"142":{"id":19,"name":"14\u53f7\u7ebf\uff08\u4e1c\uff09","spell":"14haoxiandong","janespell":"14HXD","companysid":1,"lineid":142,"sort":13,"stations":{"347":{"spell":"beijingnanzhan","name":"\u5317\u4eac\u5357\u7ad9","companysid":1,"lineid":142,"id":347,"sort":1,"lng":116.3855,"lat":39.87117},"348":{"spell":"yongdingmenwai","name":"\u6c38\u5b9a\u95e8\u5916","companysid":1,"lineid":142,"id":348,"sort":2,"lng":116.405742,"lat":39.873718},"349":{"spell":"jingtai","name":"\u666f\u6cf0","companysid":1,"lineid":142,"id":349,"sort":3,"lng":116.41716,"lat":39.87144},"350":{"spell":"puhuangyu","name":"\u84b2\u9ec4\u6986","companysid":1,"lineid":142,"id":350,"sort":4,"lng":116.429623,"lat":39.871679},"351":{"spell":"fangzhuang","name":"\u65b9\u5e84","companysid":1,"lineid":142,"id":351,"sort":5,"lng":116.44619,"lat":39.87174},"352":{"spell":"shilihe","name":"\u5341\u91cc\u6cb3","companysid":1,"lineid":142,"id":352,"sort":6,"lng":116.464617,"lat":39.871842},"353":{"spell":"beigongdaximen","name":"\u5317\u5de5\u5927\u897f\u95e8","companysid":1,"lineid":142,"id":353,"sort":7,"lng":116.484034,"lat":39.880743},"2255":{"spell":"pingleyuan","name":"\u5e73\u4e50\u56ed","companysid":1,"lineid":142,"id":2255,"sort":8,"lng":116.48396,"lat":39.89075},"354":{"spell":"jiulongshan","name":"\u4e5d\u9f99\u5c71","companysid":1,"lineid":142,"id":354,"sort":9,"lng":116.484047,"lat":39.900015},"355":{"spell":"dawanglu","name":"\u5927\u671b\u8def","companysid":1,"lineid":142,"id":355,"sort":10,"lng":116.484474,"lat":39.914707},"356":{"spell":"jintailu","name":"\u91d1\u53f0\u8def","companysid":1,"lineid":142,"id":356,"sort":11,"lng":116.484739,"lat":39.929384},"2172":{"spell":"chaoyanggongyuan","name":"\u671d\u9633\u516c\u56ed","companysid":1,"lineid":142,"id":2172,"sort":12,"lng":116.48494,"lat":39.93944},"357":{"spell":"zaoying","name":"\u67a3\u8425","companysid":1,"lineid":142,"id":357,"sort":13,"lng":116.481577,"lat":39.950171},"358":{"spell":"dongfengbeiqiao","name":"\u4e1c\u98ce\u5317\u6865","companysid":1,"lineid":142,"id":358,"sort":14,"lng":116.49258,"lat":39.9645},"359":{"spell":"jiangtai","name":"\u5c06\u53f0","companysid":1,"lineid":142,"id":359,"sort":15,"lng":116.49625,"lat":39.97696},"360":{"spell":"wangjingnan","name":"\u671b\u4eac\u5357","companysid":1,"lineid":142,"id":360,"sort":16,"lng":116.48845,"lat":39.99053},"361":{"spell":"futong","name":"\u961c\u901a","companysid":1,"lineid":142,"id":361,"sort":17,"lng":116.47764,"lat":39.99789},"362":{"spell":"wangjing","name":"\u671b\u4eac","companysid":1,"lineid":142,"id":362,"sort":18,"lng":116.474606,"lat":40.004783},"363":{"spell":"donghuqu","name":"\u4e1c\u6e56\u6e20","companysid":1,"lineid":142,"id":363,"sort":19,"lng":116.474058,"lat":40.016188},"364":{"spell":"laiguangying","name":"\u6765\u5e7f\u8425","companysid":1,"lineid":142,"id":364,"sort":20,"lng":116.473519,"lat":40.026113},"365":{"spell":"shangezhuang","name":"\u5584\u5404\u5e84","companysid":1,"lineid":142,"id":365,"sort":21,"lng":116.48476,"lat":40.03309}}},"15":{"id":11,"name":"15\u53f7\u7ebf","spell":"15haoxian","janespell":"15HX","companysid":1,"lineid":15,"sort":14,"stations":{"366":{"spell":"qinghuadongluxikou","name":"\u6e05\u534e\u4e1c\u8def\u897f\u53e3","companysid":1,"lineid":15,"id":366,"sort":1,"lng":116.345551,"lat":40.006286},"367":{"spell":"liudaokou","name":"\u516d\u9053\u53e3","companysid":1,"lineid":15,"id":367,"sort":2,"lng":116.359327,"lat":40.006704},"368":{"spell":"beishatan","name":"\u5317\u6c99\u6ee9","companysid":1,"lineid":15,"id":368,"sort":3,"lng":116.37556,"lat":40.00754},"369":{"spell":"aolinpikegongyuan","name":"\u5965\u6797\u5339\u514b\u516c\u56ed","companysid":1,"lineid":15,"id":369,"sort":4,"lng":116.398147,"lat":40.008497},"370":{"spell":"anlilu","name":"\u5b89\u7acb\u8def","companysid":1,"lineid":15,"id":370,"sort":5,"lng":116.414303,"lat":40.008928},"371":{"spell":"datunludong","name":"\u5927\u5c6f\u8def\u4e1c","companysid":1,"lineid":15,"id":371,"sort":6,"lng":116.425249,"lat":40.009098},"372":{"spell":"guanzhuang","name":"\u5173\u5e84","companysid":1,"lineid":15,"id":372,"sort":7,"lng":116.43789,"lat":40.00714},"373":{"spell":"wangjingxi","name":"\u671b\u4eac\u897f","companysid":1,"lineid":15,"id":373,"sort":8,"lng":116.457439,"lat":40.001778},"374":{"spell":"wangjing","name":"\u671b\u4eac","companysid":1,"lineid":15,"id":374,"sort":9,"lng":116.476034,"lat":40.004245},"375":{"spell":"wangjingdong","name":"\u671b\u4eac\u4e1c","companysid":1,"lineid":15,"id":375,"sort":10,"lng":116.4933,"lat":40.00927},"376":{"spell":"cuigezhuang","name":"\u5d14\u5404\u5e84","companysid":1,"lineid":15,"id":376,"sort":11,"lng":116.499157,"lat":40.028423},"377":{"spell":"maquanying","name":"\u9a6c\u6cc9\u8425","companysid":1,"lineid":15,"id":377,"sort":12,"lng":116.50964,"lat":40.039838},"378":{"spell":"sunhe","name":"\u5b59\u6cb3","companysid":1,"lineid":15,"id":378,"sort":13,"lng":116.54104,"lat":40.05126},"379":{"spell":"guozhan","name":"\u56fd\u5c55","companysid":1,"lineid":15,"id":379,"sort":14,"lng":116.561836,"lat":40.075886},"380":{"spell":"hualikan","name":"\u82b1\u68a8\u574e","companysid":1,"lineid":15,"id":380,"sort":15,"lng":116.56422,"lat":40.09031},"381":{"spell":"houshayu","name":"\u540e\u6c99\u5cea","companysid":1,"lineid":15,"id":381,"sort":16,"lng":116.57079,"lat":40.11986},"382":{"spell":"nanfaxin","name":"\u5357\u6cd5\u4fe1","companysid":1,"lineid":15,"id":382,"sort":17,"lng":116.61641,"lat":40.13446},"383":{"spell":"shimen","name":"\u77f3\u95e8","companysid":1,"lineid":15,"id":383,"sort":18,"lng":116.6475,"lat":40.13631},"384":{"spell":"shunyi","name":"\u987a\u4e49","companysid":1,"lineid":15,"id":384,"sort":19,"lng":116.663497,"lat":40.1361},"385":{"spell":"zuobo","name":"\u4ff8\u4f2f","companysid":1,"lineid":15,"id":385,"sort":20,"lng":116.69145,"lat":40.1383}}},"16":{"id":12,"name":"16\u53f7\u7ebf","spell":"16haoxian","janespell":"16HX","companysid":1,"lineid":16,"sort":15,"stations":{"3358":{"spell":"ganjiakou","name":"\u7518\u5bb6\u53e3","companysid":1,"lineid":16,"id":3358,"sort":2,"lng":116.341214,"lat":39.92909},"3359":{"spell":"guojiatushuguan","name":"\u56fd\u5bb6\u56fe\u4e66\u9986","companysid":1,"lineid":16,"id":3359,"sort":3,"lng":116.331555,"lat":39.948479},"3360":{"spell":"wanshousi","name":"\u4e07\u5bff\u5bfa","companysid":1,"lineid":16,"id":3360,"sort":4,"lng":116.316301,"lat":39.954051},"3361":{"spell":"suzhouqiao","name":"\u82cf\u5dde\u6865","companysid":1,"lineid":16,"id":3361,"sort":5,"lng":116.314621,"lat":39.968246},"3362":{"spell":"wanquanheqiao","name":"\u4e07\u6cc9\u6cb3\u6865","companysid":1,"lineid":16,"id":3362,"sort":6,"lng":116.305367,"lat":39.991441},"2173":{"spell":"xiyuan","name":"\u897f\u82d1","companysid":1,"lineid":16,"id":2173,"sort":7,"lng":116.299055,"lat":40.004739},"3357":{"spell":"nongdananlu","name":"\u519c\u5927\u5357\u8def","companysid":1,"lineid":16,"id":3357,"sort":8,"lng":116.288702,"lat":40.027823},"388":{"spell":"malianwa","name":"\u9a6c\u8fde\u6d3c","companysid":1,"lineid":16,"id":388,"sort":9,"lng":116.27926,"lat":40.03877},"389":{"spell":"xibeiwang","name":"\u897f\u5317\u65fa","companysid":1,"lineid":16,"id":389,"sort":10,"lng":116.26408,"lat":40.0553},"390":{"spell":"yongfengnan","name":"\u6c38\u4e30\u5357","companysid":1,"lineid":16,"id":390,"sort":11,"lng":116.25461,"lat":40.07167},"391":{"spell":"yongfeng","name":"\u6c38\u4e30","companysid":1,"lineid":16,"id":391,"sort":12,"lng":116.24477,"lat":40.07764},"392":{"spell":"tundian","name":"\u5c6f\u4f43","companysid":1,"lineid":16,"id":392,"sort":13,"lng":116.222465,"lat":40.074098},"393":{"spell":"daoxianghulu","name":"\u7a3b\u9999\u6e56\u8def","companysid":1,"lineid":16,"id":393,"sort":14,"lng":116.194788,"lat":40.074775},"394":{"spell":"wenyanglu","name":"\u6e29\u9633\u8def","companysid":1,"lineid":16,"id":394,"sort":15,"lng":116.167848,"lat":40.074892},"395":{"spell":"beianhe","name":"\u5317\u5b89\u6cb3","companysid":1,"lineid":16,"id":395,"sort":16,"lng":116.13682,"lat":40.07386}}},"90":{"id":13,"name":"\u516b\u901a\u7ebf","spell":"batongxian","janespell":"BTX","companysid":1,"lineid":90,"sort":16,"stations":{"396":{"spell":"sihui","name":"\u56db\u60e0","companysid":1,"lineid":90,"id":396,"sort":1,"lng":116.50194,"lat":39.91486},"397":{"spell":"sihuidong","name":"\u56db\u60e0\u4e1c","companysid":1,"lineid":90,"id":397,"sort":2,"lng":116.522306,"lat":39.91489},"398":{"spell":"gaobeidian","name":"\u9ad8\u7891\u5e97","companysid":1,"lineid":90,"id":398,"sort":3,"lng":116.538008,"lat":39.915793},"399":{"spell":"chuanmeidaxue","name":"\u4f20\u5a92\u5927\u5b66","companysid":1,"lineid":90,"id":399,"sort":4,"lng":116.561391,"lat":39.915191},"400":{"spell":"shuangqiao","name":"\u53cc\u6865","companysid":1,"lineid":90,"id":400,"sort":5,"lng":116.583346,"lat":39.915872},"401":{"spell":"guanzhuang","name":"\u7ba1\u5e84","companysid":1,"lineid":90,"id":401,"sort":6,"lng":116.605799,"lat":39.914897},"402":{"spell":"baliqiao","name":"\u516b\u91cc\u6865","companysid":1,"lineid":90,"id":402,"sort":7,"lng":116.625158,"lat":39.912202},"403":{"spell":"tongzhoubeiyuan","name":"\u901a\u5dde\u5317\u82d1","companysid":1,"lineid":90,"id":403,"sort":8,"lng":116.64361,"lat":39.91006},"404":{"spell":"guoyuan","name":"\u679c\u56ed","companysid":1,"lineid":90,"id":404,"sort":9,"lng":116.65305,"lat":39.899652},"405":{"spell":"jiukeshu","name":"\u4e5d\u68f5\u6811","companysid":1,"lineid":90,"id":405,"sort":10,"lng":116.663933,"lat":39.896455},"406":{"spell":"liyuan","name":"\u68a8\u56ed","companysid":1,"lineid":90,"id":406,"sort":11,"lng":116.67522,"lat":39.88972},"407":{"spell":"linheli","name":"\u4e34\u6cb3\u91cc","companysid":1,"lineid":90,"id":407,"sort":12,"lng":116.68547,"lat":39.88124},"408":{"spell":"tuqiao","name":"\u571f\u6865","companysid":1,"lineid":90,"id":408,"sort":13,"lng":116.69298,"lat":39.87763},"3134":{"spell":"huazhuang","name":"\u82b1\u5e84","companysid":1,"lineid":90,"id":3134,"sort":14,"lng":116.701597,"lat":39.862395}}},"91":{"id":14,"name":"\u660c\u5e73\u7ebf","spell":"changpingxian","janespell":"CPX","companysid":1,"lineid":91,"sort":17,"stations":{"409":{"spell":"changpingxishankou","name":"\u660c\u5e73\u897f\u5c71\u53e3","companysid":1,"lineid":91,"id":409,"sort":1,"lng":116.202231,"lat":40.250274},"410":{"spell":"shisanlingjingqu","name":"\u5341\u4e09\u9675\u666f\u533a","companysid":1,"lineid":91,"id":410,"sort":2,"lng":116.214362,"lat":40.245731},"411":{"spell":"changping","name":"\u660c\u5e73","companysid":1,"lineid":91,"id":411,"sort":3,"lng":116.240108,"lat":40.22634},"412":{"spell":"changpingdongguan","name":"\u660c\u5e73\u4e1c\u5173","companysid":1,"lineid":91,"id":412,"sort":4,"lng":116.268557,"lat":40.227937},"413":{"spell":"beishaowa","name":"\u5317\u90b5\u6d3c","companysid":1,"lineid":91,"id":413,"sort":5,"lng":116.28797,"lat":40.22811},"414":{"spell":"nanshao","name":"\u5357\u90b5","companysid":1,"lineid":91,"id":414,"sort":6,"lng":116.2935,"lat":40.21343},"415":{"spell":"shahegaojiaoyuan","name":"\u6c99\u6cb3\u9ad8\u6559\u56ed","companysid":1,"lineid":91,"id":415,"sort":7,"lng":116.28676,"lat":40.17101},"416":{"spell":"shahe","name":"\u6c99\u6cb3","companysid":1,"lineid":91,"id":416,"sort":8,"lng":116.29505,"lat":40.15469},"417":{"spell":"gonghuacheng","name":"\u5de9\u534e\u57ce","companysid":1,"lineid":91,"id":417,"sort":9,"lng":116.300447,"lat":40.137303},"418":{"spell":"zhuxinzhuang","name":"\u6731\u8f9b\u5e84","companysid":1,"lineid":91,"id":418,"sort":10,"lng":116.320089,"lat":40.110331},"419":{"spell":"shengmingkexueyuan","name":"\u751f\u547d\u79d1\u5b66\u56ed","companysid":1,"lineid":91,"id":419,"sort":11,"lng":116.30055,"lat":40.10098},"420":{"spell":"xierqi","name":"\u897f\u4e8c\u65d7","companysid":1,"lineid":91,"id":420,"sort":12,"lng":116.312588,"lat":40.058907}}},"92":{"id":15,"name":"\u4ea6\u5e84\u7ebf","spell":"yizhuangxian","janespell":"YZX","companysid":1,"lineid":92,"sort":18,"stations":{"421":{"spell":"songjiazhuang","name":"\u5b8b\u5bb6\u5e84","companysid":1,"lineid":92,"id":421,"sort":1,"lng":116.434905,"lat":39.851294},"422":{"spell":"xiaocun","name":"\u8096\u6751","companysid":1,"lineid":92,"id":422,"sort":2,"lng":116.45502,"lat":39.83993},"423":{"spell":"xiaohongmen","name":"\u5c0f\u7ea2\u95e8","companysid":1,"lineid":92,"id":423,"sort":3,"lng":116.46581,"lat":39.83399},"424":{"spell":"jiugong","name":"\u65e7\u5bab","companysid":1,"lineid":92,"id":424,"sort":4,"lng":116.46743,"lat":39.81254},"425":{"spell":"yizhuangqiao","name":"\u4ea6\u5e84\u6865","companysid":1,"lineid":92,"id":425,"sort":5,"lng":116.48685,"lat":39.80883},"426":{"spell":"yizhuangwenhuayuan","name":"\u4ea6\u5e84\u6587\u5316\u56ed","companysid":1,"lineid":92,"id":426,"sort":6,"lng":116.49701,"lat":39.81284},"427":{"spell":"wanyuanjie","name":"\u4e07\u6e90\u8857","companysid":1,"lineid":92,"id":427,"sort":7,"lng":116.51193,"lat":39.80925},"428":{"spell":"rongjingdongjie","name":"\u8363\u4eac\u4e1c\u8857","companysid":1,"lineid":92,"id":428,"sort":8,"lng":116.51974,"lat":39.79962},"429":{"spell":"rongchangdongjie","name":"\u8363\u660c\u4e1c\u8857","companysid":1,"lineid":92,"id":429,"sort":9,"lng":116.52804,"lat":39.78919},"430":{"spell":"tongjinanlu","name":"\u540c\u6d4e\u5357\u8def","companysid":1,"lineid":92,"id":430,"sort":10,"lng":116.54638,"lat":39.77915},"431":{"spell":"jinghailu","name":"\u7ecf\u6d77\u8def","companysid":1,"lineid":92,"id":431,"sort":11,"lng":116.56891,"lat":39.78949},"432":{"spell":"ciqunan","name":"\u6b21\u6e20\u5357","companysid":1,"lineid":92,"id":432,"sort":12,"lng":116.58793,"lat":39.8008},"433":{"spell":"ciqu","name":"\u6b21\u6e20","companysid":1,"lineid":92,"id":433,"sort":13,"lng":116.59791,"lat":39.80919},"434":{"spell":"yizhuanghuochezhan","name":"\u4ea6\u5e84\u706b\u8f66\u7ad9","companysid":1,"lineid":92,"id":434,"sort":14,"lng":116.60908,"lat":39.81849}}},"93":{"id":16,"name":"\u623f\u5c71\u7ebf","spell":"fangshanxian","janespell":"FSX","companysid":1,"lineid":93,"sort":19,"stations":{"3453":{"spell":"dongguantounan","name":"\u4e1c\u7ba1\u5934\u5357","companysid":1,"lineid":93,"id":3453,"sort":1,"lng":116.329975,"lat":39.861909},"3452":{"spell":"shoujingmao","name":"\u9996\u7ecf\u8d38","companysid":1,"lineid":93,"id":3452,"sort":2,"lng":116.326785,"lat":39.850629},"3451":{"spell":"huaxiangdongqiao","name":"\u82b1\u4e61\u4e1c\u6865","companysid":1,"lineid":93,"id":3451,"sort":3,"lng":116.326462,"lat":39.83542},"3450":{"spell":"baipenyao","name":"\u767d\u76c6\u7a91","companysid":1,"lineid":93,"id":3450,"sort":4,"lng":116.319647,"lat":39.825392},"435":{"spell":"guogongzhuang","name":"\u90ed\u516c\u5e84","companysid":1,"lineid":93,"id":435,"sort":5,"lng":116.30857,"lat":39.82076},"436":{"spell":"dazuotai","name":"\u5927\u8446\u53f0","companysid":1,"lineid":93,"id":436,"sort":6,"lng":116.29816,"lat":39.81411},"437":{"spell":"daotian","name":"\u7a3b\u7530","companysid":1,"lineid":93,"id":437,"sort":7,"lng":116.22543,"lat":39.80051},"438":{"spell":"changyang","name":"\u957f\u9633","companysid":1,"lineid":93,"id":438,"sort":8,"lng":116.21926,"lat":39.76941},"439":{"spell":"libafang","name":"\u7bf1\u7b06\u623f","companysid":1,"lineid":93,"id":439,"sort":9,"lng":116.19593,"lat":39.7667},"440":{"spell":"guangyangcheng","name":"\u5e7f\u9633\u57ce","companysid":1,"lineid":93,"id":440,"sort":10,"lng":116.1914,"lat":39.75402},"441":{"spell":"liangxiangdaxuechengbei","name":"\u826f\u4e61\u5927\u5b66\u57ce\u5317","companysid":1,"lineid":93,"id":441,"sort":11,"lng":116.18986,"lat":39.73611},"442":{"spell":"liangxiangdaxuecheng","name":"\u826f\u4e61\u5927\u5b66\u57ce","companysid":1,"lineid":93,"id":442,"sort":12,"lng":116.18287,"lat":39.7295},"443":{"spell":"liangxiangdaxuechengxi","name":"\u826f\u4e61\u5927\u5b66\u57ce\u897f","companysid":1,"lineid":93,"id":443,"sort":13,"lng":116.16268,"lat":39.7296},"444":{"spell":"liangxiangnanguan","name":"\u826f\u4e61\u5357\u5173","companysid":1,"lineid":93,"id":444,"sort":14,"lng":116.14726,"lat":39.72947},"445":{"spell":"suzhuang","name":"\u82cf\u5e84","companysid":1,"lineid":93,"id":445,"sort":15,"lng":116.1319,"lat":39.7292},"2174":{"spell":"yancundong","name":"\u960e\u6751\u4e1c","companysid":1,"lineid":93,"id":2174,"sort":16,"lng":116.107,"lat":39.73467}}},"94":{"id":17,"name":"\u673a\u573a\u7ebf","spell":"jichangxian","janespell":"JCX","companysid":1,"lineid":94,"sort":20,"stations":{"446":{"spell":"dongzhimen","name":"\u4e1c\u76f4\u95e8","companysid":1,"lineid":94,"id":446,"sort":1,"lng":116.442375,"lat":39.947692},"447":{"spell":"sanyuanqiao","name":"\u4e09\u5143\u6865","companysid":1,"lineid":94,"id":447,"sort":2,"lng":116.463728,"lat":39.967329},"448":{"spell":"3haohangzhanlou","name":"3\u53f7\u822a\u7ad9\u697c","companysid":1,"lineid":94,"id":448,"sort":3,"lng":116.62174,"lat":40.058872},"449":{"spell":"2haohangzhanlou","name":"2\u53f7\u822a\u7ad9\u697c","companysid":1,"lineid":94,"id":449,"sort":4,"lng":116.599605,"lat":40.085457}}},"95":{"id":2169,"name":"S1\u7ebf","spell":"S1xian","janespell":"S1X","companysid":1,"lineid":95,"sort":21,"stations":{"2175":{"spell":"jinanqiao","name":"\u91d1\u5b89\u6865","companysid":1,"lineid":95,"id":2175,"sort":3,"lng":116.169416,"lat":39.930072},"2176":{"spell":"sidaoqiao","name":"\u56db\u9053\u6865","companysid":1,"lineid":95,"id":2176,"sort":4,"lng":116.14035,"lat":39.92211},"2177":{"spell":"qiaohuying","name":"\u6865\u6237\u8425","companysid":1,"lineid":95,"id":2177,"sort":5,"lng":116.13227,"lat":39.91835},"2178":{"spell":"shangan","name":"\u4e0a\u5cb8","companysid":1,"lineid":95,"id":2178,"sort":6,"lng":116.12871,"lat":39.91113},"2179":{"spell":"liyuanzhuang","name":"\u6817\u56ed\u5e84","companysid":1,"lineid":95,"id":2179,"sort":7,"lng":116.129841,"lat":39.901762},"2180":{"spell":"xiaoyuan","name":"\u5c0f\u56ed","companysid":1,"lineid":95,"id":2180,"sort":8,"lng":116.1213,"lat":39.89614},"2181":{"spell":"shichang","name":"\u77f3\u5382","companysid":1,"lineid":95,"id":2181,"sort":9,"lng":116.10697,"lat":39.89513}}},"96":{"id":2170,"name":"\u71d5\u623f\u7ebf","spell":"yanfangxian","janespell":"YFX","companysid":1,"lineid":96,"sort":22,"stations":{"2182":{"spell":"yancundong","name":"\u960e\u6751\u4e1c","companysid":1,"lineid":96,"id":2182,"sort":1,"lng":116.107,"lat":39.73467},"2183":{"spell":"zicaowu","name":"\u7d2b\u8349\u575e","companysid":1,"lineid":96,"id":2183,"sort":2,"lng":116.093289,"lat":39.730251},"2184":{"spell":"yancun","name":"\u960e\u6751","companysid":1,"lineid":96,"id":2184,"sort":3,"lng":116.086826,"lat":39.722475},"2185":{"spell":"xingcheng","name":"\u661f\u57ce","companysid":1,"lineid":96,"id":2185,"sort":4,"lng":116.067786,"lat":39.719724},"2186":{"spell":"dashihedong","name":"\u5927\u77f3\u6cb3\u4e1c","companysid":1,"lineid":96,"id":2186,"sort":5,"lng":116.04608,"lat":39.71611},"2187":{"spell":"magezhuang","name":"\u9a6c\u5404\u5e84","companysid":1,"lineid":96,"id":2187,"sort":6,"lng":116.02305,"lat":39.71115},"2188":{"spell":"raolefu","name":"\u9976\u4e50\u5e9c","companysid":1,"lineid":96,"id":2188,"sort":7,"lng":116.0126,"lat":39.70734},"2189":{"spell":"fangshanchengguan","name":"\u623f\u5c71\u57ce\u5173","companysid":1,"lineid":96,"id":2189,"sort":8,"lng":115.99625,"lat":39.71168},"2190":{"spell":"yanshan","name":"\u71d5\u5c71","companysid":1,"lineid":96,"id":2190,"sort":9,"lng":115.98015,"lat":39.7252}}},"97":{"id":2171,"name":"\u897f\u90ca\u7ebf","spell":"xijiaoxian","janespell":"XJX","companysid":1,"lineid":97,"sort":23,"stations":{"2191":{"spell":"bagou","name":"\u5df4\u6c9f","companysid":1,"lineid":97,"id":2191,"sort":1,"lng":116.298183,"lat":39.980662},"2192":{"spell":"yiheyuanximen","name":"\u9890\u548c\u56ed\u897f\u95e8","companysid":1,"lineid":97,"id":2192,"sort":2,"lng":116.26967,"lat":39.99199},"2193":{"spell":"chapeng","name":"\u8336\u68da","companysid":1,"lineid":97,"id":2193,"sort":3,"lng":116.25461,"lat":39.98801},"2194":{"spell":"wanan","name":"\u4e07\u5b89","companysid":1,"lineid":97,"id":2194,"sort":4,"lng":116.2386,"lat":39.98973},"2195":{"spell":"zhiwuyuan","name":"\u690d\u7269\u56ed","companysid":1,"lineid":97,"id":2195,"sort":5,"lng":116.22137,"lat":39.99925},"2196":{"spell":"xiangshan","name":"\u9999\u5c71","companysid":1,"lineid":97,"id":2196,"sort":6,"lng":116.21111,"lat":39.99982}}},"143":{"id":3143,"name":"\u5927\u5174\u673a\u573a\u7ebf","spell":"daxingjichangxian","janespell":"DXJCX","companysid":1,"lineid":143,"sort":24,"stations":{"3144":{"spell":"caoqiao","name":"\u8349\u6865","companysid":1,"lineid":143,"id":3144,"sort":1,"lng":116.356663,"lat":39.852115},"3145":{"spell":"daxingxincheng","name":"\u5927\u5174\u65b0\u57ce","companysid":1,"lineid":143,"id":3145,"sort":2,"lng":116.371794,"lat":39.741554},"3146":{"spell":"daxingjichang","name":"\u5927\u5174\u673a\u573a","companysid":1,"lineid":143,"id":3146,"sort":3,"lng":116.42396,"lat":39.511576}}}}	};
+	wiwjMap.searchCondition.locationId=city.id;
+	wiwjMap.searchCondition.locationCoord=new BMap.Point(city.lng,city.lat);
+	wiwjMap.searchCondition.houseType=2;
+	wiwjMap.map.enableScrollWheelZoom();//设置滚轮缩放
+	wiwjMap.map.addControl(new BMap.ScaleControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT}));
+	var zoom_navigation = new BMap.NavigationControl({anchor: BMAP_ANCHOR_BOTTOM_RIGHT, type: BMAP_NAVIGATION_CONTROL_SMALL}); //右上角，仅包含平移和缩放按钮
+	wiwjMap.map.addControl(zoom_navigation);
+
+	// 显示地铁图
+	var U = O = Y = R = x = [];
+    var g_conf = {
+        curLineMap: null
+    };
+
+    // for (v(t); U.length;) {
+    //     var g = U.shift();
+    //     wiwjMap.map.removeOverlay(g)
+    // }
+
+	//读入地图数据
+
+
+    (function() {
+        window._smReadyFuncs = [];
+        window.SMSdk = {
+            ready: function(fn) {
+                fn && _smReadyFuncs.push(fn);
+            }
+        };
+        window._smConf = {
+            organization: 'GDS3VusCjqwVbuolurCP', //传入organization，不要传入accessKey.
+            staticHost: 'static.fengkongcloud.com'
+        };
+        var url = (function () {
+            var originHost = "static2.fengkongcloud.com";
+            var isHttps = 'https:' === document.location.protocol;
+            var protocol = isHttps ? 'https://' : 'http://';
+            var fpJsPath = '/fpv2.js';
+            var url = protocol + _smConf.staticHost + fpJsPath;
+            var ua = navigator.userAgent.toLowerCase();
+            var isWinXP = /windows\s(?:nt\s5.1)|(?:xp)/.test(ua);
+            var isLowIE = /msie\s[678]\.0/.test(ua);
+            if(isHttps && isWinXP && isLowIE) {
+                url = protocol + originHost + fpJsPath;
+            }
+            return url;
+        })();
+        var sm = document.createElement("script");
+        var s = document.getElementsByTagName("script")[0];
+        sm.src = url;
+        s.parentNode.insertBefore(sm, s);
+    })();
+</script>
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script><!-- （baidutongji） -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?94ed3d23572054a86ed341d64b267ec6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<input id="gioTrackPageInfo" type="hidden">
+<!-- GrowingIO Analytics code version 2.1 -->
+<!-- Copyright 2015-2018 GrowingIO, Inc. More info available at http://www.growingio.com -->
+<script  src="https://res.5i5j.com/pc/common/gio-website.js?4f463b5a7dfef8bdb8180729bff5778d"></script>
+<script type='text/javascript'>
+//    window.vds 控制台输入 查询gio是否集成到页面
+    var userIdForTd = '';
+    var cityNameForTd = '北京';
+    var trackPageInfo = '{"info":{"pageName":"\u5730\u56fe\u9875","businessline_pvar":""},"type":"map"}';
+    $("#gioTrackPageInfo").val(trackPageInfo);
+    var prev_page_name = '';
+    gio('init','8fcfcf2bd7c58141', {});
+//    alert(typeof trackPageInfo);
+//    gio('config', {host: '5i5j-proxy.growingio.com'});
+//    gio('page.set', 'city_pvar', cityNameForTd);
+    gio('config', {host: 'gio.5i5j.com'});
+    gio('setUserId', userIdForTd);
+    trackPage(trackPageInfo);
+    console.log(trackPageInfo)
+    
+
+    //custom page code begin here
+
+    //custom page code end here
+
+    gio('send');
+    
+    $(document).delegate("[gio-trace='tracegio_bi']", 'click', function() { 
+        var gioEventId = $(this).attr('gioEventId');
+        var gioJson = $(this).attr('gioJson');
+        if(gioJson){
+            gioJson = JSON.parse(gioJson);//stringify()   parse
+        }else{
+            gioJson = {};
+        }
+
+        if(!gioEventId){
+            //通过页面获取事件ID
+            gioEventId = getEventId();
+
+            //指定 eventId 类型追加参数
+            if(gioEventId == 'esfdetailtrafficclick' || gioEventId == 'zfdetailtrafficclick' || gioEventId == 'bizdetailtrafficclick' ){
+                houseId = "undefined" == typeof houseId ? "" : houseId;
+                gioJson.houseid_pvar = houseId;
+            }
+
+        }
+        //
+        if (gioEventId == 'telconsult'){
+            page_entry_time = "undefined" == typeof page_entry_time ? "" : page_entry_time;
+            console.log(page_entry_time);
+            gioJson.servertime_var = page_entry_time;
+        }
+
+        console.log(gioEventId);
+        console.log(gioJson);
+        gio('track', gioEventId, gioJson);
+    });
+
+    // 二期归因埋点
+    $(document).delegate("[gio-tracetwo='tracegio_change']", 'click', function() {
+        var gioJson = $(this).attr('giotwojson');
+
+        if(gioJson){
+            gioJson = JSON.parse(gioJson);
+        }else{
+            gioJson = {};
+        }
+        console.log(gioJson);
+
+        // 发送转化变量API
+        gio('evar.set', gioJson);
+    });
+
+    function gioCustomUp(data,type){
+        gio('setUserId', data.userid);
+        gio('people.set', {"logintype_ppl":type,"uid_ppl":data.userid});
+    }
+    
+    function clearGioLogin(){
+//        gio('clearUserId');
+    }
+    
+    
+//    if(isLoginForTd!='0'){
+//        gio('setUserId', userIdForTd);
+//    }
+
+    function gioCustomTrack(gioEventId,gioJson,fromSource){
+        if(typeof(gioJson) != 'object'){
+            if(gioJson){
+                gioJson = JSON.parse(gioJson);//stringify()   parse
+            }else{
+                gioJson = {};
+            }
+        }
+        if(!gioEventId){
+            gioEventId = fromSource;
+        }
+
+        if(!gioEventId){
+            //通过网址判断事件ID
+            gioEventId = getEventId();
+            //指定 eventId 类型追加参数
+            if(gioEventId == 'esfdetailtrafficclick' || gioEventId == 'zfdetailtrafficclick' || gioEventId == 'bizdetailtrafficclick' ){
+                houseId = "undefined" == typeof houseId ? "" : houseId;
+                gioJson.houseid_pvar = houseId;
+            }
+        }
+
+        //
+        if (gioEventId == 'telconsult'){
+            page_entry_time = "undefined" == typeof page_entry_time ? "" : page_entry_time;
+            console.log(page_entry_time);
+            gioJson.servertime_var = page_entry_time;
+        }
+
+        console.log(gioEventId);
+        console.log(gioJson);
+        gio('track', gioEventId, gioJson);
+    }
+
+    //处理页面级埋点 名称
+    function trackPage(trackPageInfo){
+        var trackPageJson = {"city_pvar":cityNameForTd,"clienttype_pvar":"PC","pagesource_pvar":prev_page_name};
+        var trackInfo='';
+        var trackType='';
+        if(trackPageInfo){
+            trackPageInfo = JSON.parse(trackPageInfo);
+            trackInfo = trackPageInfo.info;
+            trackType = trackPageInfo.type;
+        }
+
+//        brokeridGio = "undefined" == typeof brokerid ? "" : brokerid;
+//        trackPageJson["agentid_pvar"] = brokeridGio;
+        houseId = "undefined" == typeof houseId ? "" : houseId;
+        communityidTd = "undefined" == typeof communityid ? "" : communityid;
+        trackBusinessline = "undefined" == typeof trackBusinessline ? "" : trackBusinessline;
+        brokeridTd = "undefined" == typeof brokerid ? "" : brokerid;
+        trackFlag3d = "undefined" == typeof trackFlag3d ? "" : trackFlag3d;
+        if(typeof trackInfo=="object"){
+            if(trackType=='ershoufang'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='ershoufang_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+                trackPageJson.houseid_pvar = houseId;
+                trackPageJson.vrtype = trackFlag3d;
+            }
+            if(trackType=='zufang'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='zufang_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+                trackPageJson.businessline_pvar = trackBusinessline;
+                trackPageJson.houseid_pvar = houseId;
+                trackPageJson.vrtype = trackFlag3d;
+
+                trackPageJson.region_pvar= point_qyname!=undefined ? point_qyname : "";
+                trackPageJson.businessdistrict_pvar= point_sqname!=undefined  ? point_sqname :"" ;
+                trackPageJson.communityid_pvar= point_communityid!=undefined ? point_communityid : 0;
+                trackPageJson.communityname_pvar= point_communityname!=undefined ? point_communityname :"";
+
+            }
+            if(trackType=='xiaoqu'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='xiaoqu_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+                trackPageJson.communityid_pvar = communityidTd;
+            }
+            //小区户型
+            if(trackType=='xqhx'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='sale'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='rent'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='sold'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='leased'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='jingjiren'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='jingjiren_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+                trackPageJson.agentid_pvar = brokeridTd
+            }
+            if(trackType=='owner'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='officebuilding' || trackType=='officebuilding_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='building'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='solds'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='leaseds'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='map'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='aikan'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='zixun'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='zhishi'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='wisecounselindex'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='xiaoceping'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='hotquestion'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='ask'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='avoid'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='loan'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='secondhandtax'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='downpayment'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='qualification'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='communityassess_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='question_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='ask_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='aikandetail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='zhishi_detail'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='focus_broker'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+            if(trackType=='activity'||trackType=='advert'){
+                trackPageJson = Object.assign(trackPageJson, trackInfo);
+            }
+
+
+        }
+        console.log(trackPageJson);
+//        if(trackPageInfo)
+//        if(trackController && trackAction){
+//            if(trackController=='broker' && trackAction=='detail'){
+//                brokeridGio = "undefined" == typeof brokerid ? "" : brokerid;
+//                trackPageJson["agentid_pvar"] = brokeridGio;
+//            }
+//        }
+//
+//        if(trackPathInfo){
+//            if(trackController=='broker' && trackAction=='detail'){
+//                brokeridGio = "undefined" == typeof brokerid ? "" : brokerid;
+//                trackPageJson["agentid_pvar"] = brokeridGio;
+//            }
+//        }
+
+
+        gio('page.set', trackPageJson);
+//        gio('send');
+    }
+
+
+    // 弹窗页面埋点
+    function trackAlert(pageName,businessline_pvar){
+        if(businessline_pvar === undefined) {
+            businessline_pvar =''
+        }
+        // alert('我进来了')
+        var trackPageJson = {"city_pvar":cityNameForTd,"clienttype_pvar":"PC","pageName":pageName,"pagesource_pvar":prev_page_name,"businessline_pvar":businessline_pvar};
+        var trackInfo='';
+        var trackType='';
+        if(trackPageInfo){
+            trackPageInfo = JSON.parse(trackPageInfo);
+            trackInfo = {"pagesource_pvar":trackPageInfo.info.pageName};
+            trackPageJson = Object.assign(trackPageJson, trackInfo);
+        }
+        console.log(trackPageJson);
+        gio('page.set', trackPageJson);
+    }
+
+    //获取事件ID
+    function getEventId(){
+        //按类型区分事件ID
+        trackPageInfo = $("#gioTrackPageInfo").val();
+        trackPageInfo = JSON.parse(trackPageInfo);
+        trackType = trackPageInfo.type;
+        console.log(trackType);
+        //首页
+        if(trackType=='newsite'){
+            gioEventId = 'hptrafficclick';
+        }
+        //二手房
+        if(trackType=='ershoufang'){
+            gioEventId = 'esftrafficclick';
+        }
+        //二手房详情
+        if(trackType=='ershoufang_detail'){
+            gioEventId = 'esfdetailtrafficclick';
+        }
+        if(trackType=='zufang'){
+            gioEventId = 'zftrafficclick';
+        }
+        if(trackType=='zufang_detail'){
+            gioEventId = 'zfdetailtrafficclick';
+        }
+        if(trackType=='officebuilding'){
+            gioEventId = 'biztrafficclick';
+        }
+        if(trackType=='officebuilding_detail'){
+            gioEventId = 'bizdetailtrafficclick';
+        }
+        return gioEventId;
+    }
+//Web弹窗SDK
+!function(n,e){function t(e,n){return function(){e.apply(n,1===arguments.length?[arguments[0]]:Array.apply(null,arguments))}}var s=n.gio?t(n.gio.q.unshift,n.gio.q):t(n._vds.push,n._vds),i="growingio-sdk";n[i]={pendingEvents:[]},s(["setListener",function(e){n[i]&&n[i].eventMessageQueue?n[i].eventMessageQueue.feed(e):n[i].pendingEvents.length<=200&&n[i].pendingEvents.push(e)}]);var o=e.createElement("script"),r=e.getElementsByTagName("script");o.async=1,o.src=("https:"==e.location.protocol?"https://":"http://")+"assets.giocdn.com/sdk/marketing/1.1/access.js";var g=r[r.length-1];g.parentNode.insertBefore(o,g)}(window,document);
+</script>
+<!-- End GrowingIO Analytics code version: 2.1 -->
+
+<script>
+    //数美反爬
+    var timeoutId;
+    var timeoutonce = 100;
+    timeoutId = setInterval(function () {
+        if (typeof window.SMSdk.getDeviceId == 'function') {
+            var smidv2 = window.SMSdk.getDeviceId();
+            $.ajax({
+                type: "post",
+                url: "/regloginnew/ajaxgetsm",
+                data: {'smidv2': smidv2},
+                dataType: "json",
+                success: function (data) {
+                    if (data.status == 200) {
+                        gio('visitor.set', 'shumei_risk_level', data.data.riskLevel);
+                    } else {
+                        gio('visitor.set', 'shumei_risk_level', 'REVIEW');
+                    }
+                }
+            });
+            clearInterval(timeoutId);
+        }
+    }, timeoutonce);
+</script></body>
+</html>
