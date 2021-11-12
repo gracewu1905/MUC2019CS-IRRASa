@@ -7,14 +7,22 @@
     <title>智能房源搜索系统</title>
 </head>
 <body>
-    <div id="container" style="width:1200px">
+    <div id="container" style="width:1400px">
         <div id="header" style="background-color:#FFA500;">
             <h1 style="text-align: center">智能房源搜索系统</h1>
         </div>
+        <!-- <input id="searchBar" type="text" class="searchInp fl" placeholder="区域、商圈、小区、地铁应有尽有" autocomplete="off"> -->
         <div id="menu" style="background-color:#FFD700;height:800px;width:300px;float:left;">
             <form>
-                租房: <input id="searchHouse" type="text" name="firstname"><button class="btn-search fr">搜索</button><br>
+                租房: <input id="searchHouse" type="text" name="firstname" placeholder="请输入区域、商圈、小区"><button class="btn-search fr">搜索</button><br>
             </form>
+            <!-- 面积、租价排序 -->
+            <div class="button-de">
+                <button type="button">按面积</button>
+                <button type="button">按价格</button>
+                <button type="button">按面积</button>
+
+            </div>
             <div class="info fr">
                 <h3>房名</h3>
                 <p class="wz">
@@ -40,13 +48,5 @@
             版权 © 
         </div>
     </div>
-    <!-- <h1 style="text-align: center">智能房源搜索系统</h1>
-    <form>
-        租房: <input id="searchHouse" type="text" name="firstname"><button class="btn-search fr">搜索</button><br>
-    </form>
-    <iframe src="testmap.html" width=1020 height=800 frameborder="0" scrolling="no" style="text-align: center;">
-        百度地图API自定义地图
-    </iframe> -->
-    
 </body>
 </html>
