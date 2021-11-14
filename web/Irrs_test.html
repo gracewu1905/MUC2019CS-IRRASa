@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+		body, html{width: 100%;height: 100%;margin:0;font-family:"微软雅黑";font-size:14px;}
+		#l-map{height:1100px;width:100%;}
+		#r-result{width:100%;}
+	</style>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=rgkditHGQqDjme0T6k4KITrB3DPXajNB"></script>
     <title>智能房源搜索系统</title>
 </head>
 <body>
@@ -11,10 +17,10 @@
         <div id="header" style="background-color:#FFA500;">
             <h1 style="text-align: center">智能房源搜索系统</h1>
         </div>
-        <!-- <input id="searchBar" type="text" class="searchInp fl" placeholder="区域、商圈、小区、地铁应有尽有" autocomplete="off"> -->
         <div id="menu" style="background-color:#FFD700;height:800px;width:300px;float:left;">
             <form>
-                租房: <input id="searchHouse" type="text" name="firstname" placeholder="请输入区域、商圈、小区"><button class="btn-search fr">搜索</button><br>
+                租房: <div id="r-result"><input id="suggestId" type="text" name="firstname" placeholder="请输入区域、商圈、小区"><button class="btn-search fr">搜索</button><br></div>
+	            <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:250px;height:auto; display:none;"></div>
             </form>
             <!-- 面积、租价排序 -->
             <div class="button-de">
@@ -38,15 +44,65 @@
                 </p>
             </div>
         </div>
-        <div id="map" style="background-color:#eeeeee;height:400px;width:800px;float:left;">
-            <iframe src="testmap.html" width=1020 height=800 frameborder="0" scrolling="no" style="text-align: center;">
-                百度地图API自定义地图
-            </iframe>
-        </div>
-            
+        <div id="l-map" style="background-color:#eeeeee;height:800px;width:1100px;float:left;"></div>    
             <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
             版权 © 
         </div>
     </div>
 </body>
+<script type="text/javascript">
+	// 百度地图API功能
+	function G(id) {
+		return document.getElementById(id);
+	}
+
+	var map = new BMap.Map("l-map");
+	map.centerAndZoom("北京",12);                   // 初始化地图,设置城市和地图级别。
+
+	var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+		{"input" : "suggestId"
+		,"location" : map
+	});
+
+	ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+	var str = "";
+		var _value = e.fromitem.value;
+		var value = "";
+		if (e.fromitem.index > -1) {
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+		
+		value = "";
+		if (e.toitem.index > -1) {
+			_value = e.toitem.value;
+			value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		}    
+		str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+		G("searchResultPanel").innerHTML = str;
+	});
+
+	var myValue;
+	ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+	var _value = e.item.value;
+		myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+		G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+		
+		setPlace();
+	});
+
+	function setPlace(){
+		map.clearOverlays();    //清除地图上所有覆盖物
+		function myFun(){
+			var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+			map.centerAndZoom(pp, 18);
+			map.addOverlay(new BMap.Marker(pp));    //添加标注
+		}
+		var local = new BMap.LocalSearch(map, { //智能搜索
+		  onSearchComplete: myFun
+		});
+		local.search(myValue);
+	}
+</script>
+
 </html>
