@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `housesystem` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `housesystem`;
 -- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: localhost    Database: housesystem
@@ -18,27 +16,12 @@ USE `housesystem`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `locationreminder`
+-- Dumping events for database 'housesystem'
 --
 
-DROP TABLE IF EXISTS `locationreminder`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `locationreminder` (
-  `uid` varchar(255) NOT NULL,
-  `children` json DEFAULT NULL,
-  PRIMARY KEY (`uid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
--- Dumping data for table `locationreminder`
+-- Dumping routines for database 'housesystem'
 --
-
-LOCK TABLES `locationreminder` WRITE;
-/*!40000 ALTER TABLE `locationreminder` DISABLE KEYS */;
-/*!40000 ALTER TABLE `locationreminder` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -49,4 +32,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-05 20:54:33
+-- Dump completed on 2021-11-15 15:32:14
