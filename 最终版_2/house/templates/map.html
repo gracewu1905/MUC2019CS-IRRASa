@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地图</title>
+    <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=rgkditHGQqDjme0T6k4KITrB3DPXajNB"></script>
+    <script>
+        function test(){
+            myValue = "民族大学";
+            setPlace();  
+        };
+       window.onload = test;
+    </script>
+</head>
+<body>
+    
+    <div id="l-map" style="background-color:#eeeeee;height:1100px;width:1800px;float:left;"></div>
+    <button id="btn-search fr" onclick="test();" th: >显示地图位置</button>
+            <div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+            版权 ©
+        </div>
+    </div>
+   
+    <script type="text/javascript" src="../static/js/mapSearch.js" defer></script>
+</body>
+</html>
